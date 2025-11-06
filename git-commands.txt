@@ -1,0 +1,4 @@
+git add . <-- me shtu ndryshimet ne git
+git commit -m "" <-- Me shkru 1 commit mesazh
+git push <-- me i bo push ndryshimet ne github
+git pull <--- me i marr ndryshimnet e tjereve
