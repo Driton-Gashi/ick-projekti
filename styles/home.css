@@ -1,0 +1,6 @@
+.hero {
+  min-height: 100vh;
+  background: url(../assets/images/heroBanner.png);
+  background-position: center;
+  background-size: cover;
+}
