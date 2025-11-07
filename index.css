@@ -26,7 +26,7 @@
   font-weight: 400;
 }
 .heroContent img {
-  width: 250px;
+  width: 15.625rem;
 }
 .hero .heroContent .heroBtnWrapper {
   display: flex;
@@ -61,7 +61,7 @@
 .hero .posterWrapper img {
   width: 100%;
   margin-bottom: 2rem;
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 
 section.trends {
