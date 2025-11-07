@@ -34,3 +34,7 @@ button {
   border: 0;
   outline: 0;
 }
+
+my-icon {
+  margin-bottom: -4px;
+}
