@@ -21,7 +21,7 @@ header::before {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px; /* thickness of the border */
+  padding: 1px;
   background: linear-gradient(
     90deg,
     rgba(34, 142, 229, 1) 0%,
@@ -105,10 +105,10 @@ header .iconWrapper {
   transform: translateX(0);
 }
 
-.closeNavSidebarBtn {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+.NavSidebarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .NavSidebar li a {
