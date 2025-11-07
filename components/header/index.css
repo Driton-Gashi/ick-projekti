@@ -76,7 +76,7 @@ header .iconWrapper {
 .OverlayNavSidebar {
   position: fixed;
   background-color: var(--overlay-dark);
-  z-index: 0;
+  z-index: -1;
   top: 0;
   right: 0;
   left: 0;
@@ -89,9 +89,9 @@ header .iconWrapper {
   top: 0;
   bottom: 0;
   width: 100%;
-  max-width: 18.75rem;
+  max-width: 25rem;
   background-color: var(--lighter-dark-color);
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 0.4s ease all;
   transform: translateX(-100%);
@@ -146,7 +146,7 @@ header .iconWrapper {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 @media (width > 1024px) {
@@ -170,5 +170,10 @@ header .iconWrapper {
   header .iconWrapper {
     justify-content: flex-start;
     gap: 1rem;
+  }
+}
+@media (width < 768px) {
+  .NavSidebar {
+    max-width: 18.75rem;
   }
 }
