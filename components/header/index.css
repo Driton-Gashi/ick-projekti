@@ -127,7 +127,7 @@ header .iconWrapper {
 
 .NavSidebar nav a.currentPage::after {
   content: ' ';
-  height: 2px;
+  height: 0.125rem;
   background-color: var(--blue-color);
   display: block;
   width: 100%;

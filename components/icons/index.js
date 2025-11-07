@@ -150,6 +150,15 @@ class MyIcon extends HTMLElement {
           />
         </svg>
       `,
+      play: `
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.25178C0 0.301027 1.01933 -0.301676 1.8524 0.156511L9.54612 4.38806C10.4096 4.86297 10.4096 6.10369 9.54612 6.5786L1.8524 10.8101C1.01933 11.2683 0 10.6656 0 9.71487V1.25178Z" fill="#EBFAFF" />
+      </svg>`,
+      arrowRight: `
+      <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.75 10.75L12.75 5.75M12.75 5.75L7.75 0.75M12.75 5.75L0.75 5.75" stroke="#EBFAFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      `,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;
