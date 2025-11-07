@@ -73,11 +73,88 @@ header .iconWrapper {
   gap: 2rem;
   justify-content: flex-end;
 }
+.OverlayNavSidebar {
+  position: fixed;
+  background-color: var(--overlay-dark);
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.NavSidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 18.75rem;
+  background-color: var(--lighter-dark-color);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.4s ease all;
+  transform: translateX(-100%);
+  display: block;
+}
+.OverlayNavSidebar.open {
+  opacity: 1;
+  z-index: 2;
+}
+.OverlayNavSidebar.open .NavSidebar {
+  transform: translateX(0);
+}
+
+.closeNavSidebarBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.NavSidebar li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: relative;
+  display: block;
+}
+.NavSidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.NavSidebar nav a.currentPage::after {
+  content: ' ';
+  height: 2px;
+  background-color: var(--blue-color);
+  display: block;
+  width: 100%;
+  filter: blur(1px);
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.NavSidebarIcons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
 @media (width > 1024px) {
   .burger {
     display: none;
   }
 }
+
 @media (width < 1025px) {
   header nav,
   header my-icon:not(.burger, .search) {
@@ -85,6 +162,7 @@ header .iconWrapper {
   }
   header {
     flex-direction: row-reverse;
+    top: 1.5rem;
   }
   header .logo {
     text-align: right;

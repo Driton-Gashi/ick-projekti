@@ -8,8 +8,10 @@
 
 :root {
   --dark-color: #030a1b;
+  --lighter-dark-color: #0b132a;
   --white-color: #ebfaff;
   --blue-color: #228ee5;
+  --overlay-dark: rgba(3, 10, 27, 0.9);
 }
 
 body {
@@ -21,4 +23,8 @@ body {
   max-width: 75rem;
   margin: auto;
   padding: 0 1.5rem;
+}
+
+.hide {
+  display: none;
 }
