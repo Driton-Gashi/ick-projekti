@@ -13,11 +13,13 @@ class Header extends HTMLElement {
       overlay.classList.remove('open');
     };
 
+    const isHomepage = window.location.pathname === '/';
+
     this.innerHTML = `
     <header>
       <div class="logo">
         <a href="/">
-          <img src="./assets/images/logo.svg" />
+          <img src="${isHomepage ? '' : '.'}./assets/images/logo.svg" />
         </a>
       </div>
       <nav>
