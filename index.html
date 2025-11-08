@@ -63,7 +63,7 @@
           ></my-icon>
         </a>
       </div>
-      <my-carousel numberOfItems="60" startFrom="1"></my-carousel>
+      <my-carousel isMovies numberOfItems="60" startFrom="1"></my-carousel>
     </section>
     <section class="movies">
       <div class="moviesTop container">
@@ -91,10 +91,41 @@
         <my-icon class="chevronLeft" iconName="chevronLeft"></my-icon>
         <my-icon class="chevronRight" iconName="chevronRight"></my-icon>
       </div>
-      <my-carousel numberOfItems="6" startFrom="7"></my-carousel>
+      <my-carousel isMovies numberOfItems="6" startFrom="7"></my-carousel>
     </section>
     <section class="goldenGlobe container">
       <img src="./assets/images/GoldenGlobe.png" />
+    </section>
+    <section class="movies">
+      <div class="moviesTop container">
+        <h2>Series</h2>
+        <a href="#" class="seeMoreLink">
+          See More
+          <my-icon
+            iconName="arrowRight"
+            iconColor="var(--blue-color)"
+            width="24"
+            height="24"
+          ></my-icon>
+        </a>
+      </div>
+      <div class="moviesFilter container">
+        <button onclick="filterBtn(event)">Drama</button>
+        <button onclick="filterBtn(event)">Action</button>
+        <button onclick="filterBtn(event)">Advendure</button>
+        <button onclick="filterBtn(event)">Drama</button>
+        <button onclick="filterBtn(event)">Action</button>
+        <button onclick="filterBtn(event)">Advendure</button>
+        <button onclick="filterBtn(event)">Drama</button>
+        <button onclick="filterBtn(event)">Action</button>
+        <button onclick="filterBtn(event)">Advendure</button>
+        <my-icon class="chevronLeft" iconName="chevronLeft"></my-icon>
+        <my-icon class="chevronRight" iconName="chevronRight"></my-icon>
+      </div>
+      <my-carousel numberOfItems="5" isSeries></my-carousel>
+    </section>
+    <section class="price container">
+      <img src="./assets/images/price.png" />
     </section>
   </body>
 </html>

@@ -5,14 +5,14 @@ header {
   padding: 0 1.5rem;
   max-width: 75rem;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   top: 2.3125rem;
   left: 1.5rem;
   right: 1.5rem;
   z-index: 1;
   height: 5rem;
   border-radius: 1.25rem;
-  background: linear-gradient(rgba(26, 25, 25, 0.3));
+  background: linear-gradient(rgba(26, 25, 25, 0.4));
   backdrop-filter: blur(5px);
 }
 

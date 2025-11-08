@@ -72,7 +72,10 @@ class MyCarousel extends HTMLElement {
   render() {
     const numberOfItems = this.getAttribute('numberOfItems') ?? 6;
     const controls = this.getAttribute('controls') !== null;
+    let isMovies = this.getAttribute('isMovies') !== null;
+    const isSeries = this.getAttribute('isSeries') !== null;
     const startFrom = this.getAttribute('startFrom') ?? 1;
+    if (!isMovies && !isSeries) isMovies = true;
     const moviesToShow =
       +startFrom + +numberOfItems > 12 ? 12 : +startFrom + +numberOfItems;
     let carouselItemHTML = '';
@@ -81,7 +84,16 @@ class MyCarousel extends HTMLElement {
       carouselItemHTML += `
         <div class="embla__slide">
           <div class="embla__slide__number">
-            <div class="movie" style="background: url(../../assets/images/movies/movie_${i}.png);">
+          ${
+            isMovies
+              ? `<div class="movie" style="background: url(../../assets/images/movies/movie_${i}.png);">`
+              : ''
+          }
+          ${
+            isSeries
+              ? `<div class="movie" style="background: url(../../assets/images/series/series_${i}.png);">`
+              : ''
+          }
               <div class="plusBtn">
                 <my-icon iconName="plus"></my-icon>
               </div>

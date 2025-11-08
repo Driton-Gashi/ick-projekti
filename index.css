@@ -88,7 +88,7 @@ section.movies {
 .seeMoreLink {
   color: var(--blue-color);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   gap: 0.625rem;
 }
@@ -134,9 +134,8 @@ section.movies {
   background-color: var(--pink-color);
 }
 
-section.goldenGlobe {
-  height: 36rem;
-  text-align: center;
+section.goldenGlobe.container {
+  padding: 0;
 }
 section.goldenGlobe img {
   width: 100%;
@@ -144,9 +143,13 @@ section.goldenGlobe img {
   object-fit: scale-down;
 }
 
+section.price img {
+  width: 100%;
+}
+
 @media (width < 1025px) {
-  .container {
-    max-width: 48rem;
+  section.goldenGlobe.container {
+    max-width: 100%;
   }
   .hero {
     background: url(./assets/images/heroBannerMobile.png);
@@ -166,11 +169,5 @@ section.goldenGlobe img {
   .hero .container .heroContent,
   .hero .container .posterWrapper {
     width: 100%;
-  }
-}
-
-@media (width < 1024px) {
-  section.goldenGlobe {
-    height: 23rem;
   }
 }

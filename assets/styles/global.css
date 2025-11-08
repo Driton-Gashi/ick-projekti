@@ -40,6 +40,14 @@ my-icon {
   margin-bottom: -4px;
 }
 
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 /* Carousel Style start*/
 
 .embla {
@@ -206,6 +214,9 @@ my-icon {
 @media (width < 1024px) {
   .embla {
     --slide-size: 33%;
+  }
+  .container {
+    max-width: 48rem;
   }
 }
 @media (width < 768px) {
