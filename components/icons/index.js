@@ -165,6 +165,15 @@ class MyIcon extends HTMLElement {
           }" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       `,
+      plus: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9.5" width="5" height="24" rx="2" fill="${
+        iconColor ? iconColor : '#EBFAFF'
+      }"/>
+<rect y="14.5" width="5" height="24" rx="2" transform="rotate(-90 0 14.5)" fill="${
+        iconColor ? iconColor : '#EBFAFF'
+      }"/>
+</svg>
+`,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;

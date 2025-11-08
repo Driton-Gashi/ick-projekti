@@ -38,3 +38,188 @@ button {
 my-icon {
   margin-bottom: -4px;
 }
+
+/* Carousel Style start*/
+
+.embla {
+  max-width: 75rem;
+  margin: auto;
+  --slide-height: 18.5rem;
+  --slide-spacing: 2rem;
+  --slide-size: 20%;
+  padding: 0 1.5rem;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem rgb(234, 234, 234);
+  border-radius: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem rgb(234, 234, 234);
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__button:disabled {
+  color: var(--detail-high-contrast);
+}
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dot:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(234, 234, 234);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(54, 49, 61);
+}
+
+.is-selected {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.movie {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 12px;
+  position: relative;
+}
+.plusBtn {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 10px solid var(--dark-color);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+}
+.movie my-icon {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  position: relative;
+  outline: 5px solid var(--dark-color);
+  border-radius: 12px;
+  margin: 0;
+}
+.movie .plusBtn {
+  cursor: pointer;
+}
+.movie .plusBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.movie .plusBtn:hover svg {
+  transform: scale(1.2);
+}
+
+@media (width < 1200px) {
+  .embla {
+    --slide-size: 25%;
+  }
+}
+@media (width < 1024px) {
+  .embla {
+    --slide-size: 33%;
+  }
+}
+@media (width < 768px) {
+  .embla {
+    --slide-size: 40%;
+  }
+}
+@media (width < 620px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
+@media (width < 468px) {
+  .embla {
+    --slide-size: 80%;
+    --slide-height: 22rem;
+  }
+}
+/* Carousel Style end */

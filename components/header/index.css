@@ -180,13 +180,13 @@ header .iconWrapper my-icon {
   padding: 2rem;
 }
 
-@media (width > 1024px) {
+@media (width > 64rem) {
   .burger {
     display: none;
   }
 }
 
-@media (width < 1025px) {
+@media (width < 64.0625rem) {
   header nav,
   header my-icon:not(.burger, .search) {
     display: none;
@@ -206,7 +206,7 @@ header .iconWrapper my-icon {
     margin-inline: 2rem;
   }
 }
-@media (width < 768px) {
+@media (width < 48rem) {
   .NavSidebar {
     max-width: 18.75rem;
   }
