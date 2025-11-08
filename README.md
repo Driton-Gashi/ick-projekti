@@ -1,12 +1,5 @@
 # ICK Team Project
 
-This project converts our shared Figma design into a responsive website using
-**HTML**, **CSS**, and **JavaScript**.
-
----
-
-## 🎯 Goal
-
 📽️ Movie App — Pure HTML, CSS & JavaScript
 
 This project is a frontend-only movie web application built using vanilla HTML,
@@ -20,6 +13,13 @@ and responsive design principles.
 The goal of this project is to practice building dynamic UI components using
 only native browser features like the DOM, Fetch API, and local JSON data, while
 maintaining clean and scalable front-end structure.
+
+---
+
+## 🎯 Goal
+
+Build a clean, pixel-perfect version of the Figma design while maintaining good
+folder organization, reusable components, and clear communication through Slack.
 
 ---
 

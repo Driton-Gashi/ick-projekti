@@ -54,6 +54,7 @@ header nav a {
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 500;
+  position: relative;
 }
 
 header nav a.currentPage::after,
@@ -65,6 +66,7 @@ header nav a:hover::after {
   width: 100%;
   filter: blur(2px);
   margin-top: 0.25rem;
+  position: absolute;
 }
 
 header .iconWrapper {
@@ -73,7 +75,11 @@ header .iconWrapper {
   gap: 2rem;
   justify-content: flex-end;
 }
-.OverlayNavSidebar {
+header .iconWrapper my-icon {
+  cursor: pointer;
+}
+.OverlayNavSidebar,
+.searchPopup {
   position: fixed;
   background-color: var(--overlay-dark);
   z-index: -1;
@@ -82,6 +88,30 @@ header .iconWrapper {
   left: 0;
   bottom: 0;
   opacity: 0;
+  backdrop-filter: blur(5px);
+}
+.searchPopup {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  backdrop-filter: blur(5px);
+}
+
+.searchPopup .search {
+  padding: 1rem;
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  margin-top: 6.25rem;
+  background-color: var(--white-color);
+}
+.closeSearchPopup {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
 }
 
 .NavSidebar {
@@ -97,7 +127,8 @@ header .iconWrapper {
   transform: translateX(-100%);
   display: block;
 }
-.OverlayNavSidebar.open {
+.OverlayNavSidebar.open,
+.searchPopup.open {
   opacity: 1;
   z-index: 2;
 }
@@ -170,6 +201,9 @@ header .iconWrapper {
   header .iconWrapper {
     justify-content: flex-start;
     gap: 1rem;
+  }
+  .searchPopup .search {
+    margin-inline: 2rem;
   }
 }
 @media (width < 768px) {
