@@ -174,6 +174,22 @@ class MyIcon extends HTMLElement {
       }"/>
 </svg>
 `,
+      chevronLeft: `<svg width="${width ? width : '10'}" height="${
+        height ? height : '18'
+      }" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.228823 8.04132C-0.0762749 8.34642 -0.0762749 8.84108 0.228823 9.14618L8.04132 16.9587C8.34642 17.2638 8.84108 17.2638 9.14618 16.9587C9.45127 16.6536 9.45127 16.1589 9.14618 15.8538L1.8861 8.59375L9.14618 1.33368C9.45127 1.02858 9.45127 0.53392 9.14618 0.228823C8.84108 -0.0762743 8.34642 -0.0762743 8.04132 0.228823L0.228823 8.04132Z" fill="${
+        iconColor ? iconColor : '#EBFAFF'
+      }"/>
+</svg>
+`,
+      chevronRight: `<svg width="${width ? width : '10'}" height="${
+        height ? height : '18'
+      }"  viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.14618 8.04132C9.45127 8.34642 9.45127 8.84108 9.14618 9.14618L1.33368 16.9587C1.02858 17.2638 0.53392 17.2638 0.228823 16.9587C-0.0762744 16.6536 -0.0762744 16.1589 0.228823 15.8538L7.4889 8.59375L0.228824 1.33368C-0.0762737 1.02858 -0.0762737 0.53392 0.228824 0.228823C0.533921 -0.0762743 1.02858 -0.0762743 1.33368 0.228823L9.14618 8.04132Z" fill="${
+        iconColor ? iconColor : '#EBFAFF'
+      }"/>
+</svg>
+`,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;

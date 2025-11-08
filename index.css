@@ -17,7 +17,8 @@
   width: 50%;
 }
 .hero .heroContent h2,
-.trends h2 {
+.trends h2,
+.movies h2 {
   font-size: 3rem;
   font-weight: bold;
 }
@@ -66,25 +67,81 @@
 
 section.trends {
   margin-top: 1.8125rem;
+  margin-bottom: 6.0625rem;
 }
 
-section.trends {
+section.trends,
+section.movies {
   color: var(--white-color);
 }
 
-section.trends .trendsTop {
+.trendsTop,
+.moviesTop {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 1.5rem;
 }
-
+.moviesTop {
+  padding-bottom: 1.9375rem;
+}
 .seeMoreLink {
   color: var(--blue-color);
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
   gap: 0.625rem;
+}
+section.movies {
+  margin-bottom: 6.0625rem;
+  background-image: url(./assets/images/moviesBackground.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.moviesFilter {
+  margin-bottom: 3.75rem;
+  display: flex;
+  gap: 1.375rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+.moviesFilter .chevronLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.moviesFilter .chevronRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.moviesFilter button {
+  background-color: transparent;
+  border: 1px solid var(--pink-color);
+  color: var(--white-color);
+  font-size: 0.875rem;
+  text-align: center;
+  flex-grow: 1;
+  padding: 0.75rem 1.75rem;
+  border-radius: 25px;
+  max-width: 9.375rem;
+}
+
+.moviesFilter button.checked {
+  background-color: var(--pink-color);
+}
+
+section.goldenGlobe {
+  height: 36rem;
+  text-align: center;
+}
+section.goldenGlobe img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 @media (width < 1025px) {
@@ -109,5 +166,11 @@ section.trends .trendsTop {
   .hero .container .heroContent,
   .hero .container .posterWrapper {
     width: 100%;
+  }
+}
+
+@media (width < 1024px) {
+  section.goldenGlobe {
+    height: 23rem;
   }
 }

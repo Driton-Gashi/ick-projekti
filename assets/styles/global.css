@@ -12,6 +12,7 @@
   --white-color: #ebfaff;
   --blue-color: #228ee5;
   --overlay-dark: rgba(3, 10, 27, 0.9);
+  --pink-color: #ec5baa;
 }
 
 body {
@@ -172,6 +173,7 @@ my-icon {
   border: 10px solid var(--dark-color);
   backdrop-filter: blur(4px);
   border-radius: 12px;
+  box-shadow: rgba(3, 10, 27, 0.35) 0px 5px 15px;
 }
 .movie my-icon {
   height: 56px;
