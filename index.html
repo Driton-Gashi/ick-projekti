@@ -9,18 +9,18 @@
       type="image/x-icon"
     />
     <title>Movie App</title>
-    <link rel="stylesheet" href="./assets/styles/global.css" />
-    <link rel="stylesheet" href="./components/header/index.css" />
+    <link rel="stylesheet" href="/assets/styles/global.css" />
+    <link rel="stylesheet" href="/components/header/index.css" />
     <link rel="stylesheet" href="./index.css" />
-    <script src="./components/icons/index.js"></script>
-    <script src="./components/header/index.js"></script>
+    <script src="/components/icons/index.js"></script>
+    <script src="/components/header/index.js"></script>
     <script
-      src="./components/carousel/embla-carousel-autoplay.umd.js"
+      src="/components/carousel/embla-carousel-autoplay.umd.js"
       defer
     ></script>
-    <script src="./components/carousel/embla-carousel.umd.js" defer></script>
-    <script src="./components/carousel/index.js" defer></script>
-    <script src="./index.js" defer></script>
+    <script src="/components/carousel/embla-carousel.umd.js" defer></script>
+    <script src="/components/carousel/movieCarousel/index.js" defer></script>
+    <script src="/components/carousel/filterCarousel/index.js" defer></script>
   </head>
   <body>
     <my-header></my-header>
@@ -33,7 +33,7 @@
             his destiny in a turbulent world where people often prove more
             wicked than beasts
           </p>
-          <img src="./assets/images/hero-rating.png" />
+          <img src="./assets/images/hero-rating.png" draggable="false" />
           <div class="heroBtnWrapper">
             <button>
               <my-icon iconName="play"></my-icon>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="posterWrapper">
-          <img src="./assets/images/FilmsPoster.png" alt="" />
+          <img src="./assets/images/FilmsPoster.png" draggable="false" />
         </div>
       </div>
     </section>
@@ -58,8 +58,6 @@
           <my-icon
             iconName="arrowRight"
             iconColor="var(--blue-color)"
-            width="24"
-            height="24"
           ></my-icon>
         </a>
       </div>
@@ -73,28 +71,16 @@
           <my-icon
             iconName="arrowRight"
             iconColor="var(--blue-color)"
-            width="24"
-            height="24"
           ></my-icon>
         </a>
       </div>
       <div class="moviesFilter container">
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <my-icon class="chevronLeft" iconName="chevronLeft"></my-icon>
-        <my-icon class="chevronRight" iconName="chevronRight"></my-icon>
+        <my-filter-carousel arrows></my-filter-carousel>
       </div>
       <my-carousel isMovies numberOfItems="6" startFrom="7"></my-carousel>
     </section>
     <section class="goldenGlobe container">
-      <img src="./assets/images/GoldenGlobe.png" />
+      <img src="./assets/images/GoldenGlobe.png" draggable="false" />
     </section>
     <section class="movies">
       <div class="moviesTop container">
@@ -104,28 +90,16 @@
           <my-icon
             iconName="arrowRight"
             iconColor="var(--blue-color)"
-            width="24"
-            height="24"
           ></my-icon>
         </a>
       </div>
       <div class="moviesFilter container">
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <button onclick="filterBtn(event)">Drama</button>
-        <button onclick="filterBtn(event)">Action</button>
-        <button onclick="filterBtn(event)">Advendure</button>
-        <my-icon class="chevronLeft" iconName="chevronLeft"></my-icon>
-        <my-icon class="chevronRight" iconName="chevronRight"></my-icon>
+        <my-filter-carousel arrows></my-filter-carousel>
       </div>
       <my-carousel numberOfItems="5" isSeries></my-carousel>
     </section>
     <section class="price container">
-      <img src="./assets/images/price.png" />
+      <img src="./assets/images/price.png" draggable="false" />
     </section>
   </body>
 </html>

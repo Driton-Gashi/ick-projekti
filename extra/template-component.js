@@ -8,7 +8,7 @@ class UserComponent extends HTMLElement {
     this.innerHTML = `
             <link rel='stylesheet' href="../../components/user/index.css"/>
             <div class="userContainer">
-                <img src="${image}" alt="User Image">
+                <img src="${image}" alt="User Image" >
                 <div class="content">
                     <h3>
                         ${title}

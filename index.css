@@ -74,7 +74,13 @@ section.trends,
 section.movies {
   color: var(--white-color);
 }
-
+.movies my-filter-carousel {
+  margin-bottom: 2.875rem;
+  display: block;
+  @media (width < 1025px) {
+    margin-bottom: 1.5rem;
+  }
+}
 .trendsTop,
 .moviesTop {
   display: flex;
@@ -88,7 +94,7 @@ section.movies {
 .seeMoreLink {
   color: var(--blue-color);
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   gap: 0.625rem;
 }
@@ -97,41 +103,6 @@ section.movies {
   background-image: url(./assets/images/moviesBackground.png);
   background-size: 100%;
   background-repeat: no-repeat;
-}
-
-.moviesFilter {
-  margin-bottom: 3.75rem;
-  display: flex;
-  gap: 1.375rem;
-  position: relative;
-  flex-wrap: wrap;
-}
-.moviesFilter .chevronLeft {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-.moviesFilter .chevronRight {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-.moviesFilter button {
-  background-color: transparent;
-  border: 1px solid var(--pink-color);
-  color: var(--white-color);
-  font-size: 0.875rem;
-  text-align: center;
-  flex-grow: 1;
-  padding: 0.75rem 1.75rem;
-  border-radius: 25px;
-  max-width: 9.375rem;
-}
-
-.moviesFilter button.checked {
-  background-color: var(--pink-color);
 }
 
 section.goldenGlobe.container {
@@ -145,6 +116,9 @@ section.goldenGlobe img {
 
 section.price img {
   width: 100%;
+  max-width: 64rem;
+  margin: auto;
+  display: block;
 }
 
 @media (width < 1025px) {

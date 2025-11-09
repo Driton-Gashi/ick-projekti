@@ -20,11 +20,20 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+my-icon,
+my-carousel,
+my-filter-carousel {
+  display: block;
+}
+
 .container {
   max-width: 75rem;
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
+  @media (width < 1025px) {
+    max-width: 100%;
+  }
 }
 
 .hide {
@@ -57,6 +66,10 @@ img {
   --slide-spacing: 2rem;
   --slide-size: 20%;
   padding: 0 1.5rem;
+  position: relative;
+  @media (width < 1024px) {
+    --slide-spacing: 1rem;
+  }
 }
 .embla__viewport {
   overflow: hidden;
@@ -205,6 +218,52 @@ img {
 .movie .plusBtn:hover svg {
   transform: scale(1.2);
 }
+.embla.filter {
+  --slide-height: max-content;
+  --slide-spacing: 1rem;
+  --slide-size: max-content;
+  @media (width < 1025px) {
+    --slide-spacing: 0.5rem;
+  }
+}
+.embla.filter .embla__slide__number,
+.embla.filter .embla__button {
+  box-shadow: none;
+}
+.embla.filter .embla__button {
+  width: unset;
+  height: unset;
+}
+.embla.filter .embla__controls {
+  margin-top: 0;
+}
+.embla.filter .embla__button--prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.embla.filter .embla__button--next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.embla.filter .filterBtn {
+  background-color: transparent;
+  border: 1px solid var(--pink-color);
+  color: var(--white-color);
+  font-size: 0.875rem;
+  text-align: center;
+  flex-grow: 1;
+  padding: 0.75rem 1.75rem;
+  border-radius: 25px;
+  max-width: 9.375rem;
+}
+
+.embla.filter .filterBtn.checked {
+  background-color: var(--pink-color);
+}
 
 @media (width < 1200px) {
   .embla {
@@ -214,9 +273,6 @@ img {
 @media (width < 1024px) {
   .embla {
     --slide-size: 33%;
-  }
-  .container {
-    max-width: 48rem;
   }
 }
 @media (width < 768px) {
@@ -231,7 +287,7 @@ img {
 }
 @media (width < 468px) {
   .embla {
-    --slide-size: 80%;
+    --slide-size: 65%;
     --slide-height: 22rem;
   }
 }

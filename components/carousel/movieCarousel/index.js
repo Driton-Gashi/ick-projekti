@@ -86,12 +86,12 @@ class MyCarousel extends HTMLElement {
           <div class="embla__slide__number">
           ${
             isMovies
-              ? `<div class="movie" style="background: url(../../assets/images/movies/movie_${i}.png);">`
+              ? `<div class="movie" style="background: url(assets/images/movies/movie_${i}.png);">`
               : ''
           }
           ${
             isSeries
-              ? `<div class="movie" style="background: url(../../assets/images/series/series_${i}.png);">`
+              ? `<div class="movie" style="background: url(assets/images/series/series_${i}.png);">`
               : ''
           }
               <div class="plusBtn">
@@ -155,7 +155,7 @@ class MyCarousel extends HTMLElement {
 
     // EmblaCarousel and EmblaCarouselAutoplay must already be loaded via <script> before this file
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
-      EmblaCarouselAutoplay({ delay: 4000 }),
+      EmblaCarouselAutoplay({ delay: 2500 }),
     ]);
 
     const onNavButtonClick = embla => {

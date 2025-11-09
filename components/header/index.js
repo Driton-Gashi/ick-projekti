@@ -31,7 +31,9 @@ class Header extends HTMLElement {
     <header>
       <div class="logo">
         <a href="/">
-          <img src="${isHomepage ? '' : '.'}./assets/images/logo.svg" />
+          <img src="${
+            isHomepage ? '' : '.'
+          }./assets/images/logo.svg" draggable="false"/>
         </a>
       </div>
       <nav>
@@ -62,7 +64,7 @@ class Header extends HTMLElement {
       <div class="NavSidebar">
         <div class="NavSidebarTop">
           <a href="/">
-            <img src="./assets/images/logo.svg" />
+            <img src="./assets/images/logo.svg" draggable="false"/>
           </a>
           <my-icon onClick="closeSidebar()" class="closeNavSidebarBtn" iconName="close"></my-icon>
         </div>
