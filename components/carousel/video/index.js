@@ -55,7 +55,7 @@ function addDotBtnsAndClickHandlers(embla, dotsRoot, onButtonClick) {
   };
 }
 
-class MyCarousel extends HTMLElement {
+class MyVideoCarousel extends HTMLElement {
   connectedCallback() {
     this.render();
     this.initEmbla();
@@ -70,41 +70,22 @@ class MyCarousel extends HTMLElement {
   }
 
   render() {
-    const numberOfItems = this.getAttribute('numberOfItems') ?? 6;
     const arrows = this.getAttribute('arrows') !== null;
     const dots = this.getAttribute('dots') !== null;
-    let isMovies = this.getAttribute('isMovies') !== null;
-    const isSeries = this.getAttribute('isSeries') !== null;
-    const startFrom = this.getAttribute('startFrom') ?? 1;
-    if (!isMovies && !isSeries) isMovies = true;
-    const moviesToShow =
-      +startFrom + +numberOfItems > 12 ? 12 : +startFrom + +numberOfItems;
+
     let carouselItemHTML = '';
 
-    for (let i = +startFrom; i <= moviesToShow; i++) {
+    for (let i = 0; i < 5; i++) {
       carouselItemHTML += `
         <div class="embla__slide">
           <div class="embla__slide__number">
-          ${
-            isMovies
-              ? `<div class="movie" style="background: url(/assets/images/movies/movie_${i}.png);">`
-              : ''
-          }
-          ${
-            isSeries
-              ? `<div class="movie" style="background: url(/assets/images/series/series_${i}.png);">`
-              : ''
-          }
-              <div class="plusBtn">
-                <my-icon iconName="plus"></my-icon>
-              </div>
-            </div>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lV1OOlGwExM?si=Ukhu11nNzaqCuqpm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>`;
     }
 
     this.innerHTML = `
-      <section class="embla">
+      <section class="embla video">
         <div class="embla__viewport">
           <div class="embla__container">
             ${carouselItemHTML}
@@ -181,4 +162,4 @@ class MyCarousel extends HTMLElement {
   }
 }
 
-customElements.define('my-carousel', MyCarousel);
+customElements.define('my-video-carousel', MyVideoCarousel);

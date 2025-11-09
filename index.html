@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./assets/images/logo.svg"
+      href="/assets/images/logo.svg"
       type="image/x-icon"
     />
     <title>Movie App</title>
@@ -21,6 +21,11 @@
     <script src="/components/carousel/embla-carousel.umd.js" defer></script>
     <script src="/components/carousel/movieCarousel/index.js" defer></script>
     <script src="/components/carousel/filterCarousel/index.js" defer></script>
+    <script
+      src="/components/carousel/collectionCarousel/index.js"
+      defer
+    ></script>
+    <script src="/components/carousel/video/index.js" defer></script>
   </head>
   <body>
     <my-header></my-header>
@@ -33,7 +38,7 @@
             his destiny in a turbulent world where people often prove more
             wicked than beasts
           </p>
-          <img src="./assets/images/hero-rating.png" draggable="false" />
+          <img src="/assets/images/hero-rating.png" draggable="false" />
           <div class="heroBtnWrapper">
             <button>
               <my-icon iconName="play"></my-icon>
@@ -46,7 +51,7 @@
           </div>
         </div>
         <div class="posterWrapper">
-          <img src="./assets/images/FilmsPoster.png" draggable="false" />
+          <img src="/assets/images/FilmsPoster.png" draggable="false" />
         </div>
       </div>
     </section>
@@ -61,7 +66,7 @@
           ></my-icon>
         </a>
       </div>
-      <my-carousel isMovies numberOfItems="60" startFrom="1"></my-carousel>
+      <my-carousel isMovies startFrom="1"></my-carousel>
     </section>
     <section class="movies">
       <div class="moviesTop container">
@@ -80,7 +85,7 @@
       <my-carousel isMovies numberOfItems="6" startFrom="7"></my-carousel>
     </section>
     <section class="goldenGlobe container">
-      <img src="./assets/images/GoldenGlobe.png" draggable="false" />
+      <img src="/assets/images/GoldenGlobe.png" draggable="false" />
     </section>
     <section class="movies">
       <div class="moviesTop container">
@@ -99,7 +104,33 @@
       <my-carousel numberOfItems="5" isSeries></my-carousel>
     </section>
     <section class="price container">
-      <img src="./assets/images/price.png" draggable="false" />
+      <img src="/assets/images/price.png" draggable="false" />
+    </section>
+    <section class="collection">
+      <div class="moviesTop container">
+        <h2>Collection</h2>
+        <a href="#" class="seeMoreLink">
+          See More
+          <my-icon
+            iconName="arrowRight"
+            iconColor="var(--blue-color)"
+          ></my-icon>
+        </a>
+      </div>
+      <my-collection-carousel></my-collection-carousel>
+    </section>
+    <section class="collection">
+      <div class="moviesTop container">
+        <h2>Continue Watching</h2>
+        <a href="#" class="seeMoreLink">
+          See More
+          <my-icon
+            iconName="arrowRight"
+            iconColor="var(--blue-color)"
+          ></my-icon>
+        </a>
+      </div>
+      <my-video-carousel></my-video-carousel>
     </section>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .hero {
   min-height: 100vh;
-  background: url(./assets/images/heroBanner.png);
+  background: url(/assets/images/heroBanner.png);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -18,9 +18,11 @@
 }
 .hero .heroContent h2,
 .trends h2,
-.movies h2 {
+.movies h2,
+.collection h2 {
   font-size: 3rem;
   font-weight: bold;
+  color: var(--white-color);
 }
 .hero .heroContent p {
   font-size: 1rem;
@@ -70,10 +72,6 @@ section.trends {
   margin-bottom: 6.0625rem;
 }
 
-section.trends,
-section.movies {
-  color: var(--white-color);
-}
 .movies my-filter-carousel {
   margin-bottom: 2.875rem;
   display: block;
@@ -100,13 +98,14 @@ section.movies {
 }
 section.movies {
   margin-bottom: 6.0625rem;
-  background-image: url(./assets/images/moviesBackground.png);
+  background-image: url(/assets/images/moviesBackground.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 section.goldenGlobe.container {
   padding: 0;
+  margin-bottom: 6.5rem;
 }
 section.goldenGlobe img {
   width: 100%;
@@ -120,13 +119,16 @@ section.price img {
   margin: auto;
   display: block;
 }
+section.collection {
+  margin-bottom: 10.625rem;
+}
 
 @media (width < 1025px) {
   section.goldenGlobe.container {
     max-width: 100%;
   }
   .hero {
-    background: url(./assets/images/heroBannerMobile.png);
+    background: url(/assets/images/heroBannerMobile.png);
     background-size: cover;
     background-position: center;
     height: 90vh;
