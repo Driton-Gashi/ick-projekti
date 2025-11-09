@@ -190,6 +190,11 @@ class MyIcon extends HTMLElement {
       }"/>
 </svg>
 `,
+      chevronBottom: `<svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6339 14.6339C14.1457 15.122 13.3543 15.122 12.8661 14.6339L0.366115 2.13388C-0.12204 1.64573 -0.12204 0.854271 0.366116 0.366116C0.854273 -0.12204 1.64573 -0.12204 2.13388 0.366116L13.75 11.9822L25.3661 0.366118C25.8543 -0.122038 26.6457 -0.122038 27.1339 0.366118C27.622 0.854273 27.622 1.64573 27.1339 2.13388L14.6339 14.6339Z" fill="#EBFAFF"/>
+</svg>
+
+`,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;

@@ -289,6 +289,9 @@ img {
   .embla {
     --slide-size: 40%;
   }
+  .embla.video {
+    --slide-size: 100%;
+  }
 }
 @media (width < 620px) {
   .embla {

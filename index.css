@@ -12,14 +12,16 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 5rem;
-  gap: 0.625rem;
+  gap: 0.5rem;
   color: var(--white-color);
   width: 50%;
 }
 .hero .heroContent h2,
 .trends h2,
 .movies h2,
-.collection h2 {
+.collection h2,
+.video h2,
+.faq h2 {
   font-size: 3rem;
   font-weight: bold;
   color: var(--white-color);
@@ -29,7 +31,7 @@
   font-weight: 400;
 }
 .heroContent img {
-  width: 15.625rem;
+  width: 15rem;
 }
 .hero .heroContent .heroBtnWrapper {
   display: flex;
@@ -38,10 +40,10 @@
 .hero .heroContent button {
   background: var(--blue-color);
   border-radius: 28px;
-  padding: 0.625rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: var(--white-color);
   display: flex;
-  gap: 0.375rem;
+  gap: 0.3rem;
   align-items: center;
   cursor: pointer;
 }
@@ -68,12 +70,12 @@
 }
 
 section.trends {
-  margin-top: 1.8125rem;
-  margin-bottom: 6.0625rem;
+  margin-top: 1.5rem;
+  margin-bottom: 6rem;
 }
 
 .movies my-filter-carousel {
-  margin-bottom: 2.875rem;
+  margin-bottom: 2.5rem;
   display: block;
   @media (width < 1025px) {
     margin-bottom: 1.5rem;
@@ -87,17 +89,17 @@ section.trends {
   padding: 1.5rem;
 }
 .moviesTop {
-  padding-bottom: 1.9375rem;
+  padding-bottom: 2rem;
 }
 .seeMoreLink {
   color: var(--blue-color);
   text-decoration: none;
   font-size: 1rem;
   display: flex;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 section.movies {
-  margin-bottom: 6.0625rem;
+  margin-bottom: 6rem;
   background-image: url(/assets/images/moviesBackground.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -119,13 +121,138 @@ section.price img {
   margin: auto;
   display: block;
 }
-section.collection {
-  margin-bottom: 10.625rem;
+section.collection,
+section.video {
+  margin-bottom: 10rem;
+}
+section.video {
+  @media (width < 1024px) {
+    margin-bottom: 7rem;
+  }
+}
+section.video .moviesTop {
+  flex-wrap: wrap;
+}
+section.video .moviesTop h2 {
+  display: flex;
+  justify-content: start;
+}
+section.kids {
+  position: relative;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  display: flex;
+  min-height: 100vh;
+  @media (width < 1024px) {
+    min-height: unset;
+  }
+}
+section.kids .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.kids .kidsContent {
+  text-align: center;
+  max-width: 48rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5.5rem;
+  @media (width < 1024px) {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
-@media (width < 1025px) {
+section.kids h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  @media (width < 768px) {
+    font-size: 2rem;
+  }
+}
+
+section.kids p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  @media (width < 768px) {
+    font-size: 1rem;
+  }
+}
+section.kids button {
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 1rem 4rem;
+  border-radius: 12px;
+  bottom: 3.5rem;
+  cursor: pointer;
+  @media (width < 1024px) {
+    font-size: 1rem;
+  }
+  @media (width < 48rem) {
+    bottom: 2rem;
+  }
+}
+section.faq {
+  min-height: 100vh;
+}
+section.kids img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+section.faq .faqItem {
+  padding: 2rem;
+  border: 1px solid var(--pink-color);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 88px;
+  overflow: hidden;
+  transition: 0.2s ease height;
+}
+section.faq .faqItem.open {
+  height: 10rem;
+}
+
+section.faq .container > h2 {
+  margin: 6.5rem 0;
+  text-align: center;
+}
+section.faq .answer {
+  font-size: 1rem;
+}
+section.faq .question {
+  display: flex;
+  justify-content: space-between;
+}
+section.faq .answer {
+  padding-top: 2rem;
+}
+
+section.faq .faqItemWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+@media (width < 64rem) {
   section.goldenGlobe.container {
     max-width: 100%;
+    margin-bottom: 0;
+  }
+  section.movies {
+    margin-bottom: 3rem;
+  }
+  section.collection {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
   }
   .hero {
     background: url(/assets/images/heroBannerMobile.png);

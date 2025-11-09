@@ -119,7 +119,7 @@
       </div>
       <my-collection-carousel></my-collection-carousel>
     </section>
-    <section class="collection">
+    <section class="video">
       <div class="moviesTop container">
         <h2>Continue Watching</h2>
         <a href="#" class="seeMoreLink">
@@ -132,5 +132,89 @@
       </div>
       <my-video-carousel></my-video-carousel>
     </section>
+    <section class="kids">
+      <div class="container">
+        <div class="kidsContent">
+          <h2>Family-friendly streaming</h2>
+          <p>
+            create kids profile, set parental control, and choose rating levels.
+            Easily find new favorites by wrting by characters and using age
+            filters.
+          </p>
+        </div>
+        <img src="/assets/images/kidsSectionImage.png" />
+        <button>Watch the children's section</button>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <h2>The Omni Questions Everyone`s Asking</h2>
+        <div class="faqItemWrapper">
+          <h2 class="faqItem open">
+            <div class="question">
+              What is Omni ?
+              <my-icon iconName="chevronBottom"></my-icon>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+              consectetur excepturi placeat, vitae illum nesciunt sed earum
+              sapiente accusantium facilis maxime, aut esse nemo accusamus
+              dolorum facere. Corrupti, accusamus explicabo.
+            </p>
+          </h2>
+
+          <h2 class="faqItem">
+            <div class="question">
+              How do I Get Help If I Have Any Issues?
+              <my-icon iconName="chevronBottom"></my-icon>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores, reiciendis.
+            </p>
+          </h2>
+
+          <h2 class="faqItem">
+            <div class="question">
+              Is Omni Good For Kids & Families?
+              <my-icon iconName="chevronBottom"></my-icon>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+              conseclorem Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Dignissimos at maxime facilis, ab ea similique quia quam,
+              illo odio, obcaecati aperiam tempora molestias magni repudiandae
+              voluptatibus recusandae vel a explicabo?
+            </p>
+          </h2>
+
+          <h2 class="faqItem">
+            <div class="question">
+              How much Does Omni Cost?
+              <my-icon iconName="chevronBottom"></my-icon>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+              conseclorem Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Dignissimos at maxime facilis, ab ea similique quia quam,
+              illo odio, obcaecati aperiam tempora molestias magni repudiandae
+              voluptatibus recusandae vel a explicabo?
+            </p>
+          </h2>
+        </div>
+      </div>
+    </section>
   </body>
+  <script>
+    const faqItems = document.querySelectorAll('.faq .faqItem');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+        for (let i = 0; i < faqItems.length; i++) {
+          if (faqItems[i] === item) continue;
+          faqItems[i].classList.remove('open');
+        }
+      });
+    });
+  </script>
 </html>

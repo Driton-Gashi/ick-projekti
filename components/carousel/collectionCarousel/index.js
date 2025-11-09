@@ -152,7 +152,7 @@ class MyCollectionCarousel extends HTMLElement {
     const nextBtnNode = emblaNode.querySelector('.embla__button--next');
     const dotsNode = emblaNode.querySelector('.embla__dots');
 
-    const OPTIONS = { dragFree: true, loop: true };
+    const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
     // EmblaCarousel and EmblaCarouselAutoplay must already be loaded via <script> before this file
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [

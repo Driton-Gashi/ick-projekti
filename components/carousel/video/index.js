@@ -1,60 +1,3 @@
-// helpers can stay outside the class
-function addPrevNextBtnsClickHandlers(embla, prevBtn, nextBtn, onButtonClick) {
-  if (!prevBtn || !nextBtn) return () => {};
-  const scrollPrev = () => {
-    embla.scrollPrev();
-    onButtonClick(embla);
-  };
-  const scrollNext = () => {
-    embla.scrollNext();
-    onButtonClick(embla);
-  };
-
-  prevBtn.addEventListener('click', scrollPrev);
-  nextBtn.addEventListener('click', scrollNext);
-
-  return () => {
-    prevBtn.removeEventListener('click', scrollPrev);
-    nextBtn.removeEventListener('click', scrollNext);
-  };
-}
-
-function addDotBtnsAndClickHandlers(embla, dotsRoot, onButtonClick) {
-  if (!dotsRoot) return () => {};
-  const slidesCount = embla.scrollSnapList().length;
-  const dotNodes = [];
-
-  for (let i = 0; i < slidesCount; i++) {
-    const button = document.createElement('button');
-    button.className = 'embla__dot';
-    button.type = 'button';
-    dotsRoot.appendChild(button);
-    dotNodes.push(button);
-  }
-
-  const selectDot = () => {
-    const selectedIndex = embla.selectedScrollSnap();
-    dotNodes.forEach((dotNode, index) => {
-      dotNode.classList.toggle('is-selected', index === selectedIndex);
-    });
-  };
-
-  dotNodes.forEach((dotNode, index) => {
-    dotNode.addEventListener('click', () => {
-      embla.scrollTo(index);
-      onButtonClick(embla);
-    });
-  });
-
-  selectDot();
-  embla.on('select', selectDot);
-
-  return () => {
-    embla.off('select', selectDot);
-    dotsRoot.innerHTML = '';
-  };
-}
-
 class MyVideoCarousel extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -62,7 +5,6 @@ class MyVideoCarousel extends HTMLElement {
   }
 
   disconnectedCallback() {
-    // destroy when element is removed
     if (this._emblaApi) {
       this._emblaApi.destroy();
       this._emblaApi = null;
@@ -79,7 +21,16 @@ class MyVideoCarousel extends HTMLElement {
       carouselItemHTML += `
         <div class="embla__slide">
           <div class="embla__slide__number">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lV1OOlGwExM?si=Ukhu11nNzaqCuqpm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/lV1OOlGwExM?controls=0&modestbranding=1&showinfo=0&rel=0&autohide=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>`;
     }
@@ -99,7 +50,6 @@ class MyVideoCarousel extends HTMLElement {
                 <button class="embla__button embla__button--prev" type="button">
                   <my-icon iconName="chevronLeft"></my-icon>
                 </button>
-
                 <button class="embla__button embla__button--next" type="button">
                   <my-icon iconName="chevronRight"></my-icon>
                 </button>
@@ -114,7 +64,6 @@ class MyVideoCarousel extends HTMLElement {
   }
 
   initEmbla() {
-    // scope everything to THIS component
     const emblaNode = this.querySelector('.embla');
     if (!emblaNode) return;
 
@@ -123,12 +72,14 @@ class MyVideoCarousel extends HTMLElement {
     const nextBtnNode = emblaNode.querySelector('.embla__button--next');
     const dotsNode = emblaNode.querySelector('.embla__dots');
 
-    const OPTIONS = { dragFree: true, loop: true };
+    const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
-    // EmblaCarousel and EmblaCarouselAutoplay must already be loaded via <script> before this file
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
-      EmblaCarouselAutoplay({ delay: 2500 }),
+      EmblaCarouselAutoplay({ delay: 3000 }),
     ]);
+
+    // we'll reuse this
+    const autoplay = emblaApi?.plugins()?.autoplay;
 
     const onNavButtonClick = embla => {
       const autoplay = embla?.plugins()?.autoplay;
@@ -153,6 +104,12 @@ class MyVideoCarousel extends HTMLElement {
       dotsNode,
       onNavButtonClick
     );
+
+    // 🟣 NEW: pause on hover so videos don’t get slid away
+    if (autoplay) {
+      emblaNode.addEventListener('mouseenter', () => autoplay.stop());
+      emblaNode.addEventListener('mouseleave', () => autoplay.play());
+    }
 
     // store so we can destroy later
     this._emblaApi = emblaApi;
