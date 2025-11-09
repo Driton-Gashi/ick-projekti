@@ -17,21 +17,35 @@ class MyVideoCarousel extends HTMLElement {
 
     let carouselItemHTML = '';
 
-    for (let i = 0; i < 5; i++) {
+    const videos = [
+      {
+        name: 'Gozilla Minus One',
+        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/nAYKaslCXPc?si=1C8_s1Wvym8k5T30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      },
+      {
+        name: 'Killers of the Flower Moon',
+        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/EG0si5bSd6I?si=JHWcQUA_ZeTSuoVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      },
+      {
+        name: 'KUNG FU PANDA 4',
+        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/_inKs4eeHiI?si=-q9h9EbwaXOFGJQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      },
+      {
+        name: 'One Piece',
+        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Ades3pQbeh8?si=uGR6YO2nc8ldlSgF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      },
+      {
+        name: 'Solo Leveling Season 2 -Arise from the Shadow',
+        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/byJ7pxxhaDY?si=bIGWvqt0zumCp3X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      },
+    ];
+
+    for (let i = 0; i < videos.length; i++) {
       carouselItemHTML += `
         <div class="embla__slide">
           <div class="embla__slide__number">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/lV1OOlGwExM?controls=0&modestbranding=1&showinfo=0&rel=0&autohide=1"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+            ${videos[i].iframe}
+            </div>
         </div>`;
     }
 

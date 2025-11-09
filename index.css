@@ -137,6 +137,9 @@ section.video .moviesTop h2 {
   display: flex;
   justify-content: start;
 }
+section.video .embla__slide__number {
+  overflow: hidden;
+}
 section.kids {
   position: relative;
   color: var(--white-color);
@@ -216,6 +219,7 @@ section.faq .faqItem {
   height: 88px;
   overflow: hidden;
   transition: 0.2s ease height;
+  cursor: pointer;
 }
 section.faq .faqItem.open {
   height: 10rem;

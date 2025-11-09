@@ -77,6 +77,8 @@ header .iconWrapper {
 }
 header .iconWrapper my-icon {
   cursor: pointer;
+  z-index: 1;
+  position: relative;
 }
 .OverlayNavSidebar,
 .searchPopup {

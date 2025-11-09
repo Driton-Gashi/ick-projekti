@@ -24,6 +24,12 @@ class Header extends HTMLElement {
       overlay.classList.remove('open');
     };
 
+    window.changeTheme = e => {
+      const icon = e.currentTarget;
+      icon.getAttribute('iconname') == 'sun'
+        ? icon.setAttribute('iconname', 'moon')
+        : icon.setAttribute('iconname', 'sun');
+    };
     const pathName = window.location.pathname;
 
     this.innerHTML = `
@@ -54,7 +60,7 @@ class Header extends HTMLElement {
               : ''
           }" iconName="profile"></my-icon>
         </a>
-        <my-icon iconName="sun"></my-icon>
+          <my-icon onClick="changeTheme(event)" iconName="sun"></my-icon>
       </div>
     </header>
     <div class="OverlayNavSidebar">
