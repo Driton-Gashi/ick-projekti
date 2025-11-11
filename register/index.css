@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.signUpSideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.signUpSideBar {
+  width: 800%;
+  height: 500px;
+
+}
+
+.signupImage {
+  width: 200%;
+  height: 100px;
+
+}
+
+.signupImage {
+  width: 50%;
+  height: 50%;
+  margin-left: 50px;
+  align-items: baseline;
+  border-radius: 20px;
+  
+}
+
+.welcomeHeading {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  font-size: 60px;
+  height: 100px;
+}
+
+.tabs {
+  display: flex;
+  gap: 50px;
+  height: 900px;
+
+}
+
+.tab.active {
+  color: white;
+  border-bottom: 3;
+}
+
+
+.form-fields input {
+    
+    border-radius: 20px;
+    padding: 10px;
+    background: transparent;
+    border:  1px solid;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10px;
+}
