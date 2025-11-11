@@ -78,7 +78,7 @@ class MyIcon extends HTMLElement {
         </svg>
       `,
       profile: `
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+        <svg width="28" height="22" viewBox="0 0 32 32" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -200,6 +200,7 @@ class MyIcon extends HTMLElement {
         iconColor ? iconColor : 'var(--white-color)'
       }"/>
 </svg>
+
 `,
     };
 
