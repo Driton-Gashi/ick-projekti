@@ -1,9 +1,5 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 
 body {
@@ -26,7 +22,7 @@ body {
     overflow: hidden; 
     border-radius: 12px; 
     margin:0;
-    
+
     
 
 }
@@ -111,7 +107,7 @@ body {
 
 .user-placeholder-icon, .password-placeholder-icon {
     position: absolute;
-    right: 15px; /* Pozicionimi djathtas */
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
