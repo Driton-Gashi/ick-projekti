@@ -19,7 +19,9 @@ class MyIcon extends HTMLElement {
   }
 
   render() {
+    // ArrowLeft
     const iconName = this.getAttribute('iconName');
+
     const iconColor = this.getAttribute('iconColor');
     const width = this.getAttribute('width');
     const height = this.getAttribute('height');
@@ -78,7 +80,7 @@ class MyIcon extends HTMLElement {
         </svg>
       `,
       profile: `
-        <svg width="28" height="22" viewBox="0 0 32 32" fill="none"
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
@@ -200,7 +202,10 @@ class MyIcon extends HTMLElement {
         iconColor ? iconColor : 'var(--white-color)'
       }"/>
 </svg>
-
+`,
+      arrowLeft: `<svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.18287 17.6249L0.74964 9.18312M0.74964 9.18312L9.19141 0.749885M0.74964 9.18312L20.9996 9.19336" stroke="#EBFAFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 `,
     };
 

@@ -23,6 +23,7 @@
     <script src="/components/carousel/filter/index.js" defer></script>
     <script src="/components/carousel/collection/index.js" defer></script>
     <script src="/components/carousel/video/index.js" defer></script>
+    <script src="/components/FAQ/index.js"></script>
   </head>
   <body>
     <my-header></my-header>
@@ -147,65 +148,43 @@
       <div class="container">
         <h2>The Omni Questions Everyone`s Asking</h2>
         <div class="faqItemWrapper">
-          <h2 class="faqItem open">
-            <div class="question">
-              What is Omni ?
-              <my-icon iconName="chevronBottom"></my-icon>
-            </div>
-            <p class="answer">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              consectetur excepturi placeat, vitae illum nesciunt sed earum
-              sapiente accusantium facilis maxime, aut esse nemo accusamus
-              dolorum facere. Corrupti, accusamus explicabo.
-            </p>
-          </h2>
+          <my-faq
+            question="What is Omni ?"
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              facilis minus repellendus et rem quidem accusamus doloribus.
+              Dolor, cum ut."
+            open
+          ></my-faq>
 
-          <h2 class="faqItem">
-            <div class="question">
-              How do I Get Help If I Have Any Issues?
-              <my-icon iconName="chevronBottom"></my-icon>
-            </div>
-            <p class="answer">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores, reiciendis.
-            </p>
-          </h2>
+          <my-faq
+            question="How do I Get Help"
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              facilis minus repellendus et rem quidem accusamus doloribus.
+              Dolor, cum ut."
+          ></my-faq>
 
-          <h2 class="faqItem">
-            <div class="question">
-              Is Omni Good For Kids & Families?
-              <my-icon iconName="chevronBottom"></my-icon>
-            </div>
-            <p class="answer">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              conseclorem Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Dignissimos at maxime facilis, ab ea similique quia quam,
-              illo odio, obcaecati aperiam tempora molestias magni repudiandae
-              voluptatibus recusandae vel a explicabo?
-            </p>
-          </h2>
+          <my-faq
+            question="Is Omni Good For?"
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              facilis minus repellendus et rem quidem accusamus doloribus.
+              Dolor, cum ut."
+          ></my-faq>
 
-          <h2 class="faqItem">
-            <div class="question">
-              How much Does Omni Cost?
-              <my-icon iconName="chevronBottom"></my-icon>
-            </div>
-            <p class="answer">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              conseclorem Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Dignissimos at maxime facilis, ab ea similique quia quam,
-              illo odio, obcaecati aperiam tempora molestias magni repudiandae
-              voluptatibus recusandae vel a explicabo?
-            </p>
-          </h2>
+          <my-faq
+            question="How much Does Omni Cost?"
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              facilis minus repellendus et rem quidem accusamus doloribus.
+              Dolor, cum ut."
+          ></my-faq>
         </div>
       </div>
     </section>
   </body>
   <script>
+    // FAQ logic
     const faqItems = document.querySelectorAll('.faq .faqItem');
     faqItems.forEach(item => {
-      item.addEventListener('click', () => {
+      item.addEventListener('click', e => {
         item.classList.toggle('open');
         for (let i = 0; i < faqItems.length; i++) {
           if (faqItems[i] === item) continue;

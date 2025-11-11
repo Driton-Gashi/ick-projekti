@@ -53,9 +53,9 @@ class Header extends HTMLElement {
         <my-icon onClick="openSidebar()" class="burger" iconName="burger"></my-icon>
         <my-icon onClick="openSearchPopup()" class="search" iconName="search"></my-icon>
         <my-icon iconName="bell"></my-icon>
-        <a href="/login">
+        <a href="/register">
           <my-icon iconColor="${
-            pathName === '/login/' || pathName === '/login/index.html'
+            pathName === '/register/' || pathName === '/register/index.html'
               ? 'var(--blue-color)'
               : ''
           }" iconName="profile"></my-icon>

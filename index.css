@@ -202,6 +202,7 @@ section.kids button {
 }
 section.faq {
   min-height: 100vh;
+  color: var(--white-color);
 }
 section.kids img {
   width: 100%;
@@ -223,6 +224,12 @@ section.faq .faqItem {
 }
 section.faq .faqItem.open {
   height: 10rem;
+  @media (width < 48rem) {
+    height: 11rem;
+  }
+  @media (width < 29rem) {
+    height: 14.5rem;
+  }
 }
 
 section.faq .container > h2 {

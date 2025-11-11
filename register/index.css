@@ -1,67 +1,80 @@
-.container {
+body {
+  background: linear-gradient(90deg, #030a1b 34%, #9747ff 100%);
+}
+section.register {
   display: flex;
-  height: 100vh;
+  align-items: center;
+  min-height: 100vh;
+  gap: 69px;
+  margin-top: 2rem;
 }
 
-.signUpSideBar {
+.registerLeft {
+  width: 30%;
+  max-width: 300px;
+}
+
+.registerRight {
+  width: 100%;
+}
+
+.registerRight img {
+  width: 100%;
+}
+.title {
+  color: var(--white-color);
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+.linkWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 50px;
+  justify-content: space-between;
+  margin-bottom: 86px;
 }
-
-.signUpSideBar {
-  width: 800%;
-  height: 500px;
-
+.linkWrapper .active {
+  position: relative;
 }
-
-.signupImage {
-  width: 200%;
-  height: 100px;
-
+.linkWrapper .active:after {
+  content: ' ';
+  height: 2px;
+  background-color: var(--blue-color);
+  display: block;
+  width: 100%;
+  filter: blur(2px);
+  margin-top: 0.25rem;
+  position: absolute;
 }
-
-.signupImage {
-  width: 50%;
-  height: 50%;
-  margin-left: 50px;
-  align-items: baseline;
-  border-radius: 20px;
-  
+.linkWrapper a {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  text-decoration: none;
 }
-
-.welcomeHeading {
-    text-align: left;
-    margin-left: 0;
-    padding-left: 0;
-  font-size: 60px;
-  height: 100px;
+.registerForm .formRow {
+  margin-bottom: 48px;
 }
-
-.tabs {
-  display: flex;
-  gap: 50px;
-  height: 900px;
-
-}
-
-.tab.active {
+.registerForm input {
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--white-color);
   color: white;
-  border-bottom: 3;
+  width: 100%;
+  padding: 18px 15px;
+}
+.registerForm input::placeholder {
+  color: #808080;
 }
 
-
-.form-fields input {
-    
-    border-radius: 20px;
-    padding: 10px;
-    background: transparent;
-    border:  1px solid;
-    color: white;
+.registerForm button {
+  background: var(--blue-color);
+  border-radius: 12px;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1rem 2.25rem;
 }
 
-button {
-    cursor: pointer;
-    border-radius: 10px;
+section.register my-icon {
+  position: absolute;
+  top: 13px;
+  left: 21px;
 }
