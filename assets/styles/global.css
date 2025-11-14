@@ -184,7 +184,7 @@ img {
   border-radius: 12px;
   position: relative;
 }
-.plusBtn {
+.movie .plusBtn {
   position: absolute;
   top: -10px;
   left: -10px;
@@ -215,6 +215,68 @@ img {
 .movie .plusBtn:hover svg {
   transform: scale(1.2);
 }
+
+/* Movie Card CSS Start */
+
+my-movie-card {
+  width: 208px;
+  height: 296px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+my-movie-card .movieCard {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.movieCard .plusBtn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 56px;
+  height: 56px;
+  outline: 10px solid var(--dark-color);
+
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: rgba(3, 10, 27, 0.35) 0 5px 15px;
+
+  transition: top 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    left 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    width 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    height 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-radius 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+.movieCard .plusBtn my-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border-radius: 12px;
+}
+
+my-movie-card:hover .movieCard .plusBtn {
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 16px;
+}
+
+my-movie-card:hover .movieCard .plusBtn my-icon {
+  display: none;
+}
+
+/* Movie Card CSS End */
+
 .embla.filter {
   --slide-height: max-content;
   --slide-spacing: 1rem;

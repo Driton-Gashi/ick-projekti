@@ -1,4 +1,3 @@
-// helpers can stay outside the class
 function addPrevNextBtnsClickHandlers(embla, prevBtn, nextBtn, onButtonClick) {
   if (!prevBtn || !nextBtn) return () => {};
   const scrollPrev = () => {
@@ -62,7 +61,6 @@ class MyCollectionCarousel extends HTMLElement {
   }
 
   disconnectedCallback() {
-    // destroy when element is removed
     if (this._emblaApi) {
       this._emblaApi.destroy();
       this._emblaApi = null;
@@ -143,7 +141,6 @@ class MyCollectionCarousel extends HTMLElement {
   }
 
   initEmbla() {
-    // scope everything to THIS component
     const emblaNode = this.querySelector('.embla');
     if (!emblaNode) return;
 
@@ -154,7 +151,6 @@ class MyCollectionCarousel extends HTMLElement {
 
     const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
-    // EmblaCarousel and EmblaCarouselAutoplay must already be loaded via <script> before this file
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
       EmblaCarouselAutoplay({ delay: 2500 }),
     ]);
@@ -183,7 +179,6 @@ class MyCollectionCarousel extends HTMLElement {
       onNavButtonClick
     );
 
-    // store so we can destroy later
     this._emblaApi = emblaApi;
 
     emblaApi.on('destroy', removePrevNext);

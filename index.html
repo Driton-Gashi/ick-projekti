@@ -23,7 +23,8 @@
     <script src="/components/carousel/filter/index.js" defer></script>
     <script src="/components/carousel/collection/index.js" defer></script>
     <script src="/components/carousel/video/index.js" defer></script>
-    <script src="/components/FAQ/index.js"></script>
+    <script src="/components/FAQ/index.js" defer></script>
+    <script src="/components/movieCard/index.js" defer></script>
   </head>
   <body>
     <my-header></my-header>
@@ -64,7 +65,7 @@
           ></my-icon>
         </a>
       </div>
-      <my-carousel isMovies startFrom="1"></my-carousel>
+      <my-movie-carousel isMovies></my-movie-carousel>
     </section>
     <section class="movies">
       <div class="moviesTop container">
@@ -80,7 +81,7 @@
       <div class="moviesFilter container">
         <my-filter-carousel arrows></my-filter-carousel>
       </div>
-      <my-carousel isMovies numberOfItems="6" startFrom="7"></my-carousel>
+      <my-movie-carousel isMovies></my-movie-carousel>
     </section>
     <section class="goldenGlobe container">
       <img src="/assets/images/GoldenGlobe.png" draggable="false" />
@@ -99,7 +100,7 @@
       <div class="moviesFilter container">
         <my-filter-carousel arrows></my-filter-carousel>
       </div>
-      <my-carousel numberOfItems="5" isSeries></my-carousel>
+      <my-movie-carousel isSeries></my-movie-carousel>
     </section>
     <section class="price container">
       <img src="/assets/images/price.png" draggable="false" />
@@ -117,7 +118,7 @@
       </div>
       <my-collection-carousel></my-collection-carousel>
     </section>
-    <section class="video">
+    <!-- <section class="video">
       <div class="moviesTop container">
         <h2>Continue Watching</h2>
         <a href="#" class="seeMoreLink">
@@ -129,7 +130,7 @@
         </a>
       </div>
       <my-video-carousel></my-video-carousel>
-    </section>
+    </section> -->
     <section class="kids">
       <div class="container">
         <div class="kidsContent">
@@ -179,18 +180,20 @@
         </div>
       </div>
     </section>
+    <section class="studio container">
+      <h2>Studios</h2>
+      <div class="logoWrapper">
+        <img src="/assets/images/studio_logos/Brand_1.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_2.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_3.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_4.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_5.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_6.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_7.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_8.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_9.png" draggable="false" />
+        <img src="/assets/images/studio_logos/Brand_10.png" draggable="false" />
+      </div>
+    </section>
   </body>
-  <script>
-    // FAQ logic
-    const faqItems = document.querySelectorAll('.faq .faqItem');
-    faqItems.forEach(item => {
-      item.addEventListener('click', e => {
-        item.classList.toggle('open');
-        for (let i = 0; i < faqItems.length; i++) {
-          if (faqItems[i] === item) continue;
-          faqItems[i].classList.remove('open');
-        }
-      });
-    });
-  </script>
 </html>

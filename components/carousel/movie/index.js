@@ -1,4 +1,3 @@
-// helpers can stay outside the class
 function addPrevNextBtnsClickHandlers(embla, prevBtn, nextBtn, onButtonClick) {
   if (!prevBtn || !nextBtn) return () => {};
   const scrollPrev = () => {
@@ -62,7 +61,6 @@ class MyCarousel extends HTMLElement {
   }
 
   disconnectedCallback() {
-    // destroy when element is removed
     if (this._emblaApi) {
       this._emblaApi.destroy();
       this._emblaApi = null;
@@ -70,37 +68,58 @@ class MyCarousel extends HTMLElement {
   }
 
   render() {
-    const numberOfItems = this.getAttribute('numberOfItems') ?? 6;
     const arrows = this.getAttribute('arrows') !== null;
     const dots = this.getAttribute('dots') !== null;
     let isMovies = this.getAttribute('isMovies') !== null;
-    const isSeries = this.getAttribute('isSeries') !== null;
-    const startFrom = this.getAttribute('startFrom') ?? 1;
+    let isSeries = this.getAttribute('isSeries') !== null;
     if (!isMovies && !isSeries) isMovies = true;
-    const moviesToShow =
-      +startFrom + +numberOfItems > 12 ? 12 : +startFrom + +numberOfItems;
+
     let carouselItemHTML = '';
 
-    for (let i = +startFrom; i <= moviesToShow; i++) {
-      carouselItemHTML += `
-        <div class="embla__slide">
-          <div class="embla__slide__number">
-          ${
-            isMovies
-              ? `<div class="movie" style="background: url(/assets/images/movies/movie_${i}.png);">`
-              : ''
-          }
-          ${
-            isSeries
-              ? `<div class="movie" style="background: url(/assets/images/series/series_${i}.png);">`
-              : ''
-          }
-              <div class="plusBtn">
-                <my-icon iconName="plus"></my-icon>
-              </div>
+    const movies = [
+      { image1: 'movie_1.png', image2: 'movie_2.png' },
+      { image1: 'movie_2.png', image2: 'movie_3.png' },
+      { image1: 'movie_3.png', image2: 'movie_4.png' },
+      { image1: 'movie_4.png', image2: 'movie_5.png' },
+      { image1: 'movie_5.png', image2: 'movie_6.png' },
+      { image1: 'movie_6.png', image2: 'movie_7.png' },
+      { image1: 'movie_7.png', image2: 'movie_8.png' },
+      { image1: 'movie_8.png', image2: 'movie_9.png' },
+      { image1: 'movie_9.png', image2: 'movie_10.png' },
+      { image1: 'movie_10.png', image2: 'movie_11.png' },
+      { image1: 'movie_11.png', image2: 'movie_12.png' },
+      { image1: 'movie_12.png', image2: 'movie_1.png' },
+    ];
+
+    const series = [
+      { image1: 'series_1.png', image2: 'series_2.png' },
+      { image1: 'series_2.png', image2: 'series_3.png' },
+      { image1: 'series_3.png', image2: 'series_4.png' },
+      { image1: 'series_4.png', image2: 'series_5.png' },
+      { image1: 'series_5.png', image2: 'series_6.png' },
+      { image1: 'series_6.png', image2: 'series_1.png' },
+    ];
+
+    if (isMovies) {
+      for (let i = 0; i < movies.length; i++) {
+        carouselItemHTML += `
+          <div class="embla__slide">
+            <div class="embla__slide__number">
+            <my-movie-card onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isMovie image1="${movies[i].image1}" image2="${movies[i].image2}"></my-movie-card>
             </div>
-          </div>
-        </div>`;
+          </div>`;
+      }
+    }
+
+    if (isSeries) {
+      for (let i = 0; i < series.length; i++) {
+        carouselItemHTML += `
+          <div class="embla__slide">
+            <div class="embla__slide__number">
+            <my-movie-card onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isSerie image1="${series[i].image1}" image2="${series[i].image2}"></my-movie-card>
+            </div>
+          </div>`;
+      }
     }
 
     this.innerHTML = `
@@ -133,7 +152,6 @@ class MyCarousel extends HTMLElement {
   }
 
   initEmbla() {
-    // scope everything to THIS component
     const emblaNode = this.querySelector('.embla');
     if (!emblaNode) return;
 
@@ -144,7 +162,6 @@ class MyCarousel extends HTMLElement {
 
     const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
-    // EmblaCarousel and EmblaCarouselAutoplay must already be loaded via <script> before this file
     const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [
       EmblaCarouselAutoplay({ delay: 2500 }),
     ]);
@@ -173,7 +190,6 @@ class MyCarousel extends HTMLElement {
       onNavButtonClick
     );
 
-    // store so we can destroy later
     this._emblaApi = emblaApi;
 
     emblaApi.on('destroy', removePrevNext);
@@ -181,4 +197,4 @@ class MyCarousel extends HTMLElement {
   }
 }
 
-customElements.define('my-carousel', MyCarousel);
+customElements.define('my-movie-carousel', MyCarousel);

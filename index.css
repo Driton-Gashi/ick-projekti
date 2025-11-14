@@ -21,7 +21,8 @@
 .movies h2,
 .collection h2,
 .video h2,
-.faq h2 {
+.faq h2,
+.studio h2 {
   font-size: 3rem;
   font-weight: bold;
   color: var(--white-color);
@@ -203,6 +204,7 @@ section.kids button {
 section.faq {
   min-height: 100vh;
   color: var(--white-color);
+  padding-bottom: 110px;
 }
 section.kids img {
   width: 100%;
@@ -251,6 +253,35 @@ section.faq .faqItemWrapper {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+}
+
+section.studio {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 160px;
+}
+section.studio .logoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  @media (width < 768px) {
+    gap: 40px;
+  }
+}
+section.studio img {
+  width: calc(20% - 60px);
+  @media (width < 1025px) {
+    width: calc(25% - 60px);
+  }
+  @media (width < 768px) {
+    width: calc(33.33% - 40px);
+  }
+  @media (width < 468px) {
+    width: calc(50% - 40px);
+  }
 }
 
 @media (width < 64rem) {

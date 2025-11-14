@@ -1,14 +1,12 @@
 class MyIcon extends HTMLElement {
-  // 1) tell the browser we care about "iconName"
   static get observedAttributes() {
-    return ['iconname']; // lowercase! attributes are case-insensitive
+    return ['iconname'];
   }
 
   connectedCallback() {
     this.render();
   }
 
-  // 2) this runs every time iconname="" changes
   attributeChangedCallback(name, oldValue, newValue) {
     // console.log('Name: ', name);
     // console.log('oldValue: ', oldValue);
@@ -19,7 +17,6 @@ class MyIcon extends HTMLElement {
   }
 
   render() {
-    // ArrowLeft
     const iconName = this.getAttribute('iconName');
 
     const iconColor = this.getAttribute('iconColor');

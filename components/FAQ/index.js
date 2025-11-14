@@ -13,7 +13,7 @@ class FAQ extends HTMLElement {
 
     const open = this.getAttribute('open') !== null ? 'open' : '';
     this.innerHTML = `
-            <h2 onclick="openFaq" class="faqItem ${open}">
+            <h2 class="faqItem ${open}">
             <div class="question">
               ${question ? question : ''}
               <my-icon iconName="chevronBottom"></my-icon>
@@ -27,3 +27,14 @@ class FAQ extends HTMLElement {
 }
 
 customElements.define('my-faq', FAQ);
+
+const faqItems = document.querySelectorAll('.faq .faqItem');
+faqItems.forEach(item => {
+  item.addEventListener('click', e => {
+    item.classList.toggle('open');
+    for (let i = 0; i < faqItems.length; i++) {
+      if (faqItems[i] === item) continue;
+      faqItems[i].classList.remove('open');
+    }
+  });
+});

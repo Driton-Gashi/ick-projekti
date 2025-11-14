@@ -92,7 +92,6 @@ class MyVideoCarousel extends HTMLElement {
       EmblaCarouselAutoplay({ delay: 3000 }),
     ]);
 
-    // we'll reuse this
     const autoplay = emblaApi?.plugins()?.autoplay;
 
     const onNavButtonClick = embla => {
@@ -119,7 +118,6 @@ class MyVideoCarousel extends HTMLElement {
       onNavButtonClick
     );
 
-    // 🟣 NEW: pause on hover so videos don’t get slid away
     if (autoplay) {
       emblaNode.addEventListener('mouseenter', () => autoplay.stop());
       emblaNode.addEventListener('mouseleave', () => autoplay.play());
