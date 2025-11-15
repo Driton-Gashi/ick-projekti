@@ -55,7 +55,7 @@ class Header extends HTMLElement {
             : ''
         }" href="/series">Series</a></li>
         <li><a href="#">Collection</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="/#faq">FAQ</a></li>
       </nav>
       <div class="iconWrapper">
         <my-icon onClick="openSidebar()" class="burger" iconName="burger"></my-icon>
@@ -97,7 +97,7 @@ class Header extends HTMLElement {
               : ''
           }" href="/series">Series</a></li>
           <li><a href="#">Collection</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </nav>
         <div class="NavSidebarIcons">
           <my-icon iconName="bell"></my-icon>
