@@ -42,9 +42,13 @@ class Header extends HTMLElement {
       <nav>
         <li><a class="${
           pathName === '/' || pathName === '/index.html' ? 'currentPage' : ''
-        }" href="/">Home</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Movies</a></li>
+        }" href="/#top">Home</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a class="${
+          pathName === '/movies/' || pathName === '/index.html'
+            ? 'currentPage'
+            : ''
+        }" href="/movies">Movies</a></li>
         <li><a href="#">Series</a></li>
         <li><a href="#">Collection</a></li>
         <li><a href="#">FAQ</a></li>
@@ -72,9 +76,17 @@ class Header extends HTMLElement {
           <my-icon onClick="closeSidebar()" class="closeNavSidebarBtn" iconName="close"></my-icon>
         </div>
         <nav>
-          <li><a class="currentPage" href="#">Home</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Movies</a></li>
+            <li><a class="${
+              pathName === '/' || pathName === '/index.html'
+                ? 'currentPage'
+                : ''
+            }" href="/#top">Home</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a class="${
+            pathName === '/movies/' || pathName === '/index.html'
+              ? 'currentPage'
+              : ''
+          }" href="/movies">Movies</a></li>
           <li><a href="#">Series</a></li>
           <li><a href="#">Collection</a></li>
           <li><a href="#">FAQ</a></li>

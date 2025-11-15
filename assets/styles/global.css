@@ -15,6 +15,10 @@
   --pink-color: #ec5baa;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--dark-color);
   font-family: 'Lato', sans-serif;
@@ -225,7 +229,8 @@ my-movie-card {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 13px;
+  padding: 1px;
 }
 
 my-movie-card .movieCard {
@@ -242,7 +247,6 @@ my-movie-card .movieCard {
   width: 56px;
   height: 56px;
   outline: 10px solid var(--dark-color);
-
   border-radius: 12px;
   backdrop-filter: blur(4px);
   box-shadow: rgba(3, 10, 27, 0.35) 0 5px 15px;
@@ -253,6 +257,35 @@ my-movie-card .movieCard {
     height 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
     border-radius 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.35s ease,
     backdrop-filter 0.35s ease;
+}
+.plusBtn:after,
+.plusBtn:before {
+  content: '';
+  background-color: var(--dark-color);
+  position: absolute;
+  -webkit-mask: radial-gradient(
+    circle at bottom,
+    transparent 12px,
+    var(--dark-color) 9px
+  );
+  mask: radial-gradient(
+    circle at bottom right,
+    transparent 12px,
+    var(--dark-color) 0px
+  );
+}
+
+.plusBtn:before {
+  width: 12px;
+  height: 16px;
+  bottom: -22px;
+  left: 0px;
+}
+.plusBtn:after {
+  width: 16px;
+  height: 12px;
+  top: 0px;
+  right: -22px;
 }
 
 .movieCard .plusBtn my-icon {

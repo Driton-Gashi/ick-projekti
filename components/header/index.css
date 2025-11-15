@@ -6,7 +6,7 @@ header {
   max-width: 75rem;
   margin: 0 auto;
   position: fixed;
-  top: 2.3125rem;
+  top: 2.3rem;
   left: 1.5rem;
   right: 1.5rem;
   z-index: 1;
@@ -143,7 +143,9 @@ header .iconWrapper my-icon {
   align-items: center;
   justify-content: space-between;
 }
-
+.NavSidebar li {
+  list-style: none;
+}
 .NavSidebar li a {
   color: var(--white-color);
   text-decoration: none;

@@ -26,12 +26,9 @@ class MovieCard extends HTMLElement {
 
   render() {
     const image1 = this.getAttribute('image1') || 'movie_1.png';
-    const image2 = this.getAttribute('image2') || 'movie_2.png';
-    const isMovie = this.getAttribute('isMovie') !== null;
     const isSerie = this.getAttribute('isSerie') !== null;
-    if (!isMovie && !isSerie) isMovie = true;
 
-    const cardType = isMovie ? 'movies' : isSerie ? 'series' : 'movies';
+    const cardType = isSerie ? 'series' : 'movies';
 
     this.innerHTML = `
       <div class="movieCard" style="background-image: url('/assets/images/${cardType}/${image1}')">

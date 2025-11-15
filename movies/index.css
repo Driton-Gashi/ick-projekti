@@ -1,0 +1,24 @@
+section.main {
+  padding-top: calc(2.3rem + 80px + 30px);
+}
+section.main h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--white-color);
+  margin-bottom: 69px;
+}
+.filter {
+  padding: 0 2rem;
+  width: 100%;
+  margin-bottom: 95px;
+}
+.filter img {
+  width: 100%;
+}
+
+.movieList {
+  display: flex;
+  gap: 75px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
