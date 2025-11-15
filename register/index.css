@@ -65,6 +65,7 @@ section.register {
   width: 100%;
   padding: 18px 15px;
 }
+
 .registerForm input::placeholder {
   color: #808080;
 }
