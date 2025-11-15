@@ -1,162 +1,84 @@
-
-
-
-
 body {
-
-    color: #ffffff; 
-    font-family: sans-serif; 
-    min-height: 100vh;
-    display: flex; 
-   
-    align-items: center;
+  background: linear-gradient(
+    200deg,
+    #030a1b 50%,
+    rgba(151, 71, 255, 0.5) 100%
+  );
+}
+section.register {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  gap: 69px;
+  margin-top: 2rem;
 }
 
-
-
-.container{
-    display: flex;
-    max-width: 2000px; 
-    width: 95vw; 
-    height: 600px;
-    overflow: hidden; 
-    border-radius: 12px; 
-    margin:0;
-
-    
-
+.registerLeft {
+  width: 30%;
+  max-width: 300px;
 }
 
-
-
-.loginSidebar {
-    flex:2.5;
-    padding:0px 40px ;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width:100%;
-   
-    height:100%;
-    
-    
-
+.registerRight {
+  width: 100%;
 }
 
-
-
-.welcomeHeading {
-    font-size: 3em;
-    font-weight: bold;
-  
-    margin-bottom: 20px;
+.registerRight img {
+  width: 100%;
+}
+.title {
+  color: var(--white-color);
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+.linkWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+}
+.linkWrapper .active {
+  position: relative;
+}
+.linkWrapper .active:after {
+  content: ' ';
+  height: 2px;
+  background-color: var(--blue-color);
+  display: block;
+  width: 100%;
+  filter: blur(2px);
+  margin-top: 0.25rem;
+  position: absolute;
+}
+.linkWrapper a {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.registerForm .formRow {
+  margin-bottom: 48px;
+}
+.registerForm input {
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--white-color);
+  color: white;
+  width: 100%;
+  padding: 18px 15px;
+}
+.registerForm input::placeholder {
+  color: #808080;
 }
 
-.authTabs {
-    display: flex;
-    margin-bottom: 40px;
+.registerForm button {
+  background: var(--blue-color);
+  border-radius: 12px;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1rem 2.25rem;
 }
 
-.tab {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    margin-right: 25px;
-    padding-bottom: 5px;
+section.register my-icon {
+  position: absolute;
+  top: 13px;
+  left: 21px;
 }
-
-.tab.active {
-    color: #ffffff;
-    border-bottom: 2px solid #4a77e5 ; 
-    
-}
-
-
-.loginForm {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.inputContainer {
-
-    position: relative; 
-    margin-bottom: 20px;
-    background-color: #0b0a1a; 
-    border-radius: 8px;
-    height: 48px; 
-    
-    border: 1px solid #fff; 
-}
-
-.formInput {
-    width: 100%;
-    height: 100%;
-    
-    padding: 0 40px 0 15px; 
-    background: transparent; 
-    border: none;
-    color: #ffffff;
-    font-size: 1em;
-    outline: none;
-}
-
-.formInput::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.user-placeholder-icon, .password-placeholder-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    color: rgba(255, 255, 255, 0.6); 
-    cursor: pointer;
-    
-}
-
-.forgotPassword {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9em;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    align-self: flex-start;
-}
-
-.loginButton {
-    background-color: #4a77e5; 
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-
-.blueFantasyimg {
-    flex: 7.5; 
-    border-radius:20px;
-    background-color: #0a0a1a; 
-    position: relative; 
-    overflow: hidden;
-    
-
-
-    
-}
-.contentImage {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-    display: block; 
-  
-}
-
-
-
-

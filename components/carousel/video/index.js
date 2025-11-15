@@ -123,7 +123,6 @@ class MyVideoCarousel extends HTMLElement {
       emblaNode.addEventListener('mouseleave', () => autoplay.play());
     }
 
-    // store so we can destroy later
     this._emblaApi = emblaApi;
 
     emblaApi.on('destroy', removePrevNext);

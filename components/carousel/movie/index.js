@@ -195,7 +195,14 @@ class MyCarousel extends HTMLElement {
         carouselItemHTML += `
           <div class="embla__slide">
             <div class="embla__slide__number">
-            <my-movie-card name="${movies[i].name}" rating=${movies[i].rating} onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isMovie image1="${movies[i].image1}" image2="${movies[i].image2}"></my-movie-card>
+            <my-movie-card 
+              name="${movies[i].name}" 
+              rating=${movies[i].rating} 
+              onmouseover="movieHoverEffect(event)" 
+              onmouseleave="movieMouseLeaveEffect(event)" 
+              isMovie image1="${movies[i].image1}" 
+              image2="${movies[i].image2}"
+            ></my-movie-card>
             </div>
           </div>`;
       }
@@ -206,7 +213,14 @@ class MyCarousel extends HTMLElement {
         carouselItemHTML += `
           <div class="embla__slide">
             <div class="embla__slide__number">
-            <my-movie-card name="${series[i].name}" rating=${series[i].rating} onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isSerie image1="${series[i].image1}" image2="${series[i].image2}"></my-movie-card>
+              <my-movie-card 
+                name="${series[i].name}" 
+                rating=${series[i].rating} 
+                onmouseover="movieHoverEffect(event)" 
+                onmouseleave="movieMouseLeaveEffect(event)" 
+                isMovie image1="${series[i].image1}" 
+                image2="${series[i].image2}"
+              ></my-movie-card>
             </div>
           </div>`;
       }
