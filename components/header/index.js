@@ -45,11 +45,15 @@ class Header extends HTMLElement {
         }" href="/#top">Home</a></li>
         <li><a href="/#pricing">Pricing</a></li>
         <li><a class="${
-          pathName === '/movies/' || pathName === '/index.html'
+          pathName === '/movies/' || pathName === 'movies/index.html'
             ? 'currentPage'
             : ''
         }" href="/movies">Movies</a></li>
-        <li><a href="#">Series</a></li>
+        <li><a class="${
+          pathName === '/series/' || pathName === 'series/index.html'
+            ? 'currentPage'
+            : ''
+        }" href="/series">Series</a></li>
         <li><a href="#">Collection</a></li>
         <li><a href="#">FAQ</a></li>
       </nav>
@@ -83,11 +87,15 @@ class Header extends HTMLElement {
             }" href="/#top">Home</a></li>
           <li><a href="/#pricing">Pricing</a></li>
           <li><a class="${
-            pathName === '/movies/' || pathName === '/index.html'
+            pathName === '/movies/' || pathName === 'movies/index.html'
               ? 'currentPage'
               : ''
           }" href="/movies">Movies</a></li>
-          <li><a href="#">Series</a></li>
+          <li><a class="${
+            pathName === '/series/' || pathName === 'series/index.html'
+              ? 'currentPage'
+              : ''
+          }" href="/series">Series</a></li>
           <li><a href="#">Collection</a></li>
           <li><a href="#">FAQ</a></li>
         </nav>
