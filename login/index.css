@@ -82,3 +82,14 @@ section.register my-icon {
   top: 13px;
   left: 21px;
 }
+@media (width < 768px) {
+  .registerRight {
+    display: none;
+  }
+  .registerLeft {
+    width: 100%;
+  }
+  section.register {
+    justify-content: center;
+  }
+}
