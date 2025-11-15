@@ -204,6 +204,10 @@ class MyIcon extends HTMLElement {
 <path d="M9.18287 17.6249L0.74964 9.18312M0.74964 9.18312L9.19141 0.749885M0.74964 9.18312L20.9996 9.19336" stroke="#EBFAFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 `,
+      ratingStar: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.7893 3.2108C11.2376 2.13286 12.7647 2.13286 13.213 3.2108L15.295 8.21652L20.6991 8.64976C21.8628 8.74306 22.3347 10.1953 21.4481 10.9549L17.3307 14.4818L18.5886 19.7553C18.8595 20.8909 17.6241 21.7884 16.6278 21.1799L12.0012 18.354L7.37451 21.1799C6.37819 21.7884 5.1428 20.8909 5.41368 19.7553L6.6716 14.4818L2.55425 10.9549C1.66761 10.1953 2.13948 8.74306 3.30322 8.64976L8.70731 8.21652L10.7893 3.2108Z" fill="#E5DB22"/>
+</svg>
+`,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;

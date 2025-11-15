@@ -77,27 +77,117 @@ class MyCarousel extends HTMLElement {
     let carouselItemHTML = '';
 
     const movies = [
-      { image1: 'movie_1.png', image2: 'movie_2.png' },
-      { image1: 'movie_2.png', image2: 'movie_3.png' },
-      { image1: 'movie_3.png', image2: 'movie_4.png' },
-      { image1: 'movie_4.png', image2: 'movie_5.png' },
-      { image1: 'movie_5.png', image2: 'movie_6.png' },
-      { image1: 'movie_6.png', image2: 'movie_7.png' },
-      { image1: 'movie_7.png', image2: 'movie_8.png' },
-      { image1: 'movie_8.png', image2: 'movie_9.png' },
-      { image1: 'movie_9.png', image2: 'movie_10.png' },
-      { image1: 'movie_10.png', image2: 'movie_11.png' },
-      { image1: 'movie_11.png', image2: 'movie_12.png' },
-      { image1: 'movie_12.png', image2: 'movie_1.png' },
+      {
+        image1: 'movie_1.png',
+        image2: 'movie_2.png',
+        name: 'Shadow Rise',
+        rating: 5,
+      },
+      {
+        image1: 'movie_2.png',
+        image2: 'movie_3.png',
+        name: 'Neon Runner',
+        rating: 3,
+      },
+      {
+        image1: 'movie_3.png',
+        image2: 'movie_4.png',
+        name: 'Broken Empire',
+        rating: 4,
+      },
+      {
+        image1: 'movie_4.png',
+        image2: 'movie_5.png',
+        name: 'Silent Echo',
+        rating: 2,
+      },
+      {
+        image1: 'movie_5.png',
+        image2: 'movie_6.png',
+        name: 'Crimson Road',
+        rating: 5,
+      },
+      {
+        image1: 'movie_6.png',
+        image2: 'movie_7.png',
+        name: 'Night Drift',
+        rating: 1,
+      },
+      {
+        image1: 'movie_7.png',
+        image2: 'movie_8.png',
+        name: 'Iron Storm',
+        rating: 4,
+      },
+      {
+        image1: 'movie_8.png',
+        image2: 'movie_9.png',
+        name: 'Lost Memory',
+        rating: 5,
+      },
+      {
+        image1: 'movie_9.png',
+        image2: 'movie_10.png',
+        name: 'Dark Horizon',
+        rating: 2,
+      },
+      {
+        image1: 'movie_10.png',
+        image2: 'movie_11.png',
+        name: 'Phoenix Burn',
+        rating: 3,
+      },
+      {
+        image1: 'movie_11.png',
+        image2: 'movie_12.png',
+        name: 'Moonfall Edge',
+        rating: 4,
+      },
+      {
+        image1: 'movie_12.png',
+        image2: 'movie_1.png',
+        name: 'Final Pulse',
+        rating: 1,
+      },
     ];
 
     const series = [
-      { image1: 'series_1.png', image2: 'series_2.png' },
-      { image1: 'series_2.png', image2: 'series_3.png' },
-      { image1: 'series_3.png', image2: 'series_4.png' },
-      { image1: 'series_4.png', image2: 'series_5.png' },
-      { image1: 'series_5.png', image2: 'series_6.png' },
-      { image1: 'series_6.png', image2: 'series_1.png' },
+      {
+        image1: 'series_1.png',
+        image2: 'series_2.png',
+        name: 'Eternal Code',
+        rating: 4,
+      },
+      {
+        image1: 'series_2.png',
+        image2: 'series_3.png',
+        name: 'Hidden Truths',
+        rating: 2,
+      },
+      {
+        image1: 'series_3.png',
+        image2: 'series_4.png',
+        name: 'Neon District',
+        rating: 5,
+      },
+      {
+        image1: 'series_4.png',
+        image2: 'series_5.png',
+        name: 'Lost Signal',
+        rating: 3,
+      },
+      {
+        image1: 'series_5.png',
+        image2: 'series_6.png',
+        name: 'Nightfall Legacy',
+        rating: 1,
+      },
+      {
+        image1: 'series_6.png',
+        image2: 'series_1.png',
+        name: 'Codebreaker',
+        rating: 4,
+      },
     ];
 
     if (isMovies) {
@@ -105,7 +195,7 @@ class MyCarousel extends HTMLElement {
         carouselItemHTML += `
           <div class="embla__slide">
             <div class="embla__slide__number">
-            <my-movie-card onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isMovie image1="${movies[i].image1}" image2="${movies[i].image2}"></my-movie-card>
+            <my-movie-card name="${movies[i].name}" rating=${movies[i].rating} onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isMovie image1="${movies[i].image1}" image2="${movies[i].image2}"></my-movie-card>
             </div>
           </div>`;
       }
@@ -116,7 +206,7 @@ class MyCarousel extends HTMLElement {
         carouselItemHTML += `
           <div class="embla__slide">
             <div class="embla__slide__number">
-            <my-movie-card onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isSerie image1="${series[i].image1}" image2="${series[i].image2}"></my-movie-card>
+            <my-movie-card name="${series[i].name}" rating=${series[i].rating} onmouseover="movieHoverEffect(event)" onmouseleave="movieMouseLeaveEffect(event)" isSerie image1="${series[i].image1}" image2="${series[i].image2}"></my-movie-card>
             </div>
           </div>`;
       }

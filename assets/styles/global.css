@@ -231,6 +231,7 @@ my-movie-card {
   overflow: hidden;
   border-radius: 13px;
   padding: 1px;
+  transition: 0.3s ease filter;
 }
 
 my-movie-card .movieCard {
@@ -238,6 +239,7 @@ my-movie-card .movieCard {
   height: 100%;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .movieCard .plusBtn {
@@ -306,6 +308,35 @@ my-movie-card:hover .movieCard .plusBtn {
 
 my-movie-card:hover .movieCard .plusBtn my-icon {
   display: none;
+}
+
+my-movie-card .movieContent {
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--white-color);
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.4s ease opacity, 0.4s ease transform;
+}
+
+my-movie-card .movieContent h3 {
+  font-size: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+my-movie-card .movieContent .stars {
+  display: flex;
+}
+my-movie-card:hover .movieContent {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Movie Card CSS End */
