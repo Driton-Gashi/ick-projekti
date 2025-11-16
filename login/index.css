@@ -5,7 +5,8 @@ body {
     rgba(151, 71, 255, 0.5) 100%
   );
 }
-section.register {
+
+section.login {
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -13,32 +14,36 @@ section.register {
   margin-top: 2rem;
 }
 
-.registerLeft {
+.loginLeft {
   width: 30%;
   max-width: 300px;
 }
 
-.registerRight {
+.loginRight {
   width: 100%;
 }
 
-.registerRight img {
+.loginRight img {
   width: 100%;
 }
+
 .title {
   color: var(--white-color);
   font-size: 4.5rem;
   font-weight: 500;
-  margin-bottom: 26px;
+  margin-bottom: 40px;
 }
+
 .linkWrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 86px;
 }
+
 .linkWrapper .active {
   position: relative;
 }
+
 .linkWrapper .active:after {
   content: ' ';
   height: 2px;
@@ -49,47 +54,76 @@ section.register {
   margin-top: 0.25rem;
   position: absolute;
 }
+
 .linkWrapper a {
   color: var(--white-color);
   font-size: 1.5rem;
   text-decoration: none;
 }
-.registerForm .formRow {
-  margin-bottom: 48px;
+
+
+.loginForm .formRow {
+  margin-bottom: 60px;
+  position: relative; 
 }
-.registerForm input {
+
+
+.loginForm .formRow .inputIcon {
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+  right: 21px; 
+  z-index: 10;
+  display: flex; 
+  align-items: center;
+}
+
+.loginForm input {
   border-radius: 12px;
   background: transparent;
   border: 1px solid var(--white-color);
   color: white;
   width: 100%;
-  padding: 18px 15px;
+  padding: 18px 55px 18px 15px;
 }
-.registerForm input::placeholder {
+
+.loginForm input::placeholder {
   color: #808080;
 }
 
-.registerForm button {
+.forgotPassword {
+  display: block;
+  text-align:center;
+  width: 125px;
+  height: 19px;
+  margin-bottom: 44px;
+  margin-top: 26px; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #B1B7BA;
+  text-decoration: none;
+}
+
+.loginForm button {
   background: var(--blue-color);
   border-radius: 12px;
   color: var(--white-color);
+  font-family:'lato';
   cursor: pointer;
   padding: 1rem 2.25rem;
 }
 
-section.register my-icon {
-  position: absolute;
-  top: 13px;
-  left: 21px;
-}
+
 @media (width < 768px) {
-  .registerRight {
+  .loginRight {
     display: none;
   }
-  .registerLeft {
+  .loginLeft {
     width: 100%;
   }
-  section.register {
+  section.login {
     justify-content: center;
   }
 }

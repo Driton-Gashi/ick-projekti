@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome -Register</title>
+    <title>Welcome-Login</title>
     <link rel="stylesheet" href="./index.css" />
     <script src="/components/header/index.js"></script>
     <link rel="stylesheet" href="/assets/styles/global.css" />
     <script src="/components/icons/index.js"></script>
   </head>
   <body>
-    <section class="register container">
-      <div class="registerLeft">
+    <section class="login container">
+      <div class="loginLeft">
         <a href="javascript:history.back()">
-          <my-icon iconName="arrowLeft"></my-icon>
+         
         </a>
         <h1 class="title">Welcome</h1>
         <div class="linkWrapper">
@@ -21,39 +21,31 @@
           <a href="/register">SIGNUP</a>
         </div>
 
-        <form method="post" class="registerForm">
+        <form method="post" class="loginForm">
           <div class="formRow">
-            <input type="text" name="fullname" placeholder="Full" />
+            <span class="inputIcon">
+              <my-icon
+            iconName="userProfile"
+          ></my-icon> </my-icon></span>
+            <input type="text" name="name" placeholder="User" />
           </div>
+          
           <div class="formRow">
-            <input type="email" name="email" placeholder="Email" />
+            <span class="inputIcon">
+              <my-icon
+            iconName="passwordEye"
+          ></my-icon> </my-icon></span>
+            <input type="password" name="password" placeholder="Password" />
           </div>
+          <a href="#" class="forgotPassword">Forgot Password?</a>
+          
           <div class="formRow">
-            <input type="password" name="password" placeholder="password" />
-          </div>
-          <div class="formRow">
-            <input
-              type="password"
-              name="repeat-password"
-              placeholder="Repeat Password"
-              required
-            />
-          </div>
-          <div class="formRow">
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              required
-            />
-          </div>
-          <div class="formRow">
-            <button type="submit">Confirm</button>
+            <button type="submit">LOGIN</button>
           </div>
         </form>
       </div>
 
-      <div class="registerRight">
+      <div class="loginRight">
         <img src="/assets/images/signUpImage.png" alt="" />
       </div>
     </section>
