@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Driton",
+    "image": "musicals.png"
+  },
+  {
+    "name": "Marvel",
+    "image": "marvel.png"
+  },
+  {
+    "name": "Batman",
+    "image": "batman.png"
+  },
+  {
+    "name": "John Wick",
+    "image": "john-wick.png"
+  },
+  {
+    "name": "Insidious",
+    "image": "insidious.png"
+  },
+  {
+    "name": "Godzilla",
+    "image": "godzilla.png"
+  }
+]

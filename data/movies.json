@@ -1,0 +1,74 @@
+[
+  {
+    "image1": "movie_1.png",
+    "image2": "movie_2.png",
+    "name": "Shadow Rise",
+    "rating": 5
+  },
+  {
+    "image1": "movie_2.png",
+    "image2": "movie_3.png",
+    "name": "Neon Runner",
+    "rating": 3
+  },
+  {
+    "image1": "movie_3.png",
+    "image2": "movie_4.png",
+    "name": "Broken Empire",
+    "rating": 4
+  },
+  {
+    "image1": "movie_4.png",
+    "image2": "movie_5.png",
+    "name": "Silent Echo",
+    "rating": 2
+  },
+  {
+    "image1": "movie_5.png",
+    "image2": "movie_6.png",
+    "name": "Crimson Road",
+    "rating": 5
+  },
+  {
+    "image1": "movie_6.png",
+    "image2": "movie_7.png",
+    "name": "Night Drift",
+    "rating": 1
+  },
+  {
+    "image1": "movie_7.png",
+    "image2": "movie_8.png",
+    "name": "Iron Storm",
+    "rating": 4
+  },
+  {
+    "image1": "movie_8.png",
+    "image2": "movie_9.png",
+    "name": "Lost Memory",
+    "rating": 5
+  },
+  {
+    "image1": "movie_9.png",
+    "image2": "movie_10.png",
+    "name": "Dark Horizon",
+    "rating": 2
+  },
+  {
+    "image1": "movie_10.png",
+    "image2": "movie_11.png",
+    "name": "Phoenix Burn",
+    "rating": 3
+  },
+  {
+    "image1": "movie_11.png",
+    "image2": "movie_12.png",
+    "name": "Moonfall Edge",
+    "rating": 4
+  },
+  {
+    "image1": "movie_12.png",
+    "image2": "movie_1.png",
+    "name": "Final Pulse",
+    "rating": 1
+  }
+]

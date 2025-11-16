@@ -64,7 +64,8 @@ const series = [
 ];
 
 series.forEach(serie => {
-  seriesContainer.innerHTML += `<my-movie-card
+  seriesContainer.innerHTML += `
+  <my-movie-card
   onmouseover="movieHoverEffect(event)"
   onmouseleave="movieMouseLeaveEffect(event)"
   isSerie

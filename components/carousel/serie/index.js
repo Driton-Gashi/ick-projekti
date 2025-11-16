@@ -1,15 +1,15 @@
-const loadMovies = async () => {
+const loadSeries = async () => {
   try {
-    const response = await fetch('/data/movies.json');
+    const response = await fetch('/data/series.json');
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Something happened while trying to fetch movies:', error);
+    console.error('Something happened while trying to fetch series:', error);
     return [];
   }
 };
 
-class MyMovieCarousels extends HTMLElement {
+class MySerieCarousel extends HTMLElement {
   async connectedCallback() {
     await this.render();
     this.initEmbla();
@@ -25,21 +25,21 @@ class MyMovieCarousels extends HTMLElement {
   async render() {
     let carouselItemHTML = '';
 
-    let movies = await loadMovies();
+    let series = await loadSeries();
 
-    for (let i = 0; i < movies.length; i++) {
+    for (let i = 0; i < series.length; i++) {
       carouselItemHTML += `
           <div class="embla__slide">
             <div class="embla__slide__number">
-            <my-movie-card 
-              name="${movies[i].name}" 
-              rating=${movies[i].rating} 
-              onmouseover="movieHoverEffect(event)" 
-              onmouseleave="movieMouseLeaveEffect(event)" 
-              isMovie 
-              image1="${movies[i].image1}" 
-              image2="${movies[i].image2}"
-            ></my-movie-card>
+                <my-movie-card 
+                name="${series[i].name}" 
+                rating=${series[i].rating} 
+                onmouseover="movieHoverEffect(event)" 
+                onmouseleave="movieMouseLeaveEffect(event)" 
+                isSerie 
+                image1="${series[i].image1}" 
+                image2="${series[i].image2}"
+                ></my-movie-card>
             </div>
           </div>`;
     }
@@ -76,4 +76,4 @@ class MyMovieCarousels extends HTMLElement {
   }
 }
 
-customElements.define('my-movie-carousel', MyMovieCarousels);
+customElements.define('my-serie-carousel', MySerieCarousel);

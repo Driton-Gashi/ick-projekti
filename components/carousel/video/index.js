@@ -1,6 +1,16 @@
+const loadVideos = async () => {
+  try {
+    const response = await fetch('/data/videos.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Something happened while trying to fetch videos:', error);
+    return [];
+  }
+};
 class MyVideoCarousel extends HTMLElement {
-  connectedCallback() {
-    this.render();
+  async connectedCallback() {
+    await this.render();
     this.initEmbla();
   }
 
@@ -11,34 +21,13 @@ class MyVideoCarousel extends HTMLElement {
     }
   }
 
-  render() {
+  async render() {
     const arrows = this.getAttribute('arrows') !== null;
     const dots = this.getAttribute('dots') !== null;
 
     let carouselItemHTML = '';
 
-    const videos = [
-      {
-        name: 'Gozilla Minus One',
-        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/nAYKaslCXPc?si=1C8_s1Wvym8k5T30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-      },
-      {
-        name: 'Killers of the Flower Moon',
-        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/EG0si5bSd6I?si=JHWcQUA_ZeTSuoVf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-      },
-      {
-        name: 'KUNG FU PANDA 4',
-        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/_inKs4eeHiI?si=-q9h9EbwaXOFGJQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-      },
-      {
-        name: 'One Piece',
-        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Ades3pQbeh8?si=uGR6YO2nc8ldlSgF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-      },
-      {
-        name: 'Solo Leveling Season 2 -Arise from the Shadow',
-        iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/byJ7pxxhaDY?si=bIGWvqt0zumCp3X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
-      },
-    ];
+    const videos = await loadVideos();
 
     for (let i = 0; i < videos.length; i++) {
       carouselItemHTML += `
@@ -82,9 +71,6 @@ class MyVideoCarousel extends HTMLElement {
     if (!emblaNode) return;
 
     const viewportNode = emblaNode.querySelector('.embla__viewport');
-    const prevBtnNode = emblaNode.querySelector('.embla__button--prev');
-    const nextBtnNode = emblaNode.querySelector('.embla__button--next');
-    const dotsNode = emblaNode.querySelector('.embla__dots');
 
     const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
@@ -94,39 +80,12 @@ class MyVideoCarousel extends HTMLElement {
 
     const autoplay = emblaApi?.plugins()?.autoplay;
 
-    const onNavButtonClick = embla => {
-      const autoplay = embla?.plugins()?.autoplay;
-      if (!autoplay) return;
-
-      const resetOrStop =
-        autoplay.options.stopOnInteraction === false
-          ? autoplay.reset
-          : autoplay.stop;
-
-      resetOrStop();
-    };
-
-    const removePrevNext = addPrevNextBtnsClickHandlers(
-      emblaApi,
-      prevBtnNode,
-      nextBtnNode,
-      onNavButtonClick
-    );
-    const removeDots = addDotBtnsAndClickHandlers(
-      emblaApi,
-      dotsNode,
-      onNavButtonClick
-    );
-
     if (autoplay) {
       emblaNode.addEventListener('mouseenter', () => autoplay.stop());
       emblaNode.addEventListener('mouseleave', () => autoplay.play());
     }
 
     this._emblaApi = emblaApi;
-
-    emblaApi.on('destroy', removePrevNext);
-    emblaApi.on('destroy', removeDots);
   }
 }
 

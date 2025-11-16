@@ -18,42 +18,6 @@ function addPrevNextBtnsClickHandlers(embla, prevBtn, nextBtn, onButtonClick) {
   };
 }
 
-function addDotBtnsAndClickHandlers(embla, dotsRoot, onButtonClick) {
-  if (!dotsRoot) return () => {};
-  const slidesCount = embla.scrollSnapList().length;
-  const dotNodes = [];
-
-  for (let i = 0; i < slidesCount; i++) {
-    const button = document.createElement('button');
-    button.className = 'embla__dot';
-    button.type = 'button';
-    dotsRoot.appendChild(button);
-    dotNodes.push(button);
-  }
-
-  const selectDot = () => {
-    const selectedIndex = embla.selectedScrollSnap();
-    dotNodes.forEach((dotNode, index) => {
-      dotNode.classList.toggle('is-selected', index === selectedIndex);
-    });
-  };
-
-  dotNodes.forEach((dotNode, index) => {
-    dotNode.addEventListener('click', () => {
-      embla.scrollTo(index);
-      onButtonClick(embla);
-    });
-  });
-
-  selectDot();
-  embla.on('select', selectDot);
-
-  return () => {
-    embla.off('select', selectDot);
-    dotsRoot.innerHTML = '';
-  };
-}
-
 class MyFilterCarousel extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -109,18 +73,13 @@ class MyFilterCarousel extends HTMLElement {
             ${carouselItemHTML}
           </div>
         </div>      
-       ${
-         arrows
-           ? ` <button class="embla__button embla__button--prev" type="button">
+      <button class="embla__button embla__button--prev" type="button">
                   <my-icon iconName="chevronLeft"></my-icon>
                 </button>
 
                 <button class="embla__button embla__button--next" type="button">
                   <my-icon iconName="chevronRight"></my-icon>
-                </button>`
-           : ''
-       }
-       ${dots ? `<div class="embla__dots"></div>` : ''}
+                </button>
       </section>
     `;
   }
@@ -132,7 +91,6 @@ class MyFilterCarousel extends HTMLElement {
     const viewportNode = emblaNode.querySelector('.embla__viewport');
     const prevBtnNode = emblaNode.querySelector('.embla__button--prev');
     const nextBtnNode = emblaNode.querySelector('.embla__button--next');
-    const dotsNode = emblaNode.querySelector('.embla__dots');
 
     const OPTIONS = { dragFree: true, loop: true, align: 'start' };
 
@@ -158,16 +116,10 @@ class MyFilterCarousel extends HTMLElement {
       nextBtnNode,
       onNavButtonClick
     );
-    const removeDots = addDotBtnsAndClickHandlers(
-      emblaApi,
-      dotsNode,
-      onNavButtonClick
-    );
 
     this._emblaApi = emblaApi;
 
     emblaApi.on('destroy', removePrevNext);
-    emblaApi.on('destroy', removeDots);
   }
 }
 
