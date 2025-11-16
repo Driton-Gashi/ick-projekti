@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(90deg, #030a1b 34%, #9747ff 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 300px;
+}
+
+.allAvatars {
+  width: 100%;
+}
