@@ -59,7 +59,7 @@ class MyIcon extends HTMLElement {
           />
         </svg>
       `,
-      bell: `
+      bellActive: `
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_1357_5529)">
@@ -76,6 +76,10 @@ class MyIcon extends HTMLElement {
           </defs>
         </svg>
       `,
+      bell: `<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 32C16.2075 32 17.9982 30.2094 17.9982 28H10.0019C10.0019 30.2094 11.7925 32 14 32ZM27.4619 22.6431C26.2544 21.3456 23.995 19.3937 23.995 13C23.995 8.14375 20.59 4.25625 15.9988 3.3025V2C15.9988 0.895625 15.1038 0 14 0C12.8963 0 12.0013 0.895625 12.0013 2V3.3025C7.41004 4.25625 4.00504 8.14375 4.00504 13C4.00504 19.3937 1.74567 21.3456 0.538168 22.6431C0.163168 23.0463 -0.00308179 23.5281 4.32118e-05 24C0.00691821 25.025 0.811293 26 2.00629 26H25.9938C27.1888 26 27.9938 25.025 28 24C28.0032 23.5281 27.8369 23.0456 27.4619 22.6431Z" fill="#EBFAFF"/>
+</svg>
+`,
       profile: `
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
           xmlns="http://www.w3.org/2000/svg">

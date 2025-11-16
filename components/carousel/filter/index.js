@@ -18,9 +18,23 @@ function addPrevNextBtnsClickHandlers(embla, prevBtn, nextBtn, onButtonClick) {
   };
 }
 
+const fetchCategories = async () => {
+  try {
+    const response = await fetch('/data/categories.json');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(
+      'Something happened while trying to fetch categories:',
+      error
+    );
+    return [];
+  }
+};
+
 class MyFilterCarousel extends HTMLElement {
-  connectedCallback() {
-    this.render();
+  async connectedCallback() {
+    await this.render();
     this.initEmbla();
   }
 
@@ -31,7 +45,7 @@ class MyFilterCarousel extends HTMLElement {
     }
   }
 
-  render() {
+  async render() {
     let carouselItemHTML = '';
     const arrows = this.getAttribute('arrows') !== null;
     const dots = this.getAttribute('dots') !== null;
@@ -40,22 +54,7 @@ class MyFilterCarousel extends HTMLElement {
       e.target.classList.toggle('checked');
     };
 
-    const movieCategories = [
-      'Action',
-      'Adventure',
-      'Drama',
-      'Comedy',
-      'Romance',
-      'Thriller',
-      'Horror',
-      'Fantasy',
-      'Mystery',
-      'Animation',
-      'Documentary',
-      'Crime',
-      'Family',
-      'Musical',
-    ];
+    const movieCategories = await fetchCategories();
 
     for (let i = 0; i < movieCategories.length; i++) {
       carouselItemHTML += `

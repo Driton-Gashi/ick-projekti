@@ -54,13 +54,13 @@ class Header extends HTMLElement {
             ? 'currentPage'
             : ''
         }" href="/series">Series</a></li>
-        <li><a href="#">Collection</a></li>
+        <li><a href="/#collection">Collection</a></li>
         <li><a href="/#faq">FAQ</a></li>
       </nav>
       <div class="iconWrapper">
         <my-icon onClick="openSidebar()" class="burger" iconName="burger"></my-icon>
         <my-icon onClick="openSearchPopup()" class="search" iconName="search"></my-icon>
-        <my-icon iconName="bell"></my-icon>
+        <my-icon class="buzz-out-on-hover" iconName="bellActive"></my-icon>
         <a href="/register">
           <my-icon iconColor="${
             pathName === '/register/' || pathName === '/register/index.html'
@@ -96,11 +96,11 @@ class Header extends HTMLElement {
               ? 'currentPage'
               : ''
           }" href="/series">Series</a></li>
-          <li><a href="#">Collection</a></li>
+          <li><a href="/#collection">Collection</a></li>
           <li><a href="/#faq">FAQ</a></li>
         </nav>
         <div class="NavSidebarIcons">
-          <my-icon iconName="bell"></my-icon>
+          <my-icon class="buzz-out-on-hover" iconName="bellActive"></my-icon>
           <a href="/login">
             <my-icon iconName="profile"></my-icon>
           </a>
