@@ -1,38 +1,62 @@
 [
   {
     "image1": "breakingBad.png",
-    "image2": "series_2.png",
+    "image2": "breakingBad_2.png",
     "name": "Breaking Bad",
     "rating": 4
   },
   {
-    "image1": "series_2.png",
-    "image2": "series_3.png",
-    "name": "Hidden Truths",
+    "image1": "see.png",
+    "image2": "see_2.png",
+    "name": "",
     "rating": 2
   },
   {
-    "image1": "series_3.png",
-    "image2": "series_4.png",
-    "name": "Neon District",
+    "image1": "gameOfThrones.png",
+    "image2": "gameOfThrones_2.png",
+    "name": "Game Of Thrones",
     "rating": 5
   },
   {
-    "image1": "series_4.png",
-    "image2": "series_5.png",
-    "name": "Lost Signal",
+    "image1": "houseOfTheDragon.png",
+    "image2": "houseOfTheDragon_2.png",
+    "name": "House of the Dragon",
     "rating": 3
   },
   {
-    "image1": "series_5.png",
-    "image2": "series_6.png",
-    "name": "Nightfall Legacy",
+    "image1": "laCasaDePapel.png",
+    "image2": "laCasaDePapel_2.png",
+    "name": "La Casa De Papel",
     "rating": 1
   },
   {
-    "image1": "series_6.png",
-    "image2": "series_1.png",
-    "name": "Codebreaker",
+    "image1": "moonKnights.png",
+    "image2": "moonKnights_2.png",
+    "name": "Moon Knights",
     "rating": 4
+  },
+  {
+    "image1": "peakyBlinders.png",
+    "image2": "peakyBlinders_2.png",
+    "name": "Peaky Blinders",
+    "rating": 3
+  },
+  {
+    "image1": "reacher.png",
+    "image2": "reacher_2.png",
+    "name": "Reacher",
+    "rating": 3
+  },
+  {
+    "image1": "theBoys.png",
+    "image2": "theBoys_2.png",
+    "name": "The Boys",
+    "rating": 3
+  },
+  {
+    "image1": "vikings.png",
+    "image2": "vikings_2.png",
+    "name": "Vikings",
+    "rating": 3
   }
 ]

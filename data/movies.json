@@ -1,74 +1,81 @@
 [
   {
     "image1": "barbie.png",
-    "image2": "movie_2.png",
+    "image2": "barbie2.png",
     "name": "Barbie",
     "rating": 5
   },
   {
     "image1": "batman.png",
-    "image2": "movie_3.png",
+    "image2": "batman_2.png",
     "name": "Batman",
     "rating": 3
   },
   {
-    "image1": "movie_3.png",
-    "image2": "movie_4.png",
-    "name": "Broken Empire",
+    "image1": "bladeRunner.png",
+    "image2": "bladeRunner_2.png",
+    "name": "Blade Runner",
     "rating": 4
   },
   {
-    "image1": "movie_4.png",
-    "image2": "movie_5.png",
-    "name": "Silent Echo",
+    "image1": "bloodRunner.png",
+    "image2": "bloodRunner_2.png",
+    "name": "Blood&Gold",
     "rating": 2
   },
   {
-    "image1": "movie_5.png",
-    "image2": "movie_6.png",
-    "name": "Crimson Road",
+    "image1": "johnWick.png",
+    "image2": "johnWick.png",
+    "name": "John Wick",
     "rating": 5
   },
   {
-    "image1": "movie_6.png",
-    "image2": "movie_7.png",
-    "name": "Night Drift",
+    "image1": "laLaLand.png",
+    "image2": "lalaLand_2.png",
+    "name": "La la Land",
     "rating": 1
   },
   {
-    "image1": "movie_7.png",
-    "image2": "movie_8.png",
-    "name": "Iron Storm",
+    "image1": "napoleon.png",
+    "image2": "napoleon_2.png",
+    "name": "Napoleon",
     "rating": 4
   },
   {
-    "image1": "batman.png",
-    "image2": "movie_9.png",
-    "name": "Lost Memory",
+    "image1": "oppenHeimer.png",
+    "image2": "oppenHeimer_2.png",
+    "name": "Oppen heimer",
     "rating": 5
   },
   {
-    "image1": "movie_9.png",
-    "image2": "movie_10.png",
-    "name": "Dark Horizon",
+    "image1": "shazam.png",
+    "image2": "shazam_2.png",
+    "name": "Shazam",
     "rating": 2
   },
   {
-    "image1": "movie_10.png",
-    "image2": "movie_11.png",
-    "name": "Phoenix Burn",
+    "image1": "theFlash.png",
+    "image2": "theFlash_2.png",
+    "name": "The Flash",
     "rating": 3
   },
   {
-    "image1": "movie_11.png",
-    "image2": "movie_12.png",
-    "name": "Moonfall Edge",
+    "image1": "theKiller.png",
+    "image2": "theKiller_2.png",
+    "name": "The killer",
     "rating": 4
   },
   {
-    "image1": "movie_12.png",
-    "image2": "movie_1.png",
-    "name": "Final Pulse",
+    "image1": "theMarvelWoman.png",
+    "image2": "theMarvelWoman_2.png",
+    "name": "The Marvel Woman",
+    "rating": 1
+  },
+
+  {
+    "image1": "venom.png",
+    "image2": "venom_2.png",
+    "name": "Venom",
     "rating": 1
   }
 ]
