@@ -24,37 +24,16 @@
     <script src="/components/carousel/filter/index.js" defer></script>
     <script src="/components/carousel/collection/index.js" defer></script>
     <script src="/components/carousel/video/index.js" defer></script>
-    <script src="/components/FAQ/index.js" defer></script>
+    <script src="/components/FAQ/faqItem/index.js" defer></script>
     <script src="/components/movieCard/index.js" defer></script>
     <script src="/components/collectionCard/index.js" defer></script>
+    <script src="/components/heroSection/index.js"></script>
+    <script src="/components/FAQ/index.js" defer></script>
   </head>
   <body>
     <my-header></my-header>
     <section class="hero">
-      <div class="container">
-        <div class="heroContent">
-          <h2>The Witcher</h2>
-          <p>
-            Geralt of Rivia, a mutated monster-hunter for hire, journeys toward
-            his destiny in a turbulent world where people often prove more
-            wicked than beasts
-          </p>
-          <img src="/assets/images/hero-rating.png" draggable="false" />
-          <div class="heroBtnWrapper">
-            <button>
-              <my-icon iconName="play"></my-icon>
-              Watch Movie
-            </button>
-            <button>
-              More Info
-              <my-icon iconName="arrowRight"></my-icon>
-            </button>
-          </div>
-        </div>
-        <div class="posterWrapper">
-          <img src="/assets/images/FilmsPoster.png" draggable="false" />
-        </div>
-      </div>
+      <my-hero-section class="container"></my-hero-section>
     </section>
     <section class="trends">
       <div class="trendsTop container">
@@ -150,36 +129,7 @@
     <section id="faq" class="faq">
       <div class="container">
         <h2>The Omni Questions Everyone`s Asking</h2>
-        <div class="faqItemWrapper">
-          <my-faq
-            question="What is Omni ?"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              facilis minus repellendus et rem quidem accusamus doloribus.
-              Dolor, cum ut."
-            open
-          ></my-faq>
-
-          <my-faq
-            question="How do I Get Help"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              facilis minus repellendus et rem quidem accusamus doloribus.
-              Dolor, cum ut."
-          ></my-faq>
-
-          <my-faq
-            question="Is Omni Good For?"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              facilis minus repellendus et rem quidem accusamus doloribus.
-              Dolor, cum ut."
-          ></my-faq>
-
-          <my-faq
-            question="How much Does Omni Cost?"
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              facilis minus repellendus et rem quidem accusamus doloribus.
-              Dolor, cum ut."
-          ></my-faq>
-        </div>
+        <my-faq-section class="faqItemWrapper"></my-faq-section>
         <section class="studio">
           <h2>Studios</h2>
           <div class="logoWrapper">

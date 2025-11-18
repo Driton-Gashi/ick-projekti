@@ -9,7 +9,15 @@ class Header extends HTMLElement {
       overlay.classList.add('open');
     };
 
-    window.closeSidebar = () => {
+    window.closeSidebar = e => {
+      console.log(e.target.classList[0]);
+
+      if (
+        !(e.target.classList[0] === 'OverlayNavSidebar') &&
+        !(e.target.classList[0] === 'closeMenuIcon')
+      )
+        return;
+
       const overlay = this.querySelector('.OverlayNavSidebar');
       overlay.classList.remove('open');
     };
@@ -75,13 +83,13 @@ class Header extends HTMLElement {
           <my-icon class="sun" onClick="changeTheme(event)" iconName="sun"></my-icon>
       </div>
     </header>
-    <div class="OverlayNavSidebar">
+    <div onclick="closeSidebar(event)" class="OverlayNavSidebar">
       <div class="NavSidebar">
         <div class="NavSidebarTop">
           <a href="/">
             <img src="/assets/images/logo.svg" draggable="false"/>
           </a>
-          <my-icon onClick="closeSidebar()" class="closeNavSidebarBtn" iconName="close"></my-icon>
+          <my-icon onClick="closeSidebar(event)" class="closeNavSidebarBtn" iconName="close"></my-icon>
         </div>
         <nav>
             <li><a class="${

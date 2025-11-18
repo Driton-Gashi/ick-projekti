@@ -123,7 +123,7 @@ class MyIcon extends HTMLElement {
         </svg>
       `,
       close: `
-        <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px"
+        <svg class="closeMenuIcon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px"
           viewBox="0 0 24 24" fill="none">
           <path
             d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
@@ -169,13 +169,13 @@ class MyIcon extends HTMLElement {
       </svg>
       `,
       plus: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="9.5" width="5" height="24" rx="2" fill="${
-        iconColor ? iconColor : '#EBFAFF'
-      }"/>
-<rect y="14.5" width="5" height="24" rx="2" transform="rotate(-90 0 14.5)" fill="${
-        iconColor ? iconColor : '#EBFAFF'
-      }"/>
-</svg>
+                <rect x="9.5" width="5" height="24" rx="2" fill="${
+                  iconColor ? iconColor : '#EBFAFF'
+                }"/>
+                <rect y="14.5" width="5" height="24" rx="2" transform="rotate(-90 0 14.5)" fill="${
+                  iconColor ? iconColor : '#EBFAFF'
+                }"/>
+              </svg>
 `,
       chevronLeft: `<svg width="${width ? width : '10'}" height="${
         height ? height : '18'
@@ -219,8 +219,7 @@ class MyIcon extends HTMLElement {
 <path d="M8.35383 10.4752L5.52485 7.64617C5.50847 7.76176 5.5 7.87989 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5C8.12011 10.5 8.23824 10.4915 8.35383 10.4752Z" fill="#EBFAFF"/>
 <path d="M4.5 8C4.5 7.58738 4.5714 7.19143 4.70253 6.82385L2.63662 4.75794C1.85124 5.56148 1.24498 6.54076 0.882274 7.63113C0.802188 7.87188 0.802265 8.13233 0.882492 8.37303C1.87522 11.3515 4.68565 13.5 7.99918 13.5C8.9998 13.5 9.95455 13.3041 10.8272 12.9485L9.17615 11.2975C8.80857 11.4286 8.41262 11.5 8 11.5C6.067 11.5 4.5 9.933 4.5 8Z" fill="#EBFAFF"/>
 </svg>
- `
-
+ `,
     };
 
     this.innerHTML = icons[iconName] || invalidIcon;

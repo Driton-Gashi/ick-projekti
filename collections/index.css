@@ -1,7 +1,14 @@
 body {
-  background-image: url(/assets/images/gradientBackground.png);
-  background-position: center;
+  background-image: url(/assets/images/footerGradient.png);
+  background-position: bottom left;
   background-size: cover;
+}
+my-collection-card {
+  width: 231px;
+}
+section.hero {
+  margin-bottom: 27px;
+  min-height: 80vh;
 }
 section.main {
   padding-top: calc(2.3rem + 80px + 30px);

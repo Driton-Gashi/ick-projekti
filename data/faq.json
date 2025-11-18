@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this Movie App about?",
+    "answer": "Our Movie App lets you explore thousands of movies with detailed information, trailers, categories, and personalized watchlists. It is designed to be fast, simple, and enjoyable to use."
+  },
+  {
+    "question": "Do I need an account to save movies?",
+    "answer": "You can browse movies without an account, but creating one allows you to save favorites, track your watched movies, and receive personalized recommendations."
+  },
+  {
+    "question": "How often are new movies added?",
+    "answer": "We update our movie collection regularly. New releases are added every week, including trending titles, classics, and category-based suggestions."
+  },
+  {
+    "question": "Can I watch movies directly on the app?",
+    "answer": "Our app does not host or stream full movies. Instead, we provide trailers, details, and links from official streaming platforms where the movie is legally available."
+  },
+  {
+    "question": "Is the app free to use?",
+    "answer": "Yes! The core features of the app are completely free. We may offer optional premium features in the future, but browsing and discovering movies will always remain free."
+  }
+]

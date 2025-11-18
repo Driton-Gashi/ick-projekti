@@ -532,3 +532,104 @@ my-collection-card h3 {
   }
 }
 /* Carousel Style end */
+
+/* Hero Section Start */
+.hero {
+  min-height: 100vh;
+  background: url(/assets/images/heroBanner.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+.hero .heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  gap: 0.5rem;
+  color: var(--white-color);
+  width: 50%;
+}
+.hero .heroContent h2,
+.trends h2,
+.movies h2,
+.collection h2,
+.video h2,
+.faq h2,
+.studio h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--white-color);
+}
+.hero .heroContent p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.heroContent img {
+  width: 15rem;
+}
+.hero .heroContent .heroBtnWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+.hero .heroContent button {
+  background: var(--blue-color);
+  border-radius: 28px;
+  padding: 0.5rem 1.5rem;
+  color: var(--white-color);
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .heroContent button:last-child {
+  background-color: transparent;
+  border: 1px solid var(--blue-color);
+}
+
+.hero .container {
+  display: flex;
+}
+
+.hero .posterWrapper {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.hero .posterWrapper img {
+  width: 100%;
+  margin-bottom: 2rem;
+  max-width: 43.75rem;
+}
+/* Hero section end */
+
+/* 1024px */
+@media (width < 64rem) {
+  .hero {
+    background: url(/assets/images/heroBannerMobile.png);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+  }
+
+  .hero .container {
+    flex-direction: column-reverse;
+  }
+
+  .hero .heroContent {
+    margin-bottom: 2rem;
+  }
+
+  .hero .posterWrapper {
+    justify-content: center;
+  }
+
+  .hero .container .heroContent,
+  .hero .container .posterWrapper {
+    width: 100%;
+  }
+}

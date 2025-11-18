@@ -27,7 +27,6 @@ class MyCollectionCarousel extends HTMLElement {
 
   async render() {
     const collections = await loadCollections();
-    console.log(collections);
 
     let carouselItemHTML = '';
 
