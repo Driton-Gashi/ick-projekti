@@ -41,7 +41,7 @@ my-filter-carousel {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 button {

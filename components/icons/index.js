@@ -52,7 +52,7 @@ class MyIcon extends HTMLElement {
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M28 28L21.0711 21.0711M21.0711 21.0711C22.8807 19.2614 24 16.7614 24 14C24 8.47715 19.5228 4 14 4C8.47715 4 4 8.47715 4 14C4 19.5228 8.47715 24 14 24C16.7614 24 19.2614 22.8807 21.0711 21.0711Z"
-            stroke="#EBFAFF"
+            stroke="${iconColor ? iconColor : '#EBFAFF'}"
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"

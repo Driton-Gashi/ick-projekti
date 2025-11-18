@@ -1,14 +1,14 @@
 [
   {
-    "image1": "movie_1.png",
+    "image1": "barbie.png",
     "image2": "movie_2.png",
-    "name": "Shadow Rise",
+    "name": "Barbie",
     "rating": 5
   },
   {
-    "image1": "movie_2.png",
+    "image1": "batman.png",
     "image2": "movie_3.png",
-    "name": "Neon Runner",
+    "name": "Batman",
     "rating": 3
   },
   {
@@ -42,7 +42,7 @@
     "rating": 4
   },
   {
-    "image1": "movie_8.png",
+    "image1": "batman.png",
     "image2": "movie_9.png",
     "name": "Lost Memory",
     "rating": 5

@@ -95,8 +95,9 @@ header .iconWrapper my-icon {
 .searchPopup {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   backdrop-filter: blur(5px);
+  flex-direction: column;
 }
 
 .searchPopup .search {
@@ -106,9 +107,62 @@ header .iconWrapper my-icon {
   border-radius: 20px;
   border: 0;
   outline: 0;
-  margin-top: 6.25rem;
   background-color: var(--white-color);
 }
+.searchPopup .search.noRadius {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid var(--lighter-dark-color);
+}
+.searchPopup .searchInputWrapper {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchPopup .searchInputWrapper .searchButton {
+  z-index: 2;
+  position: absolute;
+  color: var(--dark-color);
+  padding: 1rem;
+  cursor: pointer;
+  right: 0;
+  transition: 0.1s ease transform;
+}
+
+.searchPopup .searchInputWrapper .searchButton:active {
+  transform: scale(0.5);
+}
+
+.searchPopup .searchPopupDropdown {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 2rem;
+  background-color: var(--white-color);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.searchPopup .searchPopupDropdown .searchDropdownMovie {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.searchPopup .searchPopupDropdown .searchDropdownMovie img {
+  width: 100px;
+  border-radius: 12px;
+}
+
 .closeSearchPopup {
   position: absolute;
   top: 2rem;
@@ -154,6 +208,7 @@ body:has(.OverlayNavSidebar.open) {
 .NavSidebar li {
   list-style: none;
 }
+
 .NavSidebar li a {
   color: var(--white-color);
   text-decoration: none;
@@ -161,6 +216,7 @@ body:has(.OverlayNavSidebar.open) {
   position: relative;
   display: block;
 }
+
 .NavSidebar nav {
   display: flex;
   flex-direction: column;

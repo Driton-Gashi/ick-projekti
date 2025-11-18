@@ -1,17 +1,15 @@
 class Header extends HTMLElement {
-  connectedCallback() {
-    this.render();
+  async connectedCallback() {
+    await this.render();
   }
 
-  render() {
+  async render() {
     window.openSidebar = () => {
       const overlay = this.querySelector('.OverlayNavSidebar');
       overlay.classList.add('open');
     };
 
     window.closeSidebar = e => {
-      console.log(e.target.classList[0]);
-
       if (
         !(e.target.classList[0] === 'OverlayNavSidebar') &&
         !(e.target.classList[0] === 'closeMenuIcon')
@@ -29,7 +27,15 @@ class Header extends HTMLElement {
 
     window.closeSearchPopup = () => {
       const overlay = this.querySelector('.searchPopup');
+      const searchInput = document.querySelector('.searchInputWrapper .search');
+      searchInput.classList.remove('noRadius');
       overlay.classList.remove('open');
+      const popupDropdown = document.querySelector('.searchPopupDropdown');
+
+      while (popupDropdown.firstChild) {
+        popupDropdown.removeChild(popupDropdown.firstChild);
+      }
+      popupDropdown.classList.add('hide');
     };
 
     window.changeTheme = e => {
@@ -62,7 +68,7 @@ class Header extends HTMLElement {
             ? 'currentPage'
             : ''
         }" href="/series">Series</a></li>
-        <li><a lass="${
+        <li><a class="${
           pathName === '/collections/' || pathName === 'collections/index.html'
             ? 'currentPage'
             : ''
@@ -125,12 +131,92 @@ class Header extends HTMLElement {
         </div>
       </div>
     </div>
-    <div class="searchPopup">
-      <my-icon onClick="closeSearchPopup()" class="closeSearchPopup" iconName="close"></my-icon>
-      <input type="text" placeholder="Search..." class="search" />
-      </div>
+    <my-search-popup class="searchPopup"></my-search-popup>
         `;
   }
 }
 
 customElements.define('my-header', Header);
+
+window.fetchMovies = async () => {
+  try {
+    const movies = await fetch('/data/movies.json');
+    let data = await movies.json();
+    return data;
+  } catch (error) {
+    console.error('Something happened while trying to fetch', error);
+    return [];
+  }
+};
+window.fetchSeries = async () => {
+  try {
+    const series = await fetch('/data/series.json');
+    let data = await series.json();
+    return data;
+  } catch (error) {
+    console.error('Something happened while trying to fetch', error);
+    return [];
+  }
+};
+
+window.handleSearch = async () => {
+  const allMovies = await fetchMovies();
+  const allSeries = await fetchSeries();
+
+  let searchInput = document.querySelector('.searchInputWrapper .search');
+  const popupDropdown = document.querySelector('.searchPopupDropdown');
+  if (!searchInput.value) return;
+  while (popupDropdown.firstChild) {
+    popupDropdown.removeChild(popupDropdown.firstChild);
+  }
+
+  let filteredMovies = allMovies.filter(item =>
+    item.name.toLowerCase().includes(searchInput.value.toLowerCase())
+  );
+  let filteredSeries = allSeries.filter(item =>
+    item.name.toLowerCase().includes(searchInput.value.toLowerCase())
+  );
+
+  if (!filteredMovies && !filteredSeries) return;
+
+  popupDropdown.classList.remove('hide');
+  searchInput.classList.add('noRadius');
+
+  filteredMovies.forEach(movie => {
+    const item = document.createElement('div');
+    item.className = 'searchDropdownMovie';
+    item.innerHTML = `<img src="/assets/images/movies/${movie.image1}"/> <h3>${movie.name}</h3>`;
+    popupDropdown.appendChild(item);
+  });
+
+  filteredSeries.forEach(serie => {
+    const item = document.createElement('div');
+    item.className = 'searchDropdownMovie';
+    item.innerHTML = `<img src="/assets/images/series/${serie.image1}"/> <h3>${serie.name}</h3>`;
+    popupDropdown.appendChild(item);
+  });
+
+  searchInput.value = '';
+};
+class SearchPopupComponent extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
+                <my-icon
+                    onClick="closeSearchPopup()"
+                    class="closeSearchPopup"
+                    iconName="close"
+                ></my-icon>
+                <div class="searchInputWrapper">
+                  <input type="text" placeholder="Search..." class="search" />
+                  <span class="searchButton" onclick="handleSearch()"><my-icon iconname="search" iconColor="var(--dark-color)"></my-icon></span>
+                </div>
+                 <div class="searchPopupDropdown hide"></div>
+        `;
+  }
+}
+
+customElements.define('my-search-popup', SearchPopupComponent);
