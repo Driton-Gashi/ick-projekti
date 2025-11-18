@@ -339,7 +339,113 @@ my-movie-card:hover .movieContent {
   transform: translateY(0);
 }
 
-/* Movie Card CSS End */
+/* Collection Card */
+.embla.collection {
+  --slide-height: 324px;
+  --slide-size: max-content;
+  --slide-spacing: 2rem;
+}
+my-collection-card {
+  width: 236px;
+  height: 324px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+my-collection-card h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+my-collection-card img {
+  position: absolute;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.collectionImage1 {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.collectionImage2 {
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+}
+.collectionImage3 {
+  top: 28px;
+  left: 28px;
+  z-index: 1;
+}
+
+/* Hover animations */
+my-collection-card:hover .collectionImage1 {
+  animation: seq1 1.3s ease-in-out forwards;
+}
+my-collection-card:hover .collectionImage2 {
+  animation: seq2 1.3s ease-in-out forwards;
+}
+my-collection-card:hover .collectionImage3 {
+  animation: seq3 1.3s ease-in-out forwards;
+}
+
+/* Animation sequences */
+@keyframes seq1 {
+  0% {
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+  40% {
+    z-index: 1;
+    top: 28px;
+    left: 28px;
+  }
+  100% {
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes seq2 {
+  0% {
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+  }
+  33% {
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+  100% {
+    z-index: 1;
+    top: 28px;
+    left: 28px;
+  }
+}
+
+@keyframes seq3 {
+  0% {
+    z-index: 1;
+    top: 28px;
+    left: 28px;
+  }
+  66% {
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+  100% {
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+  }
+}
 
 .embla.filter {
   --slide-height: max-content;
@@ -386,15 +492,10 @@ my-movie-card:hover .movieContent {
   background-color: var(--pink-color);
 }
 
-.embla.collection .movie {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.embla.collection .movie h3 {
+my-collection-card h3 {
   color: var(--white-color);
   font-size: 2rem;
+  text-shadow: 1px 1px 2px var(--dark-color);
 }
 
 .embla.video {

@@ -1,0 +1,58 @@
+body {
+  background-image: url(/assets/images/gradientBackground.png);
+  background-position: center;
+  background-size: cover;
+}
+section.main {
+  padding-top: calc(2.3rem + 80px + 30px);
+}
+section.main h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--white-color);
+  margin-bottom: 69px;
+}
+.filter {
+  padding: 0 2rem;
+  width: 100%;
+  margin-bottom: 95px;
+}
+.filter img {
+  width: 100%;
+}
+
+.collectionList {
+  display: flex;
+  gap: 75px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (width < 1024px) {
+  .collectionList {
+    gap: 48px;
+  }
+}
+
+@media (width < 768px) {
+  section.main h1 {
+    margin-bottom: 60px;
+  }
+  .collectionList {
+    gap: 24px;
+  }
+  .filter {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media (width < 488px) {
+  my-movie-card {
+    width: calc(50% - 12px);
+    height: 64vw;
+  }
+  .collectionList {
+    gap: 24px;
+  }
+}

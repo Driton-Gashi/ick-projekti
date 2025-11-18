@@ -54,7 +54,11 @@ class Header extends HTMLElement {
             ? 'currentPage'
             : ''
         }" href="/series">Series</a></li>
-        <li><a href="/#collection">Collection</a></li>
+        <li><a lass="${
+          pathName === '/collections/' || pathName === 'collections/index.html'
+            ? 'currentPage'
+            : ''
+        }" href="/collections">Collections</a></li>
         <li><a href="/#faq">FAQ</a></li>
       </nav>
       <div class="iconWrapper">
@@ -96,7 +100,12 @@ class Header extends HTMLElement {
               ? 'currentPage'
               : ''
           }" href="/series">Series</a></li>
-          <li><a href="/#collection">Collection</a></li>
+          <li><a class="${
+            pathName === '/collections/' ||
+            pathName === 'collections/index.html'
+              ? 'currentPage'
+              : ''
+          }" href="/collections">Collections</a></li>
           <li><a href="/#faq">FAQ</a></li>
         </nav>
         <div class="NavSidebarIcons">

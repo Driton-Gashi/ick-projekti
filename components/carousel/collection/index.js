@@ -27,6 +27,7 @@ class MyCollectionCarousel extends HTMLElement {
 
   async render() {
     const collections = await loadCollections();
+    console.log(collections);
 
     let carouselItemHTML = '';
 
@@ -34,9 +35,12 @@ class MyCollectionCarousel extends HTMLElement {
       carouselItemHTML += `
         <div class="embla__slide">
           <div class="embla__slide__number">
-            <div class="movie" style="background: url(/assets/images/collections/${collections[i].image});">
-              <h3>${collections[i].name}</h3>
-            </div>
+            <my-collection-card
+              image1="${collections[i].image1}"
+              image2="${collections[i].image2}"
+              image3="${collections[i].image3}"
+              name="${collections[i].name}"
+            ></my-collection-card>
           </div>
         </div>`;
     }

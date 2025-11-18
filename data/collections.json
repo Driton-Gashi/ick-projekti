@@ -1,26 +1,38 @@
 [
   {
-    "name": "Driton",
-    "image": "musicals.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   },
   {
-    "name": "Marvel",
-    "image": "marvel.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   },
   {
-    "name": "Batman",
-    "image": "batman.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   },
   {
-    "name": "John Wick",
-    "image": "john-wick.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   },
   {
-    "name": "Insidious",
-    "image": "insidious.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   },
   {
-    "name": "Godzilla",
-    "image": "godzilla.png"
+    "name": "Barbie",
+    "image1": "barbie.png",
+    "image2": "batman.png",
+    "image3": "venom.png"
   }
 ]
