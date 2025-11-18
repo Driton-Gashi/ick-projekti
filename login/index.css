@@ -114,7 +114,11 @@ section.login {
   cursor: pointer;
   padding: 1rem 2.25rem;
 }
-
+.loginLink{
+  text-decoration: none;
+  size:16px;
+  color:var(--white-color);
+}
 
 @media (width < 768px) {
   .loginRight {
