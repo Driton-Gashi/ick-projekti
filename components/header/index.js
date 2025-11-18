@@ -68,7 +68,7 @@ class Header extends HTMLElement {
               : ''
           }" iconName="profile"></my-icon>
         </a>
-          <my-icon onClick="changeTheme(event)" iconName="sun"></my-icon>
+          <my-icon class="sun" onClick="changeTheme(event)" iconName="sun"></my-icon>
       </div>
     </header>
     <div class="OverlayNavSidebar">
@@ -104,14 +104,14 @@ class Header extends HTMLElement {
           <a href="/login">
             <my-icon iconName="profile"></my-icon>
           </a>
-          <my-icon iconName="sun"></my-icon>
+          <my-icon class="sun" onClick="changeTheme(event)" iconName="sun"></my-icon>
         </div>
       </div>
     </div>
     <div class="searchPopup">
       <my-icon onClick="closeSearchPopup()" class="closeSearchPopup" iconName="close"></my-icon>
       <input type="text" placeholder="Search..." class="search" />
-    </OverlayNavSidebar>
+      </div>
         `;
   }
 }

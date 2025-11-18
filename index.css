@@ -98,9 +98,8 @@ section.trends {
 }
 section.movies {
   margin-bottom: 6rem;
-  background-image: url(/assets/images/moviesBackground.png);
+  background-image: url(/assets/images/sliderGradient.png);
   background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 section.goldenGlobe.container {
@@ -187,7 +186,9 @@ section.kids button {
 section.faq {
   min-height: 100vh;
   color: var(--white-color);
-  padding-bottom: 110px;
+  background-image: url(/assets/images/footerGradient.png);
+  background-position: center;
+  background-size: cover;
 }
 section.kids img {
   width: 100%;
@@ -238,6 +239,7 @@ section.faq .faqItemWrapper {
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+  padding-bottom: 110px;
 }
 
 section.studio {

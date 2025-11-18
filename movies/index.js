@@ -22,6 +22,8 @@ const loadMovies = async () => {
         isMovie
         image1="${movie.image1}"
         image2="${movie.image2}"
+        name="${movie.name}"
+        rating="${movie.rating}"
       ></my-movie-card>
   `;
   });

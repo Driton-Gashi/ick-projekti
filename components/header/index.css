@@ -192,6 +192,13 @@ body:has(.OverlayNavSidebar.open) {
   padding: 2rem;
 }
 
+.sun {
+  transition: 0.1s ease all;
+}
+.sun:active {
+  transform: scale(0.7);
+}
+
 @media (width > 64rem) {
   .burger {
     display: none;
