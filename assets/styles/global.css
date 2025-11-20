@@ -623,11 +623,10 @@ my-collection-card h3 {
   }
 
   .hero .posterWrapper {
-    justify-content: center;
+    display: none;
   }
 
-  .hero .container .heroContent,
-  .hero .container .posterWrapper {
+  .hero .container .heroContent {
     width: 100%;
   }
 }

@@ -1,3 +1,8 @@
+const removeAllElementsFromDropdown = popupDropdown => {
+  while (popupDropdown.firstChild) {
+    popupDropdown.removeChild(popupDropdown.firstChild);
+  }
+};
 class Header extends HTMLElement {
   async connectedCallback() {
     await this.render();
@@ -32,9 +37,7 @@ class Header extends HTMLElement {
       overlay.classList.remove('open');
       const popupDropdown = document.querySelector('.searchPopupDropdown');
 
-      while (popupDropdown.firstChild) {
-        popupDropdown.removeChild(popupDropdown.firstChild);
-      }
+      removeAllElementsFromDropdown(popupDropdown);
 
       popupDropdown.classList.add('hide');
       searchInput.value = '';
@@ -170,9 +173,7 @@ window.handleSearch = async () => {
   const allMovies = await fetchMovies();
   const allSeries = await fetchSeries();
 
-  while (popupDropdown.firstChild) {
-    popupDropdown.removeChild(popupDropdown.firstChild);
-  }
+  removeAllElementsFromDropdown(popupDropdown);
 
   let filteredMovies = allMovies.filter(item =>
     item.name.toLowerCase().includes(searchInput.value.toLowerCase())
@@ -227,7 +228,6 @@ class SearchPopupComponent extends HTMLElement {
                   <span class="searchButton" onclick="handleSearch()"><my-icon iconname="search" iconColor="var(--dark-color)"></my-icon></span>
                 </div>
                  <div class="searchPopupDropdown hide">
-                 <my-icon class="closeDropdown" iconName="close"></my-icon>
                  </div>
         `;
   }
