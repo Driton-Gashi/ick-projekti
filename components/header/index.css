@@ -94,10 +94,11 @@ header .iconWrapper my-icon {
 }
 .searchPopup {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   backdrop-filter: blur(5px);
   flex-direction: column;
+  padding-top: 6rem;
 }
 
 .searchPopup .search {
@@ -148,7 +149,9 @@ header .iconWrapper my-icon {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
-
+.searchPopup .searchPopupDropdown h3 {
+  color: var(--dark-color);
+}
 .searchPopup .searchPopupDropdown .searchDropdownMovie {
   display: flex;
   flex-direction: column;
@@ -277,8 +280,8 @@ body:has(.OverlayNavSidebar.open) {
     justify-content: flex-start;
     gap: 1rem;
   }
-  .searchPopup .search {
-    margin-inline: 2rem;
+  .searchPopup.open {
+    padding-inline: 2rem;
   }
 }
 @media (width < 48rem) {

@@ -1,3 +1,8 @@
+const removeAllElementsFromDropdown = popupDropdown => {
+  while (popupDropdown.firstChild) {
+    popupDropdown.removeChild(popupDropdown.firstChild);
+  }
+};
 class Header extends HTMLElement {
   async connectedCallback() {
     await this.render();
@@ -32,10 +37,10 @@ class Header extends HTMLElement {
       overlay.classList.remove('open');
       const popupDropdown = document.querySelector('.searchPopupDropdown');
 
-      while (popupDropdown.firstChild) {
-        popupDropdown.removeChild(popupDropdown.firstChild);
-      }
+      removeAllElementsFromDropdown(popupDropdown);
+
       popupDropdown.classList.add('hide');
+      searchInput.value = '';
     };
 
     window.changeTheme = e => {
@@ -160,15 +165,15 @@ window.fetchSeries = async () => {
 };
 
 window.handleSearch = async () => {
+  let searchInput = document.querySelector('.searchInputWrapper .search');
+  const popupDropdown = document.querySelector('.searchPopupDropdown');
+
+  if (!searchInput.value) return;
+
   const allMovies = await fetchMovies();
   const allSeries = await fetchSeries();
 
-  let searchInput = document.querySelector('.searchInputWrapper .search');
-  const popupDropdown = document.querySelector('.searchPopupDropdown');
-  if (!searchInput.value) return;
-  while (popupDropdown.firstChild) {
-    popupDropdown.removeChild(popupDropdown.firstChild);
-  }
+  removeAllElementsFromDropdown(popupDropdown);
 
   let filteredMovies = allMovies.filter(item =>
     item.name.toLowerCase().includes(searchInput.value.toLowerCase())
@@ -177,7 +182,15 @@ window.handleSearch = async () => {
     item.name.toLowerCase().includes(searchInput.value.toLowerCase())
   );
 
-  if (!filteredMovies && !filteredSeries) return;
+  if (!filteredMovies.length && !filteredSeries.length) {
+    popupDropdown.innerHTML = `
+    <h3>No Movies or Series found!</h3>
+    `;
+    searchInput.classList.add('noRadius');
+    popupDropdown.classList.remove('hide');
+
+    return;
+  }
 
   popupDropdown.classList.remove('hide');
   searchInput.classList.add('noRadius');
@@ -214,7 +227,8 @@ class SearchPopupComponent extends HTMLElement {
                   <input type="text" placeholder="Search..." class="search" />
                   <span class="searchButton" onclick="handleSearch()"><my-icon iconname="search" iconColor="var(--dark-color)"></my-icon></span>
                 </div>
-                 <div class="searchPopupDropdown hide"></div>
+                 <div class="searchPopupDropdown hide">
+                 </div>
         `;
   }
 }

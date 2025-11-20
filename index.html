@@ -32,8 +32,15 @@
   </head>
   <body>
     <my-header></my-header>
-    <section class="hero">
-      <my-hero-section class="container"></my-hero-section>
+    <section class="heroCarousel">
+      <my-hero-section
+        title="The Witcher"
+        description="Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts"
+        image="heroBanner.png"
+        image-mobile="heroBannerMobile.png"
+        rating="hero-rating.png"
+        posterImg="FilmsPoster.png"
+      ></my-hero-section>
     </section>
     <section class="trends">
       <div class="trendsTop container">
@@ -133,44 +140,35 @@
         <section class="studio">
           <h2>Studios</h2>
           <div class="logoWrapper">
+            <img src="/assets/images/studio_logos/amc.png" draggable="false" />
             <img
-              src="/assets/images/studio_logos/Brand_1.png"
+              src="/assets/images/studio_logos/appleTv+.png"
               draggable="false"
             />
             <img
-              src="/assets/images/studio_logos/Brand_2.png"
+              src="/assets/images/studio_logos/dcComics.png"
               draggable="false"
             />
             <img
-              src="/assets/images/studio_logos/Brand_3.png"
+              src="/assets/images/studio_logos/disney+.png"
+              draggable="false"
+            />
+            <img src="/assets/images/studio_logos/HBO.png" draggable="false" />
+            <img
+              src="/assets/images/studio_logos/marvel.png"
               draggable="false"
             />
             <img
-              src="/assets/images/studio_logos/Brand_4.png"
+              src="/assets/images/studio_logos/netfilx.png"
               draggable="false"
             />
             <img
-              src="/assets/images/studio_logos/Brand_5.png"
+              src="/assets/images/studio_logos/paramount.png"
               draggable="false"
             />
+            <img src="/assets/images/studio_logos/sony.png" draggable="false" />
             <img
-              src="/assets/images/studio_logos/Brand_6.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/Brand_7.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/Brand_8.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/Brand_9.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/Brand_10.png"
+              src="/assets/images/studio_logos/warnerBros.png"
               draggable="false"
             />
           </div>
@@ -178,4 +176,32 @@
       </div>
     </section>
   </body>
+  <script>
+    window.addEventListener('load', async event => {
+      const response = await fetch('/data/hero-sections.json');
+      const data = await response.json();
+      const heroCarousel = document.querySelector('.heroCarousel');
+      let currentHero = 0;
+      console.log(data[0].title);
+
+      setInterval(() => {
+        heroCarousel.innerHTML = `
+          <my-hero-section
+            title="${data[currentHero].title}"
+            description="${data[currentHero].description}"
+            image="${data[currentHero].image}"
+            image-mobile="${data[currentHero].imageMobile}"
+            rating="${data[currentHero].rating}"
+            posterImg="${data[currentHero].posterImg}"
+          ></my-hero-section>
+        `;
+
+        if (currentHero == data.length - 1) {
+          currentHero = 0;
+        } else {
+          currentHero++;
+        }
+      }, 5000);
+    });
+  </script>
 </html>
