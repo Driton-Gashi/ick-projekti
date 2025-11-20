@@ -536,9 +536,8 @@ my-collection-card h3 {
 /* Hero Section Start */
 .hero {
   min-height: 100vh;
-  background: url(/assets/images/heroBanner.png);
-  background-position: center;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
   display: flex;
   align-items: end;
 }
@@ -610,7 +609,6 @@ my-collection-card h3 {
 /* 1024px */
 @media (width < 64rem) {
   .hero {
-    background: url(/assets/images/heroBannerMobile.png);
     background-size: cover;
     background-position: center;
     height: 90vh;

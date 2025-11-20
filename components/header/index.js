@@ -35,7 +35,9 @@ class Header extends HTMLElement {
       while (popupDropdown.firstChild) {
         popupDropdown.removeChild(popupDropdown.firstChild);
       }
+
       popupDropdown.classList.add('hide');
+      searchInput.value = '';
     };
 
     window.changeTheme = e => {
@@ -160,12 +162,14 @@ window.fetchSeries = async () => {
 };
 
 window.handleSearch = async () => {
+  let searchInput = document.querySelector('.searchInputWrapper .search');
+  const popupDropdown = document.querySelector('.searchPopupDropdown');
+
+  if (!searchInput.value) return;
+
   const allMovies = await fetchMovies();
   const allSeries = await fetchSeries();
 
-  let searchInput = document.querySelector('.searchInputWrapper .search');
-  const popupDropdown = document.querySelector('.searchPopupDropdown');
-  if (!searchInput.value) return;
   while (popupDropdown.firstChild) {
     popupDropdown.removeChild(popupDropdown.firstChild);
   }
@@ -177,7 +181,15 @@ window.handleSearch = async () => {
     item.name.toLowerCase().includes(searchInput.value.toLowerCase())
   );
 
-  if (!filteredMovies && !filteredSeries) return;
+  if (!filteredMovies.length && !filteredSeries.length) {
+    popupDropdown.innerHTML = `
+    <h3>No Movies or Series found!</h3>
+    `;
+    searchInput.classList.add('noRadius');
+    popupDropdown.classList.remove('hide');
+
+    return;
+  }
 
   popupDropdown.classList.remove('hide');
   searchInput.classList.add('noRadius');
@@ -214,7 +226,9 @@ class SearchPopupComponent extends HTMLElement {
                   <input type="text" placeholder="Search..." class="search" />
                   <span class="searchButton" onclick="handleSearch()"><my-icon iconname="search" iconColor="var(--dark-color)"></my-icon></span>
                 </div>
-                 <div class="searchPopupDropdown hide"></div>
+                 <div class="searchPopupDropdown hide">
+                 <my-icon class="closeDropdown" iconName="close"></my-icon>
+                 </div>
         `;
   }
 }

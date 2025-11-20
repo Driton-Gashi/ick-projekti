@@ -72,13 +72,12 @@ class MyFilterCarousel extends HTMLElement {
             ${carouselItemHTML}
           </div>
         </div>      
-      <button class="embla__button embla__button--prev" type="button">
-                  <my-icon iconName="chevronLeft"></my-icon>
-                </button>
-
-                <button class="embla__button embla__button--next" type="button">
-                  <my-icon iconName="chevronRight"></my-icon>
-                </button>
+        <button class="embla__button embla__button--prev" type="button">
+          <my-icon iconName="chevronLeft"></my-icon>
+        </button>
+        <button class="embla__button embla__button--next" type="button">
+          <my-icon iconName="chevronRight"></my-icon>
+        </button>
       </section>
     `;
   }
