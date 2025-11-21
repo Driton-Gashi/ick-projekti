@@ -1,13 +1,10 @@
-class Footer extends HTMLElement {
-  
-  async connectedCallback() {
-    await this.render();
+class FooterComponent extends HTMLElement {
+  connectedCallback() {
+    this.render();
   }
 
-  
-  async render() {
-    this.innerHTML = `<link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="global.css">
+  render() {
+    this.innerHTML = `
      <footer>
   <div class="footerLinks">
     <div class="firstRow">
@@ -39,5 +36,4 @@ class Footer extends HTMLElement {
   }
 }
 
-
-customElements.define('my-footer', footerComponent);
+customElements.define('my-footer', FooterComponent);
