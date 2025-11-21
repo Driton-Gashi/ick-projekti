@@ -1,5 +1,17 @@
 body {
-  background: linear-gradient(90deg, #030a1b 34%, #9747ff 100%);
+  background-image: url(/assets/images/footerGradient.png);
+  background-position: bottom left;
+  background-size: cover;
+}
+
+:root {
+  --white-color: #ffffff;
+  --blue-color: #2196f3;
+}
+
+.container > h1,
+.container > h4 {
+  color: var(--white-color);
 }
 
 .container {
@@ -19,4 +31,35 @@ body {
 
 .allAvatars {
   width: 100%;
+}
+
+.formRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.confirm-btn {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 14px 48px;
+  border: none;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: var(--blue-color);
+}
+
+section.register {
+  position: relative;
+}
+
+section.register my-icon {
+  position: absolute;
+  top: 13px;
+  left: 21px;
 }
