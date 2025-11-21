@@ -1,19 +1,10 @@
+
+
 body {
   background-image: url(/assets/images/footerGradient.png);
   background-position: bottom left;
   background-size: cover;
 }
-
-:root {
-  --white-color: #ffffff;
-  --blue-color: #2196f3;
-}
-
-.container > h1,
-.container > h4 {
-  color: var(--white-color);
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -21,45 +12,9 @@ body {
   font-size: 21px;
 }
 
-.profile-text {
-  font-size: 24px;
-}
-
-.avatar {
-  width: 300px;
-}
-
-.allAvatars {
-  width: 100%;
-}
-
-.formRow {
+.container1 {
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
+  flex-direction: column;
 
-.confirm-btn {
-  background-color: var(--blue-color);
-  color: var(--white-color);
-  padding: 14px 48px;
-  border: none;
-  border-radius: 14px;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.confirm-btn:hover {
-  background-color: var(--blue-color);
-}
-
-section.register {
-  position: relative;
-}
-
-section.register my-icon {
-  position: absolute;
-  top: 13px;
-  left: 21px;
+  font-size: 21px;
 }
