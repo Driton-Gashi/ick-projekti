@@ -17,6 +17,9 @@ section.login {
 .loginLeft {
   width: 30%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .loginRight {
@@ -37,7 +40,7 @@ section.login {
 .linkWrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 86px;
+  margin-bottom: 46px;
 }
 
 .linkWrapper .active {
@@ -61,20 +64,18 @@ section.login {
   text-decoration: none;
 }
 
-
 .loginForm .formRow {
   margin-bottom: 60px;
-  position: relative; 
+  position: relative;
 }
-
 
 .loginForm .formRow .inputIcon {
   position: absolute;
   top: 50%;
-  transform:translateY(-50%);
-  right: 21px; 
+  transform: translateY(-50%);
+  right: 21px;
   z-index: 10;
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -93,16 +94,16 @@ section.login {
 
 .forgotPassword {
   display: block;
-  text-align:center;
+  text-align: center;
   width: 125px;
   height: 19px;
   margin-bottom: 44px;
-  margin-top: 26px; 
+  margin-top: 26px;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: #B1B7BA;
+  color: #b1b7ba;
   text-decoration: none;
 }
 
@@ -110,14 +111,19 @@ section.login {
   background: var(--blue-color);
   border-radius: 12px;
   color: var(--white-color);
-  font-family:'lato';
+  font-family: 'lato';
   cursor: pointer;
   padding: 1rem 2.25rem;
 }
-.loginLink{
+.loginLink {
   text-decoration: none;
-  size:16px;
-  color:var(--white-color);
+  size: 16px;
+  color: var(--white-color);
+}
+section.login .arrowBack {
+  position: absolute;
+  top: 13px;
+  left: 21px;
 }
 
 @media (width < 768px) {

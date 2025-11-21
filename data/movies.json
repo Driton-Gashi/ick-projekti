@@ -1,7 +1,7 @@
 [
   {
     "image1": "barbie.png",
-    "image2": "barbie2.png",
+    "image2": "barbie_2.png",
     "name": "Barbie",
     "rating": 5
   },
@@ -25,7 +25,7 @@
   },
   {
     "image1": "johnWick.png",
-    "image2": "johnWick.png",
+    "image2": "johnWick_2.png",
     "name": "John Wick",
     "rating": 5
   },

@@ -16,10 +16,12 @@ section.register {
 .registerLeft {
   width: 30%;
   max-width: 300px;
+  height: 100%;
 }
 
 .registerRight {
   width: 100%;
+  height: 100%;
 }
 
 .registerRight img {
@@ -34,7 +36,7 @@ section.register {
 .linkWrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 86px;
+  margin-bottom: 46px;
 }
 .linkWrapper .active {
   position: relative;
@@ -78,7 +80,7 @@ section.register {
   padding: 1rem 2.25rem;
 }
 
-section.register my-icon {
+section.register .arrowBack {
   position: absolute;
   top: 13px;
   left: 21px;

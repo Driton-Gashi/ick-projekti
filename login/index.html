@@ -11,10 +11,10 @@
   </head>
   <body>
     <section class="login container">
+      <a class="arrowBack" href="/">
+        <my-icon iconName="arrowLeft"></my-icon>
+      </a>
       <div class="loginLeft">
-        <a href="javascript:history.back()">
-         
-        </a>
         <h1 class="title">Welcome</h1>
         <div class="linkWrapper">
           <a href="/login" class="active">LOGIN</a>
@@ -24,23 +24,23 @@
         <form method="post" class="loginForm">
           <div class="formRow">
             <span class="inputIcon">
-              <my-icon
-            iconName="userProfile"
-          ></my-icon> </my-icon></span>
+              <my-icon width="16" height="16" iconName="profile"></my-icon>
+            </span>
             <input type="text" name="name" placeholder="User" />
           </div>
-          
+
           <div class="formRow">
             <span class="inputIcon">
-              <my-icon
-            iconName="passwordEye"
-          ></my-icon> </my-icon></span>
+              <my-icon iconName="passwordEye"></my-icon>
+            </span>
             <input type="password" name="password" placeholder="Password" />
           </div>
           <a href="#" class="forgotPassword">Forgot Password?</a>
-          
+
           <div class="formRow">
-            <button type="submit" ><a href="../loginSucceed/" class="loginLink">LOGIN</a></button>
+            <button type="submit">
+              <a href="../loginSucceed/" class="loginLink">LOGIN</a>
+            </button>
           </div>
         </form>
       </div>
