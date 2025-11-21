@@ -29,6 +29,7 @@
     <script src="/components/collectionCard/index.js" defer></script>
     <script src="/components/heroSection/index.js"></script>
     <script src="/components/FAQ/index.js" defer></script>
+    <script src="/components/studio/index.js"></script>
   </head>
   <body>
     <my-header></my-header>
@@ -137,47 +138,17 @@
       <div class="container">
         <h2>The Omni Questions Everyone`s Asking</h2>
         <my-faq-section class="faqItemWrapper"></my-faq-section>
-        <section class="studio">
-          <h2>Studios</h2>
-          <div class="logoWrapper">
-            <img src="/assets/images/studio_logos/amc.png" draggable="false" />
-            <img
-              src="/assets/images/studio_logos/appleTv+.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/dcComics.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/disney+.png"
-              draggable="false"
-            />
-            <img src="/assets/images/studio_logos/HBO.png" draggable="false" />
-            <img
-              src="/assets/images/studio_logos/marvel.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/netfilx.png"
-              draggable="false"
-            />
-            <img
-              src="/assets/images/studio_logos/paramount.png"
-              draggable="false"
-            />
-            <img src="/assets/images/studio_logos/sony.png" draggable="false" />
-            <img
-              src="/assets/images/studio_logos/warnerBros.png"
-              draggable="false"
-            />
-          </div>
-        </section>
+        <my-studio></my-studio>
       </div>
     </section>
   </body>
   <script>
     window.addEventListener('load', async event => {
+      const preload = src => {
+        const img = new Image();
+        img.src = src;
+      };
+
       const response = await fetch('/data/hero-sections.json');
       const data = await response.json();
       const heroCarousel = document.querySelector('.heroCarousel');
@@ -186,15 +157,15 @@
 
       setInterval(() => {
         heroCarousel.innerHTML = `
-          <my-hero-section
-            title="${data[currentHero].title}"
-            description="${data[currentHero].description}"
-            image="${data[currentHero].image}"
-            image-mobile="${data[currentHero].imageMobile}"
-            rating="${data[currentHero].rating}"
-            posterImg="${data[currentHero].posterImg}"
-          ></my-hero-section>
-        `;
+               <my-hero-section
+                 title="${data[currentHero].title}"
+                 description="${data[currentHero].description}"
+                 image="${data[currentHero].image}"
+                 image-mobile="${data[currentHero].imageMobile}"
+                 rating="${data[currentHero].rating}"
+                 posterImg="${data[currentHero].posterImg}"
+               ></my-hero-section>
+             `;
 
         if (currentHero == data.length - 1) {
           currentHero = 0;
@@ -202,6 +173,19 @@
           currentHero++;
         }
       }, 5000);
+
+      const response2 = await fetch('/data/movies.json');
+      const movies = await response2.json();
+
+      const response3 = await fetch('/data/series.json');
+      const series = await response3.json();
+
+      movies.forEach(movie => {
+        preload(`/assets/images/movies/${movie.image2}`);
+      });
+      series.forEach(serie => {
+        preload(`/assets/images/series/${serie.image2}`);
+      });
     });
   </script>
 </html>

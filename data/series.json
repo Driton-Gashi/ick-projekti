@@ -18,8 +18,8 @@
     "rating": 5
   },
   {
-    "image1": "houseOfTheDragon.png",
-    "image2": "houseOfTheDragon_2.png",
+    "image1": "houseOfTheDragon_2.webp",
+    "image2": "houseOfTheDragon.png",
     "name": "House of the Dragon",
     "rating": 3
   },
@@ -55,7 +55,7 @@
   },
   {
     "image1": "vikings.png",
-    "image2": "vikings_2.png",
+    "image2": "vikings_2.webp",
     "name": "Vikings",
     "rating": 3
   }
