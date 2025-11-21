@@ -1,0 +1,20 @@
+
+
+body {
+  background-image: url(/assets/images/footerGradient.png);
+  background-position: bottom left;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 21px;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 21px;
+}
