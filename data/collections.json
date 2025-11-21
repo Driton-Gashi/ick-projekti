@@ -2,26 +2,26 @@
   {
     "name": "Barbie",
     "image1": "barbie.png",
-    "image2": "batman.png",
-    "image3": "venom.png"
+    "image2": "barbie_2.png",
+    "image3": "batman.png"
   },
   {
-    "name": "Barbie",
-    "image1": "barbie.png",
-    "image2": "batman.png",
-    "image3": "venom.png"
+    "name": "Batman",
+    "image1": "batman.png",
+    "image2": "batman_2.png",
+    "image3": "bladeRunner.png"
   },
   {
-    "name": "Barbie",
-    "image1": "barbie.png",
-    "image2": "batman.png",
-    "image3": "venom.png"
+    "name": "Blade Runner",
+    "image1": "bladeRunner.png",
+    "image2": "bladeRunner_2.png",
+    "image3": "blood&gold.png"
   },
   {
-    "name": "Barbie",
-    "image1": "barbie.png",
-    "image2": "batman.png",
-    "image3": "venom.png"
+    "name": "Blood & Gold",
+    "image1": "blood&gold.png",
+    "image2": "blood&gold_2.png",
+    "image3": "johnWick.png"
   },
   {
     "name": "Barbie",

@@ -146,11 +146,6 @@
   </body>
   <script>
     window.addEventListener('load', async event => {
-      const preload = src => {
-        const img = new Image();
-        img.src = src;
-      };
-
       const response = await fetch('/data/hero-sections.json');
       const data = await response.json();
       const heroCarousel = document.querySelector('.heroCarousel');
@@ -175,19 +170,6 @@
           currentHero++;
         }
       }, 5000);
-
-      const response2 = await fetch('/data/movies.json');
-      const movies = await response2.json();
-
-      const response3 = await fetch('/data/series.json');
-      const series = await response3.json();
-
-      movies.forEach(movie => {
-        preload(`/assets/images/movies/${movie.image2}`);
-      });
-      series.forEach(serie => {
-        preload(`/assets/images/series/${serie.image2}`);
-      });
     });
   </script>
 </html>

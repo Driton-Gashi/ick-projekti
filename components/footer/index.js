@@ -6,7 +6,7 @@ class FooterComponent extends HTMLElement {
   render() {
     this.innerHTML = `
      <footer>
-  <div class="footerLinks">
+  <div class="footerLinks container">
     <div class="firstRow">
       <a href="#">Get the Omni App <my-icon iconName="chevronRight"></my-icon></a>
       <a href="#">Help <my-icon iconName="chevronRight"></my-icon></a>
@@ -22,7 +22,7 @@ class FooterComponent extends HTMLElement {
     </div>
   </div>
 
-  <div class="contactIcons">
+  <div class="contactIcons container">
     <a href="#" class="contactIcon"><my-icon iconName="facebook"></my-icon></a>
     <a href="#" class="contactIcon"><my-icon iconName="instagram"></my-icon></a>
     <a href="#" class="contactIcon"><my-icon iconName="linkedin"></my-icon></a>

@@ -363,6 +363,10 @@ my-collection-card img {
   position: absolute;
   border-radius: 12px;
   transition: transform 0.3s ease;
+  width: 208px;
+  height: 296px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .collectionImage1 {
@@ -502,35 +506,6 @@ my-collection-card h3 {
   --slide-size: 45%;
 }
 
-@media (width < 1200px) {
-  .embla {
-    --slide-size: 25%;
-  }
-}
-@media (width < 1024px) {
-  .embla {
-    --slide-size: 33%;
-  }
-}
-@media (width < 768px) {
-  .embla {
-    --slide-size: 40%;
-  }
-  .embla.video {
-    --slide-size: 100%;
-  }
-}
-@media (width < 620px) {
-  .embla {
-    --slide-size: 50%;
-  }
-}
-@media (width < 468px) {
-  .embla {
-    --slide-size: 65%;
-    --slide-height: 22rem;
-  }
-}
 /* Carousel Style end */
 
 /* Hero Section Start */
@@ -633,11 +608,6 @@ my-collection-card h3 {
 /*Footer*/
 footer {
   padding: 60px 0;
-  color: var(--white-color-);
-  font-family: 'Lato';
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
 }
 
 .footerLinks {
@@ -649,30 +619,20 @@ footer {
 .footerLinks a {
   color: var(--white-color);
   text-decoration: none;
-  font-size: 24px;
-  font-weight: 700;
-  font-style: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
 }
 
 .firstRow,
 .secondRow {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   margin-bottom: 30px;
-}
-.firstRow {
-  padding-left: 276px;
-  padding-right: 276px;
-}
-
-.footerLinks my-icon {
-  width: 22px;
-  height: 22px;
-  fill: var(--white-color-);
+  flex-wrap: wrap;
 }
 
 .contactIcons {
@@ -683,20 +643,45 @@ footer {
   margin-bottom: 120px;
 }
 
-.contactIcon my-icon {
-  width: 55px;
-  height: 55px;
-  fill: var(--white-color-);
-  cursor: pointer;
+.footerLinks a my-icon {
+  margin-top: -1.2px;
 }
 
-.footerLinks a my-icon {
-  width: 22px;
-  height: 22px;
-  fill: var(--white-color-);
-
-  vertical-align: middle;
-  display: inline-flex;
-  align-items: center;
-  margin-top: -1.2px;
+@media (width < 1200px) {
+  .embla {
+    --slide-size: 25%;
+  }
+}
+@media (width < 1024px) {
+  .embla {
+    --slide-size: 33%;
+  }
+}
+@media (width < 768px) {
+  .embla {
+    --slide-size: 40%;
+  }
+  .embla.video {
+    --slide-size: 100%;
+  }
+  .footerLinks a {
+    width: 100%;
+  }
+  footer .contactIcons {
+    flex-wrap: wrap;
+  }
+  footer {
+    padding: 0;
+  }
+}
+@media (width < 620px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
+@media (width < 468px) {
+  .embla {
+    --slide-size: 65%;
+    --slide-height: 22rem;
+  }
 }

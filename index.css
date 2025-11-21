@@ -228,6 +228,9 @@ section.studio img {
     margin-bottom: 4rem;
     margin-top: 3rem;
   }
+  section.studio {
+    padding-bottom: 80px;
+  }
 }
 
 /* 768px */
