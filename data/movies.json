@@ -18,10 +18,10 @@
     "rating": 4
   },
   {
-    "image1": "bloodRunner.png",
-    "image2": "bloodRunner_2.png",
+    "image1": "blood&gold.png",
+    "image2": "blood&gold_2.png",
     "name": "Blood&Gold",
-    "rating": 2
+    "rating": 1
   },
   {
     "image1": "johnWick.png",
@@ -71,7 +71,6 @@
     "name": "The Marvel Woman",
     "rating": 1
   },
-
   {
     "image1": "venom.png",
     "image2": "venom_2.png",
