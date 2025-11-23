@@ -92,20 +92,20 @@ section.login {
   color: #808080;
 }
 
+
+
 .forgotPassword {
   display: block;
   text-align: center;
-  width: 125px;
-  height: 19px;
-  margin-bottom: 44px;
+  width: 100%;
   margin-top: 26px;
-  font-family: 'Lato';
-  font-style: normal;
+  margin-bottom: 44px;
   font-weight: 500;
   font-size: 16px;
   color: #b1b7ba;
   text-decoration: none;
 }
+
 
 .loginForm button {
   background: var(--blue-color);
@@ -114,7 +114,10 @@ section.login {
   font-family: 'lato';
   cursor: pointer;
   padding: 1rem 2.25rem;
+  display:block;
+  margin: 0 auto;
 }
+
 .loginLink {
   text-decoration: none;
   size: 16px;
