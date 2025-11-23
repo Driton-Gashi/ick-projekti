@@ -113,6 +113,7 @@ const handleSubmit = async e => {
   const loggedInUser = {
     username: username,
     email: email,
+    profileImage: '/assets/images/profile.png',
   };
   window.localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
 
