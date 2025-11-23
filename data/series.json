@@ -3,60 +3,70 @@
     "image1": "breakingBad.png",
     "image2": "breakingBad_2.png",
     "name": "Breaking Bad",
-    "rating": 4
+    "rating": 4,
+    "category": "crime, drama, thriller"
   },
   {
     "image1": "see.png",
     "image2": "see_2.png",
-    "name": "",
-    "rating": 2
+    "name": "See",
+    "rating": 2,
+    "category": "sci-fi, action, drama"
   },
   {
     "image1": "gameOfThrones.png",
     "image2": "gameOfThrones_2.png",
     "name": "Game Of Thrones",
-    "rating": 5
+    "rating": 5,
+    "category": "fantasy, drama, adventure"
   },
   {
     "image1": "houseOfTheDragon_2.webp",
     "image2": "houseOfTheDragon.png",
     "name": "House of the Dragon",
-    "rating": 3
+    "rating": 3,
+    "category": "fantasy, drama, action"
   },
   {
     "image1": "laCasaDePapel.png",
     "image2": "laCasaDePapel_2.png",
     "name": "La Casa De Papel",
-    "rating": 1
+    "rating": 1,
+    "category": "crime, thriller, heist"
   },
   {
     "image1": "moonKnights.png",
     "image2": "moonKnights_2.png",
     "name": "Moon Knights",
-    "rating": 4
+    "rating": 4,
+    "category": "superhero, action, fantasy"
   },
   {
     "image1": "peakyBlinders.png",
     "image2": "peakyBlinders_2.png",
     "name": "Peaky Blinders",
-    "rating": 3
+    "rating": 3,
+    "category": "crime, drama, history"
   },
   {
     "image1": "reacher.png",
     "image2": "reacher_2.png",
     "name": "Reacher",
-    "rating": 3
+    "rating": 3,
+    "category": "action, thriller, crime"
   },
   {
     "image1": "theBoys.png",
     "image2": "theBoys_2.png",
     "name": "The Boys",
-    "rating": 3
+    "rating": 3,
+    "category": "superhero, action, dark-comedy"
   },
   {
     "image1": "vikings.png",
     "image2": "vikings_2.webp",
     "name": "Vikings",
-    "rating": 3
+    "rating": 3,
+    "category": "history, action, drama"
   }
 ]

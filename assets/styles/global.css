@@ -35,7 +35,7 @@ my-filter-carousel {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-  @media (width < 1025px) {
+  @media (width < 64rem) {
     max-width: 100%;
   }
 }
@@ -71,7 +71,7 @@ img {
   --slide-size: 20%;
   padding: 0 1.5rem;
   position: relative;
-  @media (width < 1024px) {
+  @media (width < 64rem) {
     --slide-spacing: 1rem;
   }
 }
@@ -324,11 +324,15 @@ my-movie-card .movieContent {
   transition: 0.4s ease opacity, 0.4s ease transform;
 }
 
-my-movie-card .movieContent h3 {
+my-movie-card .movieContent h3,
+my-movie-card .movieContent p {
   font-size: 1.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+my-movie-card .movieContent p {
+  font-size: 0.9rem;
 }
 
 my-movie-card .movieContent .stars {
@@ -341,9 +345,9 @@ my-movie-card:hover .movieContent {
 
 /* Collection Card */
 .embla.collection {
-  --slide-height: 324px;
+  --slide-height: 381px;
   --slide-size: max-content;
-  --slide-spacing: 2rem;
+  --slide-spacing: 5rem;
 }
 my-collection-card {
   width: 236px;
@@ -353,18 +357,26 @@ my-collection-card {
   cursor: pointer;
 }
 my-collection-card h3 {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 1rem;
 }
 my-collection-card img {
   position: absolute;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  width: 208px;
-  height: 296px;
+  /* width: 208px;
+  height: 296px; */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -385,7 +397,6 @@ my-collection-card img {
   z-index: 1;
 }
 
-/* Hover animations */
 my-collection-card:hover .collectionImage1 {
   animation: seq1 1.3s ease-in-out forwards;
 }
@@ -396,7 +407,6 @@ my-collection-card:hover .collectionImage3 {
   animation: seq3 1.3s ease-in-out forwards;
 }
 
-/* Animation sequences */
 @keyframes seq1 {
   0% {
     z-index: 3;
@@ -455,7 +465,7 @@ my-collection-card:hover .collectionImage3 {
   --slide-height: max-content;
   --slide-spacing: 1rem;
   --slide-size: max-content;
-  @media (width < 1025px) {
+  @media (width < 64.0625rem) {
     --slide-spacing: 0.5rem;
   }
 }
@@ -526,13 +536,7 @@ my-collection-card h3 {
   color: var(--white-color);
   width: 50%;
 }
-.hero .heroContent h2,
-.trends h2,
-.movies h2,
-.collection h2,
-.video h2,
-.faq h2,
-.studio h2 {
+.hero .heroContent h2 {
   font-size: 3rem;
   font-weight: bold;
   color: var(--white-color);
@@ -647,17 +651,26 @@ footer {
   margin-top: -1.2px;
 }
 
-@media (width < 1200px) {
+@media (width < 75rem) {
   .embla {
     --slide-size: 25%;
   }
 }
-@media (width < 1024px) {
+@media (width < 64rem) {
   .embla {
     --slide-size: 33%;
   }
 }
-@media (width < 768px) {
+@media (width < 56rem) {
+  footer .firstRow,
+  footer .secondRow {
+    gap: 27px;
+  }
+  .footerLinks a {
+    font-size: 1.3rem;
+  }
+}
+@media (width < 48rem) {
   .embla {
     --slide-size: 40%;
   }
@@ -666,6 +679,7 @@ footer {
   }
   .footerLinks a {
     width: 100%;
+    font-size: 1.5rem;
   }
   footer .contactIcons {
     flex-wrap: wrap;
@@ -674,14 +688,18 @@ footer {
     padding: 0;
   }
 }
-@media (width < 620px) {
+
+@media (width < 38.75rem) {
   .embla {
     --slide-size: 50%;
   }
 }
-@media (width < 468px) {
+@media (width < 29.25rem) {
   .embla {
     --slide-size: 65%;
     --slide-height: 22rem;
+  }
+  .hero .heroContent h2 {
+    font-size: 2rem;
   }
 }

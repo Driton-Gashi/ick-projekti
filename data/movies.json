@@ -3,78 +3,91 @@
     "image1": "barbie.png",
     "image2": "barbie_2.png",
     "name": "Barbie",
-    "rating": 5
+    "rating": 5,
+    "category": "fantasy, adventure, family"
   },
   {
     "image1": "batman.png",
     "image2": "batman_2.png",
     "name": "Batman",
-    "rating": 3
+    "rating": 3,
+    "category": "action, superhero, crime"
   },
   {
     "image1": "bladeRunner.png",
     "image2": "bladeRunner_2.png",
     "name": "Blade Runner",
-    "rating": 4
+    "rating": 4,
+    "category": "sci-fi, thriller, action"
   },
   {
     "image1": "blood&gold.png",
     "image2": "blood&gold_2.png",
     "name": "Blood&Gold",
-    "rating": 1
+    "rating": 1,
+    "category": "war, action, drama"
   },
   {
     "image1": "johnWick.png",
     "image2": "johnWick_2.png",
     "name": "John Wick",
-    "rating": 5
+    "rating": 5,
+    "category": "action, thriller, crime"
   },
   {
     "image1": "laLaLand.png",
     "image2": "lalaLand_2.png",
     "name": "La la Land",
-    "rating": 1
+    "rating": 1,
+    "category": "romance, musical, drama"
   },
   {
     "image1": "napoleon.png",
     "image2": "napoleon_2.png",
     "name": "Napoleon",
-    "rating": 4
+    "rating": 4,
+    "category": "history, drama, war"
   },
   {
     "image1": "oppenHeimer.png",
     "image2": "oppenHeimer_2.png",
     "name": "Oppen heimer",
-    "rating": 5
+    "rating": 5,
+    "category": "history, drama, biography"
   },
   {
     "image1": "shazam.png",
     "image2": "shazam_2.png",
     "name": "Shazam",
-    "rating": 2
+    "rating": 2,
+    "category": "superhero, comedy, action"
   },
   {
     "image1": "theFlash.png",
     "image2": "theFlash_2.png",
     "name": "The Flash",
-    "rating": 3
+    "rating": 3,
+    "category": "superhero, action, sci-fi"
   },
   {
     "image1": "theKiller.png",
     "image2": "theKiller_2.png",
     "name": "The killer",
-    "rating": 4
+    "rating": 4,
+    "category": "thriller, crime, drama"
   },
   {
     "image1": "theMarvelWoman.png",
     "image2": "theMarvelWoman_2.png",
     "name": "The Marvel Woman",
-    "rating": 1
+    "rating": 1,
+    "category": "superhero, action, fantasy"
   },
   {
     "image1": "venom.png",
     "image2": "venom_2.png",
     "name": "Venom",
-    "rating": 1
+    "rating": 1,
+    "category": "superhero, sci-fi, action"
   }
 ]

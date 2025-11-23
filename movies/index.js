@@ -30,3 +30,17 @@ const loadMovies = async () => {
 };
 
 loadMovies();
+
+window.addEventListener('load', async () => {
+  const preload = src => {
+    const img = new Image();
+    img.src = src;
+  };
+
+  const response = await fetch('/data/movies.json');
+  const movies = await response.json();
+
+  movies.forEach(movie => {
+    preload(`/assets/images/movies/${movie.image2}`);
+  });
+});

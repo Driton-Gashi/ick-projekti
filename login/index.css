@@ -129,7 +129,7 @@ section.login .arrowBack {
   left: 21px;
 }
 
-@media (width < 768px) {
+@media (width < 48rem) {
   .loginRight {
     display: none;
   }

@@ -1,20 +1,54 @@
-
-
-body {
-  background-image: url(/assets/images/footerGradient.png);
-  background-position: bottom left;
-  background-size: cover;
+body{
+    overflow:hidden;
 }
-.container {
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 21px;
+  color:var(--white-color);
+
 }
 
-.container1 {
-  display: flex;
-  flex-direction: column;
 
-  font-size: 21px;
+
+.moana{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:114px;
+}
+
+h3{
+
+    font-size:24px;
+    font-weight: 700;
+}
+.succeedCreate{
+
+    margin-top:60px;
+}
+
+.twoImages{
+
+    display:flex;
+    justify-content: space-between;
+    gap:50rem;
+
+}
+
+.deadpoolImg{
+    width:244px;
+    height:315px;
+    
+
+}
+
+.avatarImg{
+   width: 171px;
+   height:351px;
+
+}
+
+.firstImg{
+    margin-bottom:38px;
 }

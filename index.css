@@ -1,3 +1,14 @@
+.trends h2,
+.movies h2,
+.collection h2,
+.video h2,
+.faq h2,
+.studio h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--white-color);
+}
+
 section.trends {
   margin-top: 1.5rem;
   margin-bottom: 6rem;
@@ -91,9 +102,6 @@ section.kids h2 {
 section.kids p {
   font-size: 1.5rem;
   font-weight: 400;
-  @media (width < 768px) {
-    font-size: 1rem;
-  }
 }
 section.kids button {
   position: absolute;
@@ -104,12 +112,6 @@ section.kids button {
   border-radius: 12px;
   bottom: 3.5rem;
   cursor: pointer;
-  @media (width < 1024px) {
-    font-size: 1rem;
-  }
-  @media (width < 48rem) {
-    bottom: 2rem;
-  }
 }
 section.faq {
   min-height: 100vh;
@@ -138,12 +140,6 @@ section.faq .faqItem {
 }
 section.faq .faqItem.open {
   height: 10rem;
-  @media (width < 48rem) {
-    height: 11rem;
-  }
-  @media (width < 29rem) {
-    height: 14.5rem;
-  }
 }
 section.faq {
   padding-top: 104px;
@@ -182,19 +178,10 @@ section.studio .logoWrapper {
   flex-wrap: wrap;
   gap: 60px;
   justify-content: center;
-  @media (width < 768px) {
-    gap: 40px;
-  }
 }
 section.studio img {
   width: calc(20% - 60px);
-  @media (width < 1025px) {
-    width: calc(25% - 60px);
-  }
-  @media (width < 768px) {
-    width: calc(33.33% - 40px);
-  }
-  @media (width < 468px) {
+  @media (width < 29.25rem) {
     width: calc(50% - 40px);
   }
 }
@@ -231,11 +218,53 @@ section.studio img {
   section.studio {
     padding-bottom: 80px;
   }
+  section.kids button {
+    font-size: 1rem;
+  }
+  section.studio img {
+    width: calc(25% - 60px);
+  }
 }
 
 /* 768px */
 @media (width< 48rem) {
   section.kids h2 {
+    font-size: 2rem;
+  }
+  section.kids p {
+    font-size: 1rem;
+  }
+  section.kids button {
+    bottom: 3rem;
+    padding: 1rem 2rem;
+  }
+  section.kids img {
+    margin-bottom: 6rem;
+  }
+  section.faq .faqItem.open {
+    height: 11rem;
+  }
+  section.studio .logoWrapper {
+    gap: 40px;
+  }
+  section.studio img {
+    width: calc(25% - 30px);
+  }
+}
+
+@media (width < 29rem) {
+  section.studio img {
+    width: calc(33.33% - 30px);
+  }
+  section.faq .faqItem.open {
+    height: 14.5rem;
+  }
+  .trends h2,
+  .movies h2,
+  .collection h2,
+  .video h2,
+  .faq h2,
+  .studio h2 {
     font-size: 2rem;
   }
 }

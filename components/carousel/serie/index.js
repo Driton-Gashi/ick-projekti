@@ -39,6 +39,7 @@ class MySerieCarousel extends HTMLElement {
                 isSerie 
                 image1="${series[i].image1}" 
                 image2="${series[i].image2}"
+                category="${series[i].category}"
                 ></my-movie-card>
             </div>
           </div>`;

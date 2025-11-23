@@ -39,6 +39,7 @@ class MyMovieCarousels extends HTMLElement {
               isMovie 
               image1="${movies[i].image1}" 
               image2="${movies[i].image2}"
+              category="${movies[i].category}"
             ></my-movie-card>
             </div>
           </div>`;

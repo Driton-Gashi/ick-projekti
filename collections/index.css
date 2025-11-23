@@ -13,31 +13,34 @@ my-collection-card {
   justify-content: center;
 }
 
-@media (width < 1024px) {
-  .collectionList {
-    gap: 48px;
+@media (width < 55.6875rem) {
+  my-collection-card {
+    width: 190px;
+    height: 266px;
   }
 }
 
-@media (width < 768px) {
+@media (width < 48rem) {
   section.main h1 {
     margin-bottom: 60px;
   }
-  .collectionList {
-    gap: 24px;
-  }
+
   .filter {
     padding: 0;
     margin-bottom: 60px;
   }
 }
 
-@media (width < 488px) {
-  my-movie-card {
-    width: calc(50% - 12px);
-    height: 64vw;
-  }
+@media (width < 31.4375rem) {
   .collectionList {
-    gap: 24px;
+    gap: 48px;
+  }
+}
+
+/* 476 */
+@media (width < 29.75rem) {
+  my-collection-card {
+    width: 129px;
+    height: 181px;
   }
 }

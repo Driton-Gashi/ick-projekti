@@ -33,6 +33,7 @@ folder organization, reusable components, and clear communication through Slack.
 
 ## 🔗 Useful Links
 
+- 🌐 [Deployed](https://ickosovo.netlify.app/)
 - 📐
   [Figma Design Link](https://www.figma.com/design/aCVRqa9dzB1aSAhbFJXFVH/Movie---Series-Website--Community-?node-id=0-1&p=f&t=B9bjTXrkC4iNawXw-0)
 - 💻 [GitHub Repository](https://github.com/Driton-Gashi/ick-projekti)

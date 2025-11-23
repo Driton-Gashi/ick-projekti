@@ -13,7 +13,7 @@ class heroSection extends HTMLElement {
     const mobileImage =
       this.getAttribute('image-mobile') ?? 'heroBannerMobile.png';
 
-    const finalImage = window.innerWidth <= 1024 ? mobileImage : image;
+    const finalImage = window.innerWidth <= 768 ? mobileImage : image;
     const rating = this.getAttribute('rating') ?? 'hero-rating.png';
     const posterImg = this.getAttribute('posterImg') ?? 'FilmsPoster.png';
     this.innerHTML = `

@@ -1,3 +1,6 @@
+
+
+
 body {
   background-image: url(/assets/images/footerGradient.png);
   background-position: bottom left;
@@ -19,6 +22,11 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 21px;
+}
+
+.profile {
+  width: px;
+  height: 160px;
 }
 
 .profile-text {
