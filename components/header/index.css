@@ -264,7 +264,7 @@ body:has(.OverlayNavSidebar.open) {
   }
 }
 
-@media (width < 64.0625rem) {
+@media (width < 64rem) {
   header nav,
   header my-icon:not(.burger, .search) {
     display: none;
@@ -284,6 +284,7 @@ body:has(.OverlayNavSidebar.open) {
     padding-inline: 2rem;
   }
 }
+
 @media (width < 48rem) {
   .NavSidebar {
     max-width: 18.75rem;

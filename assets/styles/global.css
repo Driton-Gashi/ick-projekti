@@ -35,7 +35,7 @@ my-filter-carousel {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-  @media (width < 1025px) {
+  @media (width < 64rem) {
     max-width: 100%;
   }
 }
@@ -71,7 +71,7 @@ img {
   --slide-size: 20%;
   padding: 0 1.5rem;
   position: relative;
-  @media (width < 1024px) {
+  @media (width < 64rem) {
     --slide-spacing: 1rem;
   }
 }
@@ -455,7 +455,7 @@ my-collection-card:hover .collectionImage3 {
   --slide-height: max-content;
   --slide-spacing: 1rem;
   --slide-size: max-content;
-  @media (width < 1025px) {
+  @media (width < 64.0625rem) {
     --slide-spacing: 0.5rem;
   }
 }
@@ -647,17 +647,17 @@ footer {
   margin-top: -1.2px;
 }
 
-@media (width < 1200px) {
+@media (width < 75rem) {
   .embla {
     --slide-size: 25%;
   }
 }
-@media (width < 1024px) {
+@media (width < 64rem) {
   .embla {
     --slide-size: 33%;
   }
 }
-@media (width < 768px) {
+@media (width < 48rem) {
   .embla {
     --slide-size: 40%;
   }
@@ -674,12 +674,12 @@ footer {
     padding: 0;
   }
 }
-@media (width < 620px) {
+@media (width < 38.75rem) {
   .embla {
     --slide-size: 50%;
   }
 }
-@media (width < 468px) {
+@media (width < 29.25rem) {
   .embla {
     --slide-size: 65%;
     --slide-height: 22rem;

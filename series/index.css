@@ -28,13 +28,13 @@ section.main h1 {
   justify-content: center;
 }
 
-@media (width < 1024px) {
+@media (width < 64rem) {
   .movieList {
     gap: 48px;
   }
 }
 
-@media (width < 768px) {
+@media (width < 48rem) {
   section.main h1 {
     margin-bottom: 60px;
   }
@@ -47,7 +47,7 @@ section.main h1 {
   }
 }
 
-@media (width < 488px) {
+@media (width < 30.5rem) {
   my-movie-card {
     width: calc(50% - 12px);
     height: 64vw;

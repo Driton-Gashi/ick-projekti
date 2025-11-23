@@ -30,3 +30,17 @@ const loadSeries = async () => {
 };
 
 loadSeries();
+
+window.addEventListener('load', async () => {
+  const preload = src => {
+    const img = new Image();
+    img.src = src;
+  };
+
+  const response = await fetch('/data/series.json');
+  const series = await response.json();
+
+  series.forEach(serie => {
+    preload(`/assets/images/series/${serie.image2}`);
+  });
+});
