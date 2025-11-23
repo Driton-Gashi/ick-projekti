@@ -8,6 +8,7 @@
     <script src="/components/header/index.js"></script>
     <link rel="stylesheet" href="/assets/styles/global.css" />
     <script src="/components/icons/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <section class="register container">
@@ -21,30 +22,32 @@
           <a href="/register" class="active">SIGNUP</a>
         </div>
 
-        <form method="post" class="registerForm">
+        <form method="post" class="registerForm" onsubmit="handleSubmit(event)">
           <div class="formRow">
-            <input type="text" name="fullname" placeholder="Full" />
+            <input
+              class="username"
+              type="text"
+              name="fullname"
+              placeholder="Username"
+            />
           </div>
           <div class="formRow">
-            <input type="email" name="email" placeholder="Email" />
-          </div>
-          <div class="formRow">
-            <input type="password" name="password" placeholder="password" />
+            <input class="email" type="text" name="email" placeholder="Email" />
           </div>
           <div class="formRow">
             <input
+              class="password"
               type="password"
-              name="repeat-password"
-              placeholder="Repeat Password"
-              required
+              name="password"
+              placeholder="Password"
             />
           </div>
           <div class="formRow">
             <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              required
+              class="repeatPassword"
+              type="password"
+              name="repeat-password"
+              placeholder="Repeat Password"
             />
           </div>
           <div class="formRow">
@@ -54,8 +57,9 @@
       </div>
 
       <div class="registerRight">
-        <img src="/assets/images/signUpImage.png" alt="" />
+        <img src="/assets/images/signUpImage.webp" alt="" />
       </div>
     </section>
   </body>
+  <script src="./index.js"></script>
 </html>

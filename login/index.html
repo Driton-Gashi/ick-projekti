@@ -8,6 +8,7 @@
     <script src="/components/header/index.js"></script>
     <link rel="stylesheet" href="/assets/styles/global.css" />
     <script src="/components/icons/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <section class="login container">
@@ -21,33 +22,42 @@
           <a href="/register">SIGNUP</a>
         </div>
 
-        <form method="post" class="loginForm">
+        <form method="post" class="loginForm" onsubmit="handleSubmit(event)">
           <div class="formRow">
             <span class="inputIcon">
               <my-icon width="16" height="16" iconName="profile"></my-icon>
             </span>
-            <input type="text" name="name" placeholder="User" />
+            <input
+              class="username"
+              type="text"
+              name="name"
+              placeholder="User"
+            />
           </div>
-
           <div class="formRow">
             <span class="inputIcon">
-              <my-icon iconName="passwordEye"></my-icon>
+              <my-icon
+                onclick="toggleShowPassword(event)"
+                iconName="passwordEye"
+              ></my-icon>
             </span>
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              class="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
           </div>
           <a href="#" class="forgotPassword">Forgot Password?</a>
-
           <div class="formRow">
-            <button type="submit">
-              <a href="./succeed/" class="loginLink">LOGIN</a>
-            </button>
+            <button type="submit">Login</button>
           </div>
         </form>
       </div>
-
       <div class="loginRight">
-        <img src="/assets/images/signUpImage.png" alt="" />
+        <img src="/assets/images/signUpImage.webp" alt="" />
       </div>
     </section>
   </body>
+  <script src="./index.js"></script>
 </html>

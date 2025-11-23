@@ -1,9 +1,7 @@
 body {
-  background: linear-gradient(
-    200deg,
-    #030a1b 50%,
-    rgba(151, 71, 255, 0.5) 100%
-  );
+  background-image: url('/assets//images/registerBackground.png');
+  background-size: cover;
+  background-position: left bottom;
 }
 
 section.login {
@@ -92,8 +90,6 @@ section.login {
   color: #808080;
 }
 
-
-
 .forgotPassword {
   display: block;
   text-align: center;
@@ -106,7 +102,6 @@ section.login {
   text-decoration: none;
 }
 
-
 .loginForm button {
   background: var(--blue-color);
   border-radius: 12px;
@@ -114,7 +109,7 @@ section.login {
   font-family: 'lato';
   cursor: pointer;
   padding: 1rem 2.25rem;
-  display:block;
+  display: block;
   margin: 0 auto;
 }
 

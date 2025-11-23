@@ -1,9 +1,7 @@
 body {
-  background: linear-gradient(
-    200deg,
-    #030a1b 50%,
-    rgba(151, 71, 255, 0.5) 100%
-  );
+  background-image: url('/assets//images/registerBackground.png');
+  background-size: cover;
+  background-position: left bottom;
   display: flex;
   justify-content: center;
   align-items: center;

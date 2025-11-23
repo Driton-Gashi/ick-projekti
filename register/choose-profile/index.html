@@ -5,40 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Succed Registering</title>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/assets/styles/global.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-   
-
-      <div class="container">
-        <h1>Hi Diona</h1>
-
-        <img src="/assets/images/profile.png" />
-        <h4>choose your profile</h4>
-       
-
-        <div>
-       <img src="/assets/images/registerSucced/deadPool.png" />
-       <img src="/assets/images/registerSucced/joker.png" />
-       <img src="/assets/images/registerSucced/spiderman.png" />
-       <img src="/assets/images/registerSucced/batman.png" />
-       <img src="/assets/images/registerSucced/antMan.png" />
-        </div>
-        <div>
+    <div class="container">
+      <h1>
+        Hi
+        <span id="name">Diona</span>
+      </h1>
+      <img class="currentProfile" src="/assets/images/profile.png" />
+      <h4>choose your profile</h4>
+      <div class="imageWrapper">
+        <img src="/assets/images/registerSucced/deadPool.png" />
+        <img src="/assets/images/registerSucced/joker.png" />
+        <img src="/assets/images/registerSucced/spiderman.png" />
+        <img src="/assets/images/registerSucced/batman.png" />
+        <img src="/assets/images/registerSucced/antMan.png" />
+      </div>
+      <div class="imageWrapper">
         <img src="/assets/images/registerSucced/insideOut.png" />
-       <img src="/assets/images/registerSucced/moana.png" />
-       <img src="/assets/images/registerSucced/garfield.png" />
-       <img src="/assets/images/registerSucced/sonic.png" />
-       <img src="/assets/images/registerSucced/chooseAPhoto.png" />
-        
-       <div class="formRow">
-       <a href="/accCreatedSuccesfully/index.html">
-       <button type="button" class="confirm-btn">Confirm</button></a>
-       </div>
-
-          
-
+        <img src="/assets/images/registerSucced/moana.png" />
+        <img src="/assets/images/registerSucced/garfield.png" />
+        <img src="/assets/images/registerSucced/sonic.png" />
+        <img src="/assets/images/registerSucced/chooseAPhoto.png" />
+        <div class="formRow">
+          <button onclick="saveProfileImage()" class="confirm-btn">
+            Confirm
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   </body>
+  <script>
+    let allImages = document.querySelectorAll('.imageWrapper img');
+    let currentProfile = document.querySelector('.currentProfile');
+
+    if (localStorage.getItem('loggedInUser')) {
+      let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+      document.querySelector('#name').textContent = loggedInUser.username;
+      currentProfile.src = loggedInUser.profileImage;
+    }
+
+    allImages.forEach(image => {
+      image.addEventListener('click', e => {
+        console.log(currentProfile.src);
+        currentProfile.src = e.target.src;
+      });
+    });
+
+    const saveProfileImage = () => {
+      let user = JSON.parse(localStorage.getItem('loggedInUser'));
+      let newUser = {
+        ...user,
+        profileImage: currentProfile.src,
+      };
+      localStorage.setItem('loggedInUser', JSON.stringify(newUser));
+      window.location.href = '/register/succeed';
+    };
+  </script>
 </html>

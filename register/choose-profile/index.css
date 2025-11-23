@@ -1,15 +1,7 @@
-
-
-
 body {
   background-image: url(/assets/images/footerGradient.png);
   background-position: bottom left;
   background-size: cover;
-}
-
-:root {
-  --white-color: #ffffff;
-  --blue-color: #2196f3;
 }
 
 .container > h1,
@@ -25,7 +17,6 @@ body {
 }
 
 .profile {
-  width: px;
   height: 160px;
 }
 
@@ -70,4 +61,10 @@ section.register my-icon {
   position: absolute;
   top: 13px;
   left: 21px;
+}
+
+.currentProfile {
+  width: 364px;
+  height: 364px;
+  object-fit: cover;
 }

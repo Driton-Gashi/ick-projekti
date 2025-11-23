@@ -1,54 +1,47 @@
-body{
-    overflow:hidden;
+body {
+  overflow: hidden;
 }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color:var(--white-color);
-
+  color: var(--white-color);
 }
 
-
-
-.moana{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:114px;
+.moana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 114px;
 }
 
-h3{
-
-    font-size:24px;
-    font-weight: 700;
+h3 {
+  font-size: 24px;
+  font-weight: 700;
 }
-.succeedCreate{
-
-    margin-top:60px;
+.succeedCreate {
+  margin-top: 60px;
 }
-
-.twoImages{
-
-    display:flex;
-    justify-content: space-between;
-    gap:50rem;
-
+.succeedCreate h1 {
+  text-align: center;
 }
 
-.deadpoolImg{
-    width:244px;
-    height:315px;
-    
-
+.twoImages {
+  display: flex;
+  justify-content: space-between;
+  gap: 50rem;
 }
 
-.avatarImg{
-   width: 171px;
-   height:351px;
-
+.deadpoolImg {
+  width: 244px;
+  height: 315px;
 }
 
-.firstImg{
-    margin-bottom:38px;
+.avatarImg {
+  width: 171px;
+  height: 351px;
+}
+
+.firstImg {
+  margin-bottom: 38px;
 }
