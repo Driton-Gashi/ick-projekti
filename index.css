@@ -1,3 +1,14 @@
+.trends h2,
+.movies h2,
+.collection h2,
+.video h2,
+.faq h2,
+.studio h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--white-color);
+}
+
 section.trends {
   margin-top: 1.5rem;
   margin-bottom: 6rem;
@@ -224,7 +235,11 @@ section.studio img {
     font-size: 1rem;
   }
   section.kids button {
-    bottom: 2rem;
+    bottom: 3rem;
+    padding: 1rem 2rem;
+  }
+  section.kids img {
+    margin-bottom: 6rem;
   }
   section.faq .faqItem.open {
     height: 11rem;
@@ -233,12 +248,23 @@ section.studio img {
     gap: 40px;
   }
   section.studio img {
-    width: calc(33.33% - 40px);
+    width: calc(25% - 30px);
   }
 }
 
 @media (width < 29rem) {
+  section.studio img {
+    width: calc(33.33% - 30px);
+  }
   section.faq .faqItem.open {
     height: 14.5rem;
+  }
+  .trends h2,
+  .movies h2,
+  .collection h2,
+  .video h2,
+  .faq h2,
+  .studio h2 {
+    font-size: 2rem;
   }
 }

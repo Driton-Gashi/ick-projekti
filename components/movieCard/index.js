@@ -36,6 +36,7 @@ class MovieCard extends HTMLElement {
     for (let i = 0; i < rating; i++) {
       stars += '<my-icon iconName="ratingStar"></my-icon>';
     }
+    console.log(category);
 
     this.innerHTML = `
       <div class="movieCard" style="background-image: url('/assets/images/${cardType}/${image1}')">

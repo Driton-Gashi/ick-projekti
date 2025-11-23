@@ -155,7 +155,6 @@
       const data = await response.json();
       const heroCarousel = document.querySelector('.heroCarousel');
       let currentHero = 0;
-      console.log(data[0].title);
 
       setInterval(() => {
         heroCarousel.innerHTML = `
