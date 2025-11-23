@@ -34,6 +34,7 @@ const handleSubmit = async e => {
     if (users[i].username == username && users[i].password == password) {
       let loggedInUser = {
         username: users[i].username,
+        profileImage: '/assets/images/profile.png',
       };
 
       localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));

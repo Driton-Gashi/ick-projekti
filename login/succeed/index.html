@@ -11,7 +11,11 @@
   <body>
     <section class="loginSucceed">
       <div class="loginProfile">
-        <img src="/assets/images/profile.png" class="userProfile" />
+        <img
+          id="profile"
+          src="/assets/images/profile.png"
+          class="userProfile"
+        />
       </div>
       <p class="usernameProfile"><span id="name">Suela</span></p>
 
@@ -22,8 +26,9 @@
     if (localStorage.getItem('loggedInUser')) {
       let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
       document.querySelector('#name').textContent = loggedInUser.username;
+      document.querySelector('#profile').src = loggedInUser.profileImage;
     }
 
-    setTimeout(() => (window.location.href = '/'), 3000);
+    // setTimeout(() => (window.location.href = '/'), 5000);
   </script>
 </html>

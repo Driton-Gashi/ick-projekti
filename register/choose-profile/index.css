@@ -13,7 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 21px;
+  min-height: 100vh;
+  gap: 1rem;
 }
 
 .profile {
@@ -50,21 +51,26 @@ body {
 }
 
 .confirm-btn:hover {
-  background-color: var(--blue-color);
-}
-
-section.register {
-  position: relative;
-}
-
-section.register my-icon {
-  position: absolute;
-  top: 13px;
-  left: 21px;
+  background-color: var(--white-color);
+  color: var(--blue-color);
 }
 
 .currentProfile {
-  width: 364px;
-  height: 364px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+}
+.imageWrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imageWrapper img {
+  cursor: pointer;
+}
+@media (width < 39.1875rem) {
+  .imageWrapper img {
+    width: calc(33.33% - 0.7rem);
+  }
 }

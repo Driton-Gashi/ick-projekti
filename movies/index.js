@@ -15,6 +15,8 @@ const loadMovies = async () => {
   const movies = await fetchMovies();
 
   movies.forEach(movie => {
+    console.log(movie);
+
     moviesContainer.innerHTML += `
       <my-movie-card
         onmouseover="movieHoverEffect(event)"
@@ -24,6 +26,7 @@ const loadMovies = async () => {
         image2="${movie.image2}"
         name="${movie.name}"
         rating="${movie.rating}"
+        category="${movie.category}"
       ></my-movie-card>
   `;
   });

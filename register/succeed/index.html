@@ -11,8 +11,8 @@
   <body>
     <div class="container">
       <div class="moana">
-        <img src="/assets/images/registerSucced/moana.png" />
-        <div class="accountName"><h3>Diona</h3></div>
+        <img id="profile" src="/assets/images/profile.png" />
+        <div class="accountName"><h3 id="name">Diona</h3></div>
       </div>
       <div class="succeedCreate">
         <h1>Your account has been successfully created</h1>
@@ -29,6 +29,11 @@
     </div>
   </body>
   <script>
-    setTimeout(() => (window.location.href = '/'), 5000);
+    if (localStorage.getItem('loggedInUser')) {
+      let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+      document.querySelector('#name').textContent = loggedInUser.username;
+      document.querySelector('#profile').src = loggedInUser.profileImage;
+    }
+    // setTimeout(() => (window.location.href = '/'), 5000);
   </script>
 </html>

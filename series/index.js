@@ -24,6 +24,7 @@ const loadSeries = async () => {
   image2="${serie.image2}"
   rating="${serie.rating}"
   name="${serie.name}"
+  category="${serie.category}"
   ></my-movie-card>
 `;
   });
