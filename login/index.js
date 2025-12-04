@@ -7,22 +7,15 @@ const handleSubmit = async e => {
   e.preventDefault();
   const username = document.querySelector('.username').value;
   const password = document.querySelector('.password').value;
+  const errorMessage = document.querySelector('.errorMessage');
 
   if (username == '') {
-    Swal.fire({
-      title: 'Oops!',
-      text: 'Username should not be empty!',
-      icon: 'error',
-    });
+    errorMessage.textContent = 'Username should not be empty!';
     return;
   }
 
   if (password == '') {
-    Swal.fire({
-      title: 'Oops!',
-      text: 'Password should not be empty!',
-      icon: 'error',
-    });
+    errorMessage.textContent = 'Password should not be empty!';
     return;
   }
 
@@ -45,17 +38,14 @@ const handleSubmit = async e => {
     }
   }
   if (noUserFound) {
-    Swal.fire({
-      title: 'Oops!',
-      text: 'No users with those credentials found',
-      icon: 'error',
-    });
+    errorMessage.textContent = 'No users with those credentials found';
   } else {
     Swal.fire({
       title: 'Success!',
       text: 'You are logged In!',
       icon: 'success',
     });
+    errorMessage.classList.add('hide');
     setTimeout(() => (window.location.href = '/login/succeed'), 2000);
   }
 };

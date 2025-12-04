@@ -124,6 +124,11 @@ section.login .arrowBack {
   left: 21px;
 }
 
+section.login .errorMessage {
+  color: red;
+  text-align: center;
+}
+
 @media (width < 48rem) {
   .loginRight {
     display: none;
